@@ -1,4 +1,33 @@
 .UserHeader {
-    height: 200px;
-    background-color: red;
+    .header-top {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 40px;
+        padding: 5px 0;
+        line-height: 0;
+        background-color: var(--COLOR-pink);
+
+        a {
+            margin-left: 20px;
+            font-weight: bold;
+            color: var(--COLOR-brown);
+
+            &:hover {
+                color: var(--COLOR-brown-hover);
+            }
+        }
+    }
+
+    .header-content {
+        height: 110px;
+
+        .logo {
+            text-align: left;
+        }
+    }
+
+    .navigation {
+        height: 50px;
+    }
 }

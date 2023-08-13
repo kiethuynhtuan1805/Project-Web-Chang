@@ -7,6 +7,16 @@
 body {
   overflow-x: hidden;
   overflow-y: scroll;
+
+  .container {
+    margin: 0 15%;
+  }
+
+  --COLOR-pink: #ffb0bd;
+  --COLOR-pink-deep: #FFB0BD;
+  --COLOR-pink-hover: #FD8FA1;
+  --COLOR-brown: #8A4762;
+  --COLOR-brown-hover: #E56266;
 }
 
 /* width */
