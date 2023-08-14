@@ -7,7 +7,7 @@ export default function UserFooter() {
         <div className="UserFooter">
             <div className="container">
                 <Row>
-                    <Col span={10} className="footer-left">
+                    <Col span={9} className="footer-left">
                         <div className='hot-line'>
                             <Icon icon="gg:phone" width="48" height="48" />
                             <div>
@@ -34,25 +34,8 @@ export default function UserFooter() {
                             HƯỚNG DẪN MUA HÀNG
                         </div>
                     </Col>
-                    <Col span={10} className='footer-middle'>
-                        SÓC TRĂNG (9h00 - 22h)
-                        <ul>
-                            <li>
-                                1
-                            </li>
-                            <li>
-                                2
-                            </li>
-                            <li>
-                                3
-                            </li>
-                            <li>
-                                4
-                            </li>
-                            <li>
-                                5
-                            </li>
-                        </ul>
+                    <Col span={11} className='footer-middle'>
+
                     </Col>
                     <Col span={4} className='footer-right'>
                         <div>

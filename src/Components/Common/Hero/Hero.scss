@@ -1,0 +1,39 @@
+.Hero {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    .hero-main {
+        width: 75%;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .hero-sub {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
+        padding-left: 5px;
+
+        #hero-sub-1 {
+            height: 49%;
+            background: url('https://blog.topcv.vn/wp-content/uploads/2021/07/sk2uEvents_Page_Header_2903ed9c-40c1-4f6c-9a69-70bb8415295b.jpg') center center/cover;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        #hero-sub-2 {
+            height: 49%;
+            background: url('https://cdn.brvn.vn/topics/1280px/2020/23552_23552_xuhuongEvent2020-Covid-19_Ava_2.jpg') center center/cover;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
