@@ -60,13 +60,12 @@ function UserHeader(props) {
                                         Đăng ký
                                     </Col>
                                     <Col span={8}>
-
+                                        <Icon icon="wpf:shopping-cart" />
                                     </Col>
                                 </Row>
                             </Col>
                         </Row>
                         <div className='navigation'>
-                            {/* <Icon icon="wpf:shopping-cart" /> */}
                         </div>
                     </Header>
                     <Content style={contentStyle}>Content</Content>
