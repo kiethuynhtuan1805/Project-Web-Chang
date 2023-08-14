@@ -1,7 +1,7 @@
 import './App.scss';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Home } from './Pages';
+import { GlobalHome } from './Pages';
 import UserLayout from 'Components/Layout/UserLayout/UserLayout';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path='' element={<UserLayout />}>
-          <Route index element={<Home />} />
+          <Route index element={<GlobalHome />} />
           {/* <Route path='//' element={<Home />} /> */}
         </Route>
       </Routes>

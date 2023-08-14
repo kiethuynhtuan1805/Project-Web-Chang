@@ -1,5 +1,5 @@
-import Home from "./Global/Home/Home";
+import GlobalHome from "./Global/Home/GlobalHome";
 
 export {
-    Home
+    GlobalHome,
 };
