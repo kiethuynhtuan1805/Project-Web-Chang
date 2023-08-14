@@ -1,3 +1,13 @@
 .UserLayout {
-    color: red;
+    .copy-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border-top: 3px solid #ffffff;
+        background-color: var(--COLOR-pink);
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
 }

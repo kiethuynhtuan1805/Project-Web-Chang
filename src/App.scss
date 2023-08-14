@@ -9,7 +9,9 @@ body {
   overflow-y: scroll;
 
   .container {
-    margin: 0 15%;
+    padding: 0 10%;
+    width: 100%;
+    max-width: 2000px;
   }
 
   --COLOR-pink: #ffb0bd;

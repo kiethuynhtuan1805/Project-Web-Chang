@@ -1,33 +1,149 @@
 .UserHeader {
     .header-top {
         display: flex;
-        justify-content: right;
+        justify-content: center;
         align-items: center;
-        height: 40px;
+        height: 30px;
         padding: 5px 0;
         line-height: 0;
         background-color: var(--COLOR-pink);
 
-        a {
-            margin-left: 20px;
-            font-weight: bold;
-            color: var(--COLOR-brown);
+        .container {
+            div {
+                display: flex;
+                justify-content: right;
 
-            &:hover {
-                color: var(--COLOR-brown-hover);
+                a {
+                    margin-left: 20px;
+                    font-weight: bold;
+                    color: var(--COLOR-brown);
+
+                    &:hover {
+                        color: var(--COLOR-brown-hover);
+                    }
+                }
             }
         }
     }
 
     .header-content {
-        height: 110px;
+        display: flex;
+        justify-content: center;
 
-        .logo {
-            text-align: left;
+        .container {
+            height: 110px;
+
+            .logo {
+                display: flex;
+                align-items: center;
+                text-align: left;
+                height: 100%;
+
+                div {
+                    width: 200px;
+                    height: 100%;
+                    background: url('../../../../assets/images/logo1.jpg') center center/cover;
+                }
+            }
+
+            .auth-user {
+                font-weight: bold;
+                text-align: center;
+                height: 60%;
+
+                .log-in {
+                    position: relative;
+
+                    div {
+                        position: absolute;
+                        top: 25%;
+                        right: 0;
+                        height: 30px;
+                        border-right: 2px solid black;
+                    }
+
+                    &:hover {
+                        div {
+                            border-color: var(--COLOR-pink);
+                        }
+                    }
+                }
+
+                .log-in,
+                .sign-up {
+                    font-size: 1rem;
+                    height: 30%;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: var(--COLOR-pink);
+                    }
+                }
+
+                .icon-cart {
+                    position: relative;
+                    width: 100%;
+                    height: 48px;
+
+                    .number-cart {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 22px;
+                        height: 22px;
+                        border: 1px solid red;
+                        border-radius: 50%;
+                        background-color: #E56266;
+                        text-align: center;
+                        color: #FFFFFF;
+                        font-size: 0.8rem;
+                        font-weight: bold;
+                    }
+                }
+            }
         }
     }
 
     .navigation {
-        height: 50px;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        background-color: var(--COLOR-pink-deep);
+
+        .container {
+            .menu-nav {
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: var(--COLOR-brown);
+                font-weight: bold;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+
+                    &:hover {
+                        color: var(--COLOR-brown-hover);
+                    }
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                    }
+                }
+            }
+        }
     }
+}
+
+.ant-menu-submenu {
+    background-color: var(--COLOR-pink) !important;
 }
