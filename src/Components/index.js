@@ -5,6 +5,7 @@ import SearchBar from "./Common/SearchBar/SearchBar";
 import UserLayout from "./Layout/UserLayout/UserLayout";
 import ListProduct from "./Common/ListProduct/ListProduct";
 import Product from "./Common/Product/Product";
+import FollowMeBanner from "./Common/FollowMeBanner/FollowMeBanner";
 
 export {
     Hero,
@@ -14,4 +15,5 @@ export {
     UserLayout,
     ListProduct,
     Product,
+    FollowMeBanner,
 }

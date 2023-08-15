@@ -28,7 +28,7 @@
             .email {
                 display: flex;
                 flex-direction: row;
-                align-items: end;
+                align-items: flex-end;
 
                 div:last-child {
                     text-align: left;

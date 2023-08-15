@@ -2,7 +2,8 @@ import './GlobalHome.scss';
 import React from 'react'
 import { connect } from 'react-redux'
 import { mapDispatchToProps, mapStateToProps } from './rdGlobalHome'
-import { Hero, ListProduct } from 'Components';
+import { Hero, ListProduct, FollowMeBanner } from 'Components';
+
 
 function GlobalHome(props) {
     return (
@@ -23,6 +24,7 @@ function GlobalHome(props) {
                         <ListProduct />
                     </div>
                 </div>
+                <FollowMeBanner />
             </div>
             {/* {JSON.stringify(props)}
             <button onClick={props.GetUser}>Click Me</button> */}
