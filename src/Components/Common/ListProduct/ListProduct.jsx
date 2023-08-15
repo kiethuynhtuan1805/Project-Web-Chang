@@ -1,23 +1,31 @@
 import './ListProduct.scss';
 import Product from '../Product/Product';
-import { fakeListProduct } from 'data';
-import { Button } from 'antd';
+import { Button, Col, Row } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
-export default function ListProduct(props) {
+export default function ListProduct({ data }) {
+    const navigate = useNavigate();
+
+    const linkTo = () => {
+        return navigate('/products/1');
+    };
+
     return (
         <div className='ListProduct'>
-            <div className='ListProduct-wrap'>
+            <Row>
                 {
-                    fakeListProduct.map((data, id) => {
+                    data.map((data, id) => {
                         return (
-                            <div key={`Product-${id}`}>
-                                <Product dataProduct={data} />
-                            </div>
+                            <Col key={`Product-${data}-${id}`} xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{ span: 6 }} xxl={{ span: 4 }} onClick={linkTo}>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Product dataProduct={data} />
+                                </div>
+                            </Col>
                         )
                     })
                 }
-            </div>
-            <Button type="primary" className='btn-more'>Xem thêm</Button>
+            </Row>
+            <Button className='btn-more'>Xem thêm</Button>
         </div>
     )
 }

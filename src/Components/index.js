@@ -6,6 +6,7 @@ import UserLayout from "./Layout/UserLayout/UserLayout";
 import ListProduct from "./Common/ListProduct/ListProduct";
 import Product from "./Common/Product/Product";
 import FollowMeBanner from "./Common/FollowMeBanner/FollowMeBanner";
+import Trace from "./Common/Trace/Trace";
 
 export {
     Hero,
@@ -16,4 +17,5 @@ export {
     ListProduct,
     Product,
     FollowMeBanner,
+    Trace,
 }

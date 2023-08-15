@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Asap', sans-serif;
+  line-height: 1.4;
 }
 
 body {
@@ -15,6 +16,11 @@ body {
     max-width: 2200px;
   }
 
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
   --COLOR-pink: #ffb0bd;
   --COLOR-pink-deep: #FFB0BD;
   --COLOR-pink-super-deep: #FB6565;
@@ -23,6 +29,7 @@ body {
   --COLOR-brown-smooth: #C75D26;
   --COLOR-brown-deep: #9C491E;
   --COLOR-brown-hover: #E56266;
+  --COLOR-blue-hover: #0048ff;
 }
 
 /* width */

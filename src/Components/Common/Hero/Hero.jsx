@@ -26,7 +26,7 @@ export default function Hero() {
                     {
                         apiHero.map((data, id) => {
                             return (
-                                <div key={`hero-${id}`}>
+                                <div key={`hero-${data}-${id}`}>
                                     <div style={{
                                         ...contentStyle, background: `url(${data}) center center/cover`
                                     }}></div>

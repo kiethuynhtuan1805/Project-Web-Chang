@@ -3,6 +3,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { mapDispatchToProps, mapStateToProps } from './rdGlobalHome'
 import { Hero, ListProduct, FollowMeBanner } from 'Components';
+import { fakeApiHome } from 'data';
 
 
 function GlobalHome(props) {
@@ -11,18 +12,16 @@ function GlobalHome(props) {
             <Hero />
             <div className='container'>
                 <div className='home-content'>
-                    <div>
-                        SẢN PHẨM MỚI
-                        <ListProduct />
-                    </div>
-                    <div>
-                        SẢN PHẨM MỚI
-                        <ListProduct />
-                    </div>
-                    <div>
-                        SẢN PHẨM MỚI
-                        <ListProduct />
-                    </div>
+                    {
+                        fakeApiHome.map((data, id) => {
+                            return (
+                                <div key={`home-${data.name}-${id}`} className='home-data'>
+                                    <p className='home-data-name'>{data.name}</p>
+                                    <ListProduct data={data.data} />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
                 <FollowMeBanner />
             </div>

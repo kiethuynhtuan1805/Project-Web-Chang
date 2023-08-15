@@ -17,6 +17,8 @@ const footerStyle = {
     color: '#fff',
     fontWeight: 'bold',
     backgroundColor: '#ffb0bd',
+    paddingLeft: 0,
+    paddingRight: 0,
 };
 
 export default function UserLayout() {

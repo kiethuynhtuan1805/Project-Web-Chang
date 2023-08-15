@@ -56,9 +56,9 @@
 
                     div {
                         position: absolute;
-                        top: 25%;
+                        top: 0;
                         right: 0;
-                        height: 30px;
+                        height: 25px;
                         border-right: 2px solid black;
                     }
 
@@ -146,5 +146,15 @@
 }
 
 .ant-menu-submenu {
-    background-color: var(--COLOR-pink) !important;
+    ul {
+        background-color: white !important;
+
+        li {
+            &:hover {
+                background-color: var(--COLOR-pink-deep) !important;
+                color: white;
+                opacity: 0.7;
+            }
+        }
+    }
 }

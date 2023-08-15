@@ -1,12 +1,17 @@
+import { Image } from 'antd';
 import './Product.scss';
 
 export default function Product({ dataProduct }) {
     return (
         <div className='Product'>
-            <div style={{
-                height: '70%',
-                background: `url('${dataProduct.picSrc}') center center/cover`
-            }}>
+            <div style={{ height: '70%' }}>
+                <Image
+                    width={'100%'}
+                    height={'100%'}
+                    preview={false}
+                    src={dataProduct.picSrc}
+                    fallback={require('../../../assets/images/image-not-found.png')}
+                />
             </div>
             <div style={{ height: '30%' }}>
                 <p>

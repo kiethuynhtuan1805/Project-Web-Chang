@@ -1,0 +1,25 @@
+.Trace {
+    display: flex;
+    height: 50px;
+
+    .trace-data {
+        display: flex;
+        align-items: center;
+
+        p {
+            text-transform: capitalize;
+        }
+
+        &:hover {
+            color: var(--COLOR-pink-deep);
+            cursor: pointer;
+        }
+    }
+
+    .trace-data:last-child {
+        &:hover {
+            color: var(--COLOR-brown-deep);
+            cursor: auto;
+        }
+    }
+}
