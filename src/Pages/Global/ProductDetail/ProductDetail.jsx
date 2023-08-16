@@ -27,7 +27,7 @@ export default function ProductDetail(props) {
                         <Col xl={{ span: 12 }}>
                             <div className='product-image'>
                                 <Image
-                                    src={fakeProduct.picSrc.split('\n')[0]}
+                                    src={fakeProduct.picSrc[0].src}
                                     width={'100%'}
                                     height={'100%'}
                                     fallback={require('../../../assets/images/image-not-found.png')}
@@ -35,11 +35,11 @@ export default function ProductDetail(props) {
                             </div>
                             <div className='product-image-sub'>
                                 {
-                                    fakeProduct.picSrc.split('\n').splice(1,).map((data, id) => {
+                                    fakeProduct.picSrc.splice(1,).map((data, id) => {
                                         return (
                                             <Image
-                                                key={`sub-image-${data}-${id}`}
-                                                src={data}
+                                                key={`sub-image-${data.src}-${id}`}
+                                                src={data.src}
                                                 width={'100%'}
                                                 height={'100%'}
                                                 fallback={require('../../../assets/images/image-not-found.png')}
