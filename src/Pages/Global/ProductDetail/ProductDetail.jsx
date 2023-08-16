@@ -25,14 +25,29 @@ export default function ProductDetail(props) {
                 <div className='product-detail-main'>
                     <Row>
                         <Col xl={{ span: 12 }}>
-                            <Image
-                                src={fakeProduct.picSrc}
-                                className='product-image'
-                                height={'700px'}
-                                width={'100%'}
-                                fallback={require('../../../assets/images/image-not-found.png')}
-                            />
-                            <div className='product-image-sub'></div>
+                            <div className='product-image'>
+                                <Image
+                                    src={fakeProduct.picSrc.split('\n')[0]}
+                                    width={'100%'}
+                                    height={'100%'}
+                                    fallback={require('../../../assets/images/image-not-found.png')}
+                                />
+                            </div>
+                            <div className='product-image-sub'>
+                                {
+                                    fakeProduct.picSrc.split('\n').splice(1,).map((data, id) => {
+                                        return (
+                                            <Image
+                                                key={`sub-image-${data}-${id}`}
+                                                src={data}
+                                                width={'100%'}
+                                                height={'100%'}
+                                                fallback={require('../../../assets/images/image-not-found.png')}
+                                            />
+                                        )
+                                    })
+                                }
+                            </div>
                         </Col>
                         <Col xl={{ span: 12 }}>
                             <div className='product-detail-content'>

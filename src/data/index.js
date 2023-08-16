@@ -7,7 +7,7 @@ export const fakeHero = "https://img.freepik.com/free-vector/bright-geometrical-
 
 export const fakeProduct = {
     id: 0,
-    picSrc: 'https://tinyyume.com/cdn/shop/files/AA082copiepourmini2_740x.jpg?v=1690406278',
+    picSrc: 'https://tinyyume.com/cdn/shop/files/AA082copiepourmini2_740x.jpg?v=1690406278\nhttps://tinyyume.com/cdn/shop/files/F1022_360x.jpg?v=1690404618\nhttps://tinyyume.com/cdn/shop/files/SC0033_360x.jpg?v=1690403748\nhttps://tinyyume.com/cdn/shop/files/miniature850copie_52e266d2-a52f-4b8f-b1f7-f757980c7adc_360x.jpg?v=1686579761\nhttps://tinyyume.com/cdn/shop/files/AA084copie2_360x.jpg?v=1690404912',
     name: 'Cottagecore stamp stickers',
     price: 260000,
     inventory: 6,

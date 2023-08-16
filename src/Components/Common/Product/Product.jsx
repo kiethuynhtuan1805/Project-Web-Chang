@@ -9,7 +9,7 @@ export default function Product({ dataProduct }) {
                     width={'100%'}
                     height={'100%'}
                     preview={false}
-                    src={dataProduct.picSrc}
+                    src={dataProduct.picSrc.split('\n')[0]}
                     fallback={require('../../../assets/images/image-not-found.png')}
                 />
             </div>
