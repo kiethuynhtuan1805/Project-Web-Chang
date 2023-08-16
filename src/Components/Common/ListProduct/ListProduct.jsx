@@ -3,7 +3,7 @@ import Product from '../Product/Product';
 import { Button, Col, Row } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
-export default function ListProduct({ data }) {
+export default function ListProduct({ data, btn }) {
     const navigate = useNavigate();
 
     const linkTo = () => {
@@ -25,7 +25,11 @@ export default function ListProduct({ data }) {
                     })
                 }
             </Row>
-            <Button className='btn-more'>Xem thêm</Button>
+            {
+                btn !== false && (
+                    <Button className='btn-more'>Xem thêm</Button>
+                )
+            }
         </div>
     )
 }

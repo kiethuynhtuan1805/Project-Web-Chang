@@ -7,6 +7,7 @@ import ListProduct from "./Common/ListProduct/ListProduct";
 import Product from "./Common/Product/Product";
 import FollowMeBanner from "./Common/FollowMeBanner/FollowMeBanner";
 import Trace from "./Common/Trace/Trace";
+import ScrollToTop from "./Common/ScrollToTop/ScrollToTop";
 
 export {
     Hero,
@@ -18,4 +19,5 @@ export {
     Product,
     FollowMeBanner,
     Trace,
+    ScrollToTop,
 }

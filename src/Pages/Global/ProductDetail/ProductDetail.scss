@@ -13,17 +13,14 @@
 
         .product-detail-main {
             margin-top: 20px;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
 
             .product-image {
-                height: 700px;
                 border-radius: 15px;
                 box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
             }
 
-            .product-image-sub {
-                height: 300px;
-            }
+            .product-image-sub {}
 
             .product-detail-content {
                 padding-top: 10px;
@@ -89,9 +86,60 @@
                 }
 
                 .commit {
-                    margin-top: 30px;
+                    margin: 30px 0;
                     color: red;
+
+                    p:first-child {
+                        margin-bottom: 40px;
+                    }
+
+                    p:last-child {
+                        display: flex;
+                        align-items: center;
+                        color: var(--COLOR-brown-deep);
+                    }
+
+                    strong {
+                        color: var(--COLOR-brown-smooth);
+                    }
                 }
+
+                .share {
+                    width: 280px;
+
+                    p:first-child {
+                        margin-bottom: 20px;
+                        font-size: 1rem;
+                        font-weight: bold;
+                    }
+
+                    .btn-share {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 1px solid #ccc;
+                        width: 100%;
+
+                        .icon {
+                            margin-right: 5px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .product-detail-sub {
+            font-size: 1.2rem;
+            text-align: left;
+
+            &>p:first-child {
+                margin-bottom: 20px;
+            }
+
+            &>div {
+                margin-bottom: 50px;
+
             }
         }
     }
