@@ -25,17 +25,23 @@ const items = [
     getItem('TẤT CẢ', '1'),
     getItem('Option 2', '2'),
     getItem('Option 3', 'sub1', [
-        getItem('Tom', '3'),
-        getItem('Bill', '4'),
+        getItem('Tom', 'subsub1', [
+            getItem('Bill', '3'),
+            getItem('Alex', '4'),
+        ]),
         getItem('Alex', '5'),
+        getItem('Alex', 'subsub2', [
+            getItem('Test1', '6'),
+            getItem('Test2', '7'),
+        ]),
     ]),
-    getItem('Option 4', 'sub2', [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-    getItem('Option 5', '9'),
-    getItem('Option 6', '10'),
-    getItem('Option 7', '11'),
-    getItem('Option 8', '12'),
-    getItem('Option 9', '13'),
-    getItem('Option 10', '14'),
+    getItem('Option 4', 'sub2', [getItem('Team 1', '8'), getItem('Team 2', '9')]),
+    getItem('Option 5', '10'),
+    getItem('Option 6', '11'),
+    getItem('Option 7', '12'),
+    getItem('Option 8', '13'),
+    getItem('Option 9', '14'),
+    getItem('Option 10', '15'),
 ];
 
 function UserHeader(props) {
