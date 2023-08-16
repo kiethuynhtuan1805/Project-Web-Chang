@@ -15,7 +15,8 @@ export default function App() {
           {/* <Route path='/collections'>
             <Route index></Route>
           </Route> */}
-          <Route path='/login' element={<Login />}></Route>
+          <Route path='/login' element={<Login type={'login'} />}></Route>
+          <Route path='/signup' element={<Login type={'signup'} />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

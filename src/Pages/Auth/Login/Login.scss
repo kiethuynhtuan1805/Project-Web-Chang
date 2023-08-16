@@ -1,9 +1,112 @@
 .Login {
     .container-wrapper {
-        .select {}
+        width: 70%;
+        max-width: 700px;
+        padding: 0;
+        margin: 30px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1.4rem;
 
-        .login-data {}
+        .select {
+            font-weight: bold;
+            cursor: pointer;
 
-        .btn {}
+            .select-log-in {
+                padding: 10px 0;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            .select-sign-up {
+                padding: 10px 0;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            p {
+                font-size: 1.4rem;
+                color: var(--COLOR-pink-super-deep);
+            }
+
+            .selected {
+                border-bottom: 3px solid var(--COLOR-pink-deep);
+            }
+        }
+
+        .login-data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+
+            &>input,
+            &>span {
+                width: 80%;
+                height: 40px;
+                margin-top: 15px;
+            }
+
+            &>span:last-child {
+                margin-bottom: 20px;
+            }
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+
+            .btn-sign-up,
+            .btn-log-in,
+            .btn-facebook,
+            .btn-google {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                font-size: 1.2rem;
+                background-color: var(--COLOR-pink);
+                color: white;
+
+                &:hover {
+                    border: none;
+                    background-color: var(--COLOR-pink-hover);
+                }
+            }
+
+            .btn-forget-password {
+                width: 80%;
+                margin-top: 10px;
+                padding-right: 0;
+                font-size: 1rem;
+                text-align: right;
+            }
+
+            .btn-facebook {
+                font-size: 1rem;
+                background-color: var(--COLOR-blue);
+                margin-bottom: 10px;
+
+                &:hover {
+                    background-color: var(--COLOR-blue-hover);
+                }
+            }
+
+            .btn-google {
+                font-size: 1rem;
+                background-color: #f3473a;
+
+                &:hover {
+                    background-color: #ff1100;
+                }
+            }
+        }
     }
 }
