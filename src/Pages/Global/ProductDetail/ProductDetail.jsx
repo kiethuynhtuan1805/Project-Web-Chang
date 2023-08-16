@@ -20,7 +20,7 @@ export default function ProductDetail(props) {
 
     return (
         <div className='ProductDetail'>
-            <div className='container'>
+            <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <div className='product-detail-main'>
                     <Row>

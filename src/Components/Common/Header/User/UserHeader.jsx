@@ -41,7 +41,7 @@ function UserHeader(props) {
         <div className='UserHeader'>
             <Header style={headerStyle}>
                 <div className='header-top'>
-                    <div className='container'>
+                    <div className='container-wrapper'>
                         <div>
                             <a href="#">HỆ THỐNG CỬA HÀNG</a>
                             <a href="#">VỀ CHANG</a>
@@ -50,7 +50,7 @@ function UserHeader(props) {
                     </div>
                 </div>
                 <div className='header-content'>
-                    <Row align="middle" className='container'>
+                    <Row align="middle" className='container-wrapper'>
                         <Col span={5} className='logo'>
                             <div></div>
                         </Col>
@@ -84,7 +84,7 @@ function UserHeader(props) {
                     </Row>
                 </div>
                 <div className='navigation'>
-                    <div className='container'>
+                    <div className='container-wrapper'>
                         <Menu
                             theme="#FFB0BD"
                             mode="horizontal"

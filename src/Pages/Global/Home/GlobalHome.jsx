@@ -10,7 +10,7 @@ function GlobalHome(props) {
     return (
         <div className='GlobalHome'>
             <Hero />
-            <div className='container'>
+            <div className='container-wrapper'>
                 <div className='home-content'>
                     {
                         fakeApiHome.map((data, id) => {

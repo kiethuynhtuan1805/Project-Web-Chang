@@ -8,7 +8,7 @@
         line-height: 0;
         background-color: var(--COLOR-pink);
 
-        .container {
+        .container-wrapper {
             div {
                 display: flex;
                 justify-content: right;
@@ -30,7 +30,7 @@
         display: flex;
         justify-content: center;
 
-        .container {
+        .container-wrapper {
             height: 110px;
 
             .logo {
@@ -110,7 +110,7 @@
         height: 40px;
         background-color: var(--COLOR-pink-deep);
 
-        .container {
+        .container-wrapper {
             .menu-nav {
                 align-items: center;
                 justify-content: center;

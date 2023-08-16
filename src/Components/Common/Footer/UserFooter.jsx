@@ -5,7 +5,7 @@ import { Col, Row } from "antd";
 export default function UserFooter() {
     return (
         <div className="UserFooter">
-            <div className="container">
+            <div className="container-wrapper">
                 <Row>
                     <Col span={9} className="footer-left">
                         <div className='hot-line'>
