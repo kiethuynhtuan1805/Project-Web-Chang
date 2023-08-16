@@ -25,11 +25,11 @@ export default function Signup() {
                     </Row>
                 </div>
                 <div className='signup-data'>
+                    <Input placeholder="Tên đăng nhập (*)" />
+                    <Input placeholder="Họ và tên (*)" />
                     <Input placeholder="Nhập tên đăng nhập" />
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input placeholder="Nhập tên đăng nhập" />
+                    <Input placeholder="Điện thoại (*)" />
+                    <Input placeholder="Email (*)" type='email' />
                     <Input placeholder="Nhập tên đăng nhập" />
                     <Input placeholder="Nhập tên đăng nhập" />
                     <Input placeholder="Nhập tên đăng nhập" />

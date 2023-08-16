@@ -1,4 +1,4 @@
-import { Button, Col, Input, Row } from 'antd'
+import { Button, Col, Form, Input, Row } from 'antd'
 import './Login.scss'
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
@@ -11,6 +11,14 @@ export default function Login() {
     const signUp = () => {
         navigate('/signup');
     }
+
+    const onFinish = (values) => {
+        console.log('Success:', values);
+    };
+
+    const onFinishFailed = (errorInfo) => {
+        console.log('Failed:', errorInfo);
+    };
 
     return (
         <div className="Login container">
@@ -26,17 +34,56 @@ export default function Login() {
                     </Row>
                 </div>
                 <div className='login-data'>
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input.Password placeholder="Mật khẩu" />
-                </div>
-                <div className='btn'>
-                    <Button className='btn-log-in' size='large'>ĐĂNG NHẬP</Button>
-                    <Button type="link" className='btn-forget-password'>Quên mật khẩu?</Button>
-                    <div style={{ width: '80%', fontSize: '1.1rem', marginTop: '40px', marginBottom: '20px' }}>
-                        ---------- Hoặc ----------
-                    </div>
-                    <Button className='btn-facebook' size='large'><Icon icon="logos:facebook" style={{ marginRight: '5px' }} />Đăng nhập với Facebook</Button>
-                    <Button className='btn-google' size='large'><Icon icon="devicon:google" style={{ marginRight: '5px' }} />Đăng nhập với Google</Button>
+                    <Form
+                        name="basic"
+                        style={{
+                            width: '100%',
+                        }}
+                        initialValues={{
+                            remember: true,
+                        }}
+                        onFinish={onFinish}
+                        onFinishFailed={onFinishFailed}
+                        autoComplete="off"
+                    >
+                        <Form.Item
+                            name="username"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Vui lòng nhập tên đăng nhập!',
+                                },
+                            ]}
+                            className='username'
+                        >
+                            <Input placeholder="Nhập tên đăng nhập" />
+                        </Form.Item>
+
+                        <Form.Item
+                            name="password"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Vui lòng nhập mật khẩu!',
+                                },
+                            ]}
+                            className='password'
+                        >
+                            <Input.Password placeholder="Mật khẩu" />
+                        </Form.Item>
+
+                        <Form.Item>
+                            <div className='btn'>
+                                <Button className='btn-log-in' size='large' htmlType="submit">ĐĂNG NHẬP</Button>
+                                <Button type="link" className='btn-forget-password'>Quên mật khẩu?</Button>
+                                <div style={{ width: '80%', fontSize: '1.1rem', marginTop: '40px', marginBottom: '20px' }}>
+                                    ---------- Hoặc ----------
+                                </div>
+                                <Button className='btn-facebook' size='large'><Icon icon="logos:facebook" style={{ marginRight: '5px' }} />Đăng nhập với Facebook</Button>
+                                <Button className='btn-google' size='large'><Icon icon="devicon:google" style={{ marginRight: '5px' }} />Đăng nhập với Google</Button>
+                            </div>
+                        </Form.Item>
+                    </Form>
                 </div>
             </div>
         </div >

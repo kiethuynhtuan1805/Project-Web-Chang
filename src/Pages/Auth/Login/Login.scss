@@ -42,70 +42,85 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 10px;
+            margin-top: 20px;
 
-            &>input,
-            &>span {
-                width: 80%;
-                height: 40px;
-                margin-top: 15px;
+            .username {
+                input {
+                    width: 80%;
+                    height: 50px;
+                    margin-top: 15px;
+                    font-size: 1rem;
+                }
             }
 
-            &>span:last-child {
-                margin-bottom: 20px;
+            .password {
+                display: flex;
+                justify-content: center;
+
+                &>div:first-child {
+                    width: 80%;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    height: 50px;
+                    font-size: 1rem;
+                }
             }
-        }
 
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-bottom: 30px;
-
-            .btn-log-in,
-            .btn-facebook,
-            .btn-google {
+            .btn {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 80%;
-                font-size: 1.2rem;
-                background-color: var(--COLOR-pink);
-                color: white;
+                flex-direction: column;
+                margin-bottom: 30px;
 
-                &:hover {
-                    border: none;
-                    background-color: var(--COLOR-pink-hover);
+                .btn-log-in,
+                .btn-facebook,
+                .btn-google {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    font-size: 1.2rem;
+                    background-color: var(--COLOR-pink);
+                    color: white;
+
+                    &:hover {
+                        border: none;
+                        background-color: var(--COLOR-pink-hover);
+                    }
                 }
-            }
 
-            .btn-forget-password {
-                width: 80%;
-                margin-top: 10px;
-                padding-right: 0;
-                font-size: 1rem;
-                text-align: right;
-            }
-
-            .btn-facebook {
-                font-size: 1rem;
-                background-color: var(--COLOR-blue);
-                margin-bottom: 10px;
-
-                &:hover {
-                    background-color: var(--COLOR-blue-hover);
+                .btn-forget-password {
+                    width: 80%;
+                    margin-top: 10px;
+                    padding-right: 0;
+                    font-size: 1rem;
+                    text-align: right;
                 }
-            }
 
-            .btn-google {
-                font-size: 1rem;
-                background-color: #f3473a;
+                .btn-facebook {
+                    font-size: 1rem;
+                    background-color: var(--COLOR-blue);
+                    margin-bottom: 10px;
 
-                &:hover {
-                    background-color: #ff1100;
+                    &:hover {
+                        background-color: var(--COLOR-blue-hover);
+                    }
+                }
+
+                .btn-google {
+                    font-size: 1rem;
+                    background-color: #f3473a;
+
+                    &:hover {
+                        background-color: #ff1100;
+                    }
                 }
             }
         }
+
     }
 }
