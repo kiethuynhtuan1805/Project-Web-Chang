@@ -8,7 +8,7 @@ import { fakeApiHome } from 'data';
 
 function GlobalHome(props) {
     return (
-        <div className='GlobalHome'>
+        <div className='GlobalHome container'>
             <Hero />
             <div className='container-wrapper'>
                 <div className='home-content'>

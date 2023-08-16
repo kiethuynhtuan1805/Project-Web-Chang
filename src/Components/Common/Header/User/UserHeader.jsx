@@ -2,6 +2,7 @@ import './UserHeader.scss';
 import { Layout, Col, Row, Menu } from 'antd';
 import SearchBar from 'Components/Common/SearchBar/SearchBar';
 import { Icon } from '@iconify/react';
+import { useNavigate } from 'react-router-dom';
 
 const { Header } = Layout;
 
@@ -37,6 +38,18 @@ const items = [
 ];
 
 function UserHeader(props) {
+    // useNavigate
+    const navigate = useNavigate();
+
+    // Function
+    const logIn = () => {
+        return navigate('/login');
+    }
+
+    const signUp = () => {
+        return navigate('/signup');
+    }
+
     return (
         <div className='UserHeader'>
             <Header style={headerStyle}>
@@ -62,11 +75,11 @@ function UserHeader(props) {
                         </Col>
                         <Col span={6}>
                             <Row align="middle" className='auth-user'>
-                                <Col span={9} className='log-in'>
+                                <Col span={9} className='log-in' onClick={logIn}>
                                     Đăng nhập
                                     <div></div>
                                 </Col>
-                                <Col span={9} className='sign-up'>
+                                <Col span={9} className='sign-up' onClick={signUp}>
                                     Đăng ký
                                 </Col>
                                 <Col span={6} style={{

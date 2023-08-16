@@ -1,7 +1,7 @@
 import './App.scss';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { GlobalHome, ProductDetail } from './Pages';
+import { GlobalHome, ProductDetail, Login, Signup } from './Pages';
 import { ScrollToTop, UserLayout } from 'Components';
 
 export default function App() {
@@ -15,6 +15,7 @@ export default function App() {
           {/* <Route path='/collections'>
             <Route index></Route>
           </Route> */}
+          <Route path='/login' element={<Login />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
