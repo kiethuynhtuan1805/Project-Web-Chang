@@ -1,8 +1,9 @@
 import './UserHeader.scss';
-import { Layout, Col, Row, Menu } from 'antd';
+import { Layout, Col, Row, Menu, Tooltip } from 'antd';
 import SearchBar from 'Components/Common/SearchBar/SearchBar';
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
+import { fakeUser } from 'data';
 
 const { Header } = Layout;
 
@@ -88,8 +89,19 @@ function UserHeader(props) {
                                     textAlign: 'right',
                                 }}>
                                     <div className='icon-cart'>
-                                        <Icon icon="solar:cart-bold-duotone" color="pink" width={48} height={48} />
-                                        <input defaultValue={0} className='number-cart' />
+                                        {
+                                            fakeUser ? (
+                                                <Tooltip placement='bottom' title={fakeUser === 0 ? ('Bạn chưa thêm sản phẩm nào vào giỏ hàng!') : ('Nhấn vào để thanh toán!')}>
+                                                    <Icon icon="solar:cart-bold-duotone" color="pink" width={48} height={48} />
+                                                    <input defaultValue={fakeUser.cart} className='number-cart' disabled />
+                                                </Tooltip>
+                                            ) : (
+                                                <Tooltip placement='bottom' title={'Bạn chưa thêm sản phẩm nào vào giỏ hàng!'}>
+                                                    <Icon icon="solar:cart-bold-duotone" color="pink" width={48} height={48} />
+                                                    <input defaultValue={0} className='number-cart' disabled />
+                                                </Tooltip>
+                                            )
+                                        }
                                     </div>
                                 </Col>
                             </Row>
