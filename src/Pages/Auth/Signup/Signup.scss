@@ -1,4 +1,4 @@
-.Login {
+.Signup {
     .container-wrapper {
         width: 70%;
         max-width: 700px;
@@ -38,7 +38,7 @@
             }
         }
 
-        .login-data {
+        .signup-data {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -63,9 +63,7 @@
             flex-direction: column;
             margin-bottom: 30px;
 
-            .btn-log-in,
-            .btn-facebook,
-            .btn-google {
+            .btn-sign-up {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -77,33 +75,6 @@
                 &:hover {
                     border: none;
                     background-color: var(--COLOR-pink-hover);
-                }
-            }
-
-            .btn-forget-password {
-                width: 80%;
-                margin-top: 10px;
-                padding-right: 0;
-                font-size: 1rem;
-                text-align: right;
-            }
-
-            .btn-facebook {
-                font-size: 1rem;
-                background-color: var(--COLOR-blue);
-                margin-bottom: 10px;
-
-                &:hover {
-                    background-color: var(--COLOR-blue-hover);
-                }
-            }
-
-            .btn-google {
-                font-size: 1rem;
-                background-color: #f3473a;
-
-                &:hover {
-                    background-color: #ff1100;
                 }
             }
         }
