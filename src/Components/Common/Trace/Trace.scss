@@ -1,7 +1,9 @@
 .Trace {
     display: flex;
     height: 60px;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    opacity: 0.8;
 
     .trace-data {
         display: flex;

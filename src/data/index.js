@@ -13,6 +13,10 @@ export let fakeNav = [
         key: '/products',
     },
     {
+        label: 'HOT',
+        key: '/products/0',
+    },
+    {
         label: 'Option 1',
         key: 'option-1',
         children: [
@@ -34,15 +38,35 @@ export let fakeNav = [
     },
     {
         label: 'Option 2',
-        key: '/products/4',
+        key: '/collections/option-2',
     },
     {
         label: 'Option 3',
-        key: '/products/5',
+        key: '/collections/option-3',
     },
     {
         label: 'Option 4',
-        key: '/products/6',
+        key: '/collections/option-4',
+    },
+    {
+        label: 'Option 5',
+        key: '/collections/option-5',
+    },
+    {
+        label: 'Option 6',
+        key: '/collections/option-6',
+    },
+    {
+        label: 'Option 7',
+        key: '/collections/option-7',
+    },
+    {
+        label: 'Option 8',
+        key: '/collections/option-8',
+    },
+    {
+        label: 'Khác',
+        key: '/collections/khac',
     },
 ]
 
@@ -77,12 +101,18 @@ export const fakeProduct = {
     inventory: 6,
     code: '#AA082',
     onSale: 0,
+    trace: 'Phụ kiện\nTrang sức',
+    type: 'phu-kien\ntrang-suc',
     description: '1 matte waterproof vinyl sticker\nEasily removable without glue residue\nSuitable for outdoor use, planners, cell phone, laptop and more! No dishwasher or microwave proof\nMeasures 6,5 x 7 cm\nColors may vary because of your monitor'
 }
 
-export const fakeListProduct = [
-    fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct
-]
+export const fakeListProduct = {
+    data: [
+        fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct
+    ],
+    trace: 'Phụ kiện\nTrang sức',
+    type: 'phu-kien\ntrang-suc',
+}
 
 export const fakeBanner = ["https://tinyyume.com/cdn/shop/files/Snapinsta.app_338458269_879996006396274_990222832187670111_n_1080_360x.jpg?v=1680243210",
     "https://tinyyume.com/cdn/shop/files/Snapinsta.app_334156055_671529237994962_7039349499115086332_n_1080_360x.jpg?v=1680243210",
@@ -94,11 +124,11 @@ export const fakeTrace = ["Home", "Collections", "Cottagecore stamp stickers #AA
 
 export const fakeApiHome = [{
     name: "sản phẩm mới",
-    data: fakeListProduct,
+    data: fakeListProduct.data,
 }, {
     name: "sản phẩm bán chạy",
-    data: fakeListProduct,
+    data: fakeListProduct.data,
 }, {
     name: "sản phẩm lỗi",
-    data: fakeListProduct,
+    data: fakeListProduct.data,
 }]

@@ -6,10 +6,15 @@ import { fakeProduct, fakeListProduct, fakeTrace } from 'data';
 import { ListProduct } from 'Components';
 
 export default function ProductDetail(props) {
+    const traceData = {
+        data: ["Home", ...fakeProduct.trace.split('\n'), `${fakeProduct.name} ${fakeProduct.code}`],
+        route: ['/', ...fakeProduct.type.split('\n')]
+    };
+
     return (
         <div className='ProductDetail container'>
             <div className='container-wrapper'>
-                <Trace traceData={fakeTrace} />
+                <Trace traceData={traceData} />
                 <div className='product-detail-main'>
                     <Row>
                         <Col xl={{ span: 12 }}>
@@ -108,7 +113,7 @@ export default function ProductDetail(props) {
                         Một số sản phẩm liên quan
                     </p>
                     <div>
-                        <ListProduct data={fakeListProduct} btn={false} />
+                        <ListProduct data={fakeListProduct.data} btn={false} />
                     </div>
                 </div>
             </div>

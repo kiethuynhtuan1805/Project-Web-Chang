@@ -122,7 +122,7 @@
                 justify-content: center;
                 height: 100%;
                 color: var(--COLOR-brown);
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: bold;
 
                 li {
@@ -140,6 +140,8 @@
                         display: flex;
                         align-items: center;
                         height: 100%;
+                        border: none;
+                        outline: none;
                     }
 
                     span {
@@ -160,8 +162,6 @@
         background-color: white !important;
 
         li {
-            border: none;
-
             &:hover {
                 background-color: var(--COLOR-pink-deep) !important;
                 color: white;

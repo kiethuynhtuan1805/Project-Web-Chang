@@ -6,23 +6,26 @@ export default function Trace({ traceData }) {
     const navigate = useNavigate();
 
     const linkTo = (id) => {
-        if (id === 'Home') return navigate('/');
-        return navigate(`/${id}`);
+        if (id === '/' || id === 'products') {
+            return navigate(id);
+        } else {
+            return navigate(`/collections/${id}`)
+        }
     }
 
     return (
         <div className='Trace'>
             {
-                traceData.map((data, id) => {
+                traceData.data.map((data, id) => {
                     return (
                         <div key={`Trace-${data}-${id}`} id={`${data}`} className='trace-data' onClick={() => {
-                            if (id + 1 !== traceData.length)
-                                return linkTo(data);
+                            if (id + 1 !== traceData.data.length)
+                                return linkTo(traceData.route[id]);
                             return;
                         }}>
                             <p>{data}</p>
                             {
-                                id + 1 !== traceData.length && (
+                                id + 1 !== traceData.data.length && (
                                     <Icon icon="grommet-icons:next" width="10" height="10" style={{
                                         margin: '0 10px',
                                     }} />
