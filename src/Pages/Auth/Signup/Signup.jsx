@@ -1,7 +1,6 @@
 import { Button, Col, DatePicker, Form, Input, Row, Select } from 'antd'
 import './Signup.scss'
 import { useNavigate } from 'react-router-dom';
-import { Option } from 'antd/es/mentions';
 
 export default function Signup() {
     // useNavigate
@@ -66,6 +65,21 @@ export default function Signup() {
                         >
                             <Select placeholder="Tỉnh/thành phố">
                             </Select>
+                        </Form.Item>
+
+                        <Form.Item
+                            name="ward"
+                            className='default-select'
+                        >
+                            <Select placeholder="Vui lòng chọn tỉnh/thành phố trước!">
+                            </Select>
+                        </Form.Item>
+
+                        <Form.Item
+                            name="street"
+                            className='default-input'
+                        >
+                            <Input placeholder="Địa chỉ chi tiết" />
                         </Form.Item>
 
                         <Form.Item
@@ -140,14 +154,6 @@ export default function Signup() {
                             </div>
                         </Form.Item>
                     </Form>
-                    <Input placeholder="Điện thoại (*)" />
-                    <Input placeholder="Email (*)" type='email' />
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input placeholder="Nhập tên đăng nhập" />
-                    <Input.Password placeholder="Mật khẩu" />
-                    <Input.Password placeholder="Mật khẩu" />
                 </div>
             </div>
         </div >

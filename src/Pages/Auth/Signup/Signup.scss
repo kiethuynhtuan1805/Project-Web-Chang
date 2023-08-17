@@ -68,16 +68,8 @@
             }
 
             .password {
-                display: flex;
-                justify-content: center;
-
-                &>div:first-child {
+                .ant-form-item-control-input-content>span {
                     width: 80%;
-                }
-
-                span {
-                    display: flex;
-                    align-items: center;
                     height: 40px;
                     font-size: 1rem;
                 }
@@ -89,6 +81,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            margin-top: 20px;
             margin-bottom: 30px;
 
             .btn-sign-up {

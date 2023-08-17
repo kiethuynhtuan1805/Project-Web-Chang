@@ -53,16 +53,8 @@
             }
 
             .password {
-                display: flex;
-                justify-content: center;
-
-                &>div:first-child {
+                .ant-form-item-control-input-content>span {
                     width: 80%;
-                }
-
-                span {
-                    display: flex;
-                    align-items: center;
                     height: 50px;
                     font-size: 1rem;
                 }
