@@ -3,6 +3,49 @@ export const fakeUser = {
     cart: 2,
 }
 
+export let fakeNav = [
+    {
+        label: 'HOME',
+        key: '/',
+    },
+    {
+        label: 'TẤT CẢ',
+        key: '/products',
+    },
+    {
+        label: 'Option 1',
+        key: 'option-1',
+        children: [
+            {
+                label: 'Toàn bộ',
+                key: '/products/1',
+            },
+            {
+                label: 'Gấu đen',
+                key: '/products/2',
+                children: [
+                    {
+                        label: 'Gấu đen tím',
+                        key: '/products/3',
+                    },
+                ],
+            },
+        ]
+    },
+    {
+        label: 'Option 2',
+        key: '/products/4',
+    },
+    {
+        label: 'Option 3',
+        key: '/products/5',
+    },
+    {
+        label: 'Option 4',
+        key: '/products/6',
+    },
+]
+
 export const fakeHero = "https://img.freepik.com/free-vector/bright-geometrical-black-friday-sale-banner-design-vector_1055-9127.jpg?w=2000\nhttps://img.freepik.com/premium-vector/big-sale-with-shopping-cart-design_181623-283.jpg?w=1380\nhttps://img.freepik.com/premium-vector/super-sale-banner-with-podium-template-design-emoji-icon_181623-569.jpg?w=1380";
 
 export const fakeProduct = {
@@ -47,7 +90,7 @@ export const fakeBanner = ["https://tinyyume.com/cdn/shop/files/Snapinsta.app_33
     "https://tinyyume.com/cdn/shop/files/Snapinsta.app_328177085_696358295520178_4844218665367907946_n_1080_360x.jpg?v=1680243210"
 ]
 
-export const fakeTrace = ["Home", "Collections"];
+export const fakeTrace = ["Home", "Collections", "Cottagecore stamp stickers #AA082"];
 
 export const fakeApiHome = [{
     name: "sản phẩm mới",

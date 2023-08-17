@@ -3,7 +3,7 @@ import { Layout, Col, Row, Menu, Tooltip } from 'antd';
 import SearchBar from 'Components/Common/SearchBar/SearchBar';
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
-import { fakeUser } from 'data';
+import { fakeUser, fakeNav } from 'data';
 
 const { Header } = Layout;
 
@@ -13,36 +13,6 @@ const headerStyle = {
     paddingInline: 0,
     backgroundColor: '#ffffff',
 };
-
-function getItem(label, key, children) {
-    return {
-        key,
-        children,
-        label,
-    };
-}
-const items = [
-    getItem('TẤT CẢ', '1'),
-    getItem('Option 2', '2'),
-    getItem('Option 3', 'sub1', [
-        getItem('Tom', 'subsub1', [
-            getItem('Bill', '3'),
-            getItem('Alex', '4'),
-        ]),
-        getItem('Alex', '5'),
-        getItem('Alex', 'subsub2', [
-            getItem('Test1', '6'),
-            getItem('Test2', '7'),
-        ]),
-    ]),
-    getItem('Option 4', 'sub2', [getItem('Team 1', '8'), getItem('Team 2', '9')]),
-    getItem('Option 5', '10'),
-    getItem('Option 6', '11'),
-    getItem('Option 7', '12'),
-    getItem('Option 8', '13'),
-    getItem('Option 9', '14'),
-    getItem('Option 10', '15'),
-];
 
 function UserHeader(props) {
     // useNavigate
@@ -55,6 +25,10 @@ function UserHeader(props) {
 
     const signUp = () => {
         return navigate('/signup');
+    }
+
+    const linkTo = (e) => {
+        navigate(e.key);
     }
 
     return (
@@ -120,8 +94,9 @@ function UserHeader(props) {
                             theme="#FFB0BD"
                             mode="horizontal"
                             defaultSelectedKeys={['1']}
-                            items={items}
+                            items={fakeNav}
                             className='menu-nav'
+                            onClick={linkTo}
                         />
                     </div>
                 </div>

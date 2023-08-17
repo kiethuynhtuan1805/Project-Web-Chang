@@ -2,26 +2,26 @@ import { Icon } from '@iconify/react';
 import './ProductDetail.scss';
 import { Trace } from 'Components';
 import { Button, Col, Image, InputNumber, Row, Tooltip } from 'antd';
-import { fakeProduct, fakeListProduct } from 'data';
+import { fakeProduct, fakeListProduct, fakeTrace } from 'data';
 import { ListProduct } from 'Components';
 
 export default function ProductDetail(props) {
     // Setting trace
-    let traceData = ["Home"];
-    const dataHref = window.location.href.split('/').splice(3,);
-    for (let i = 0; i <= dataHref.length - 2; i++) {
-        if (dataHref[i] === 'products') {
-            traceData.push(`${fakeProduct.name} ${fakeProduct.code}`);
-            break;
-        } else {
-            traceData.push(dataHref[i]);
-        };
-    }
+    // let traceData = ["Home"];
+    // const dataHref = window.location.href.split('/').splice(3,);
+    // for (let i = 0; i <= dataHref.length - 2; i++) {
+    //     if (dataHref[i] === 'products') {
+    //         traceData.push(`${fakeProduct.name} ${fakeProduct.code}`);
+    //         break;
+    //     } else {
+    //         traceData.push(dataHref[i]);
+    //     };
+    // }
 
     return (
         <div className='ProductDetail container'>
             <div className='container-wrapper'>
-                <Trace traceData={traceData} />
+                <Trace traceData={fakeTrace} />
                 <div className='product-detail-main'>
                     <Row>
                         <Col xl={{ span: 12 }}>
