@@ -6,18 +6,6 @@ import { fakeProduct, fakeListProduct, fakeTrace } from 'data';
 import { ListProduct } from 'Components';
 
 export default function ProductDetail(props) {
-    // Setting trace
-    // let traceData = ["Home"];
-    // const dataHref = window.location.href.split('/').splice(3,);
-    // for (let i = 0; i <= dataHref.length - 2; i++) {
-    //     if (dataHref[i] === 'products') {
-    //         traceData.push(`${fakeProduct.name} ${fakeProduct.code}`);
-    //         break;
-    //     } else {
-    //         traceData.push(dataHref[i]);
-    //     };
-    // }
-
     return (
         <div className='ProductDetail container'>
             <div className='container-wrapper'>
