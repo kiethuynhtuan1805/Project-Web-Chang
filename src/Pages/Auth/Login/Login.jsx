@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Row } from 'antd'
+import { Button, Col, Divider, Form, Input, Row } from 'antd'
 import './Login.scss'
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
@@ -76,9 +76,7 @@ export default function Login() {
                             <div className='btn'>
                                 <Button className='btn-log-in' size='large' htmlType="submit">ĐĂNG NHẬP</Button>
                                 <Button type="link" className='btn-forget-password'>Quên mật khẩu?</Button>
-                                <div style={{ width: '80%', fontSize: '1.1rem', marginTop: '40px', marginBottom: '20px' }}>
-                                    ---------- Hoặc ----------
-                                </div>
+                                <Divider orientation="center" style={{ width: '80%', fontSize: '1.1rem', marginTop: '40px', marginBottom: '30px' }}>Hoặc</Divider>
                                 <Button className='btn-facebook' size='large'><Icon icon="logos:facebook" style={{ marginRight: '5px' }} />Đăng nhập với Facebook</Button>
                                 <Button className='btn-google' size='large'><Icon icon="devicon:google" style={{ marginRight: '5px' }} />Đăng nhập với Google</Button>
                             </div>

@@ -1,13 +1,74 @@
 .AllProduct {
     .container-wrapper {
+        .list-select {
+            padding-right: 50px;
+            text-align: left;
+
+            &>div {
+                &>div:first-child {
+                    padding: 0 15px;
+                    color: var(--COLOR-brown-deep);
+                    border-bottom: 1px solid var(--COLOR-brown-deep);
+                }
+
+                &>div:last-child {
+                    padding: 0;
+                    padding-top: 10px;
+
+                    &>ul {
+                        border-inline-end: none;
+                    }
+
+                    .ant-menu-submenu {
+                        &>ul {
+                            background-color: white !important;
+
+                            &>li {
+                                &:hover {
+                                    color: black;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        margin: 5px 15px;
+                    }
+
+                    &>div {
+                        margin: 30px 15px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
         .content {
-            &>p {
+            &>div:first-child {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 margin-top: 10px;
                 margin-bottom: 30px;
-                text-align: left;
-                font-weight: bold;
-                font-size: 1.7rem;
-                text-transform: uppercase;
+
+                &>div {
+                    &>div {
+                        display: flex;
+                        align-items: center;
+                        height: 40px;
+                        font-size: 1rem;
+                        color: var(--COLOR-brown-deep);
+                    }
+                }
+
+                &>p {
+                    text-align: left;
+                    font-weight: bold;
+                    font-size: 1.7rem;
+                    text-transform: uppercase;
+                }
             }
 
             &>div {

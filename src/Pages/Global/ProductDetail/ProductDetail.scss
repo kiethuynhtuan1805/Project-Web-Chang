@@ -143,13 +143,25 @@
             text-align: left;
 
             &>p:first-child {
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 font-weight: bold;
             }
 
             &>div {
-                margin-bottom: 50px;
+                margin-bottom: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
 
+                .pagination {
+                    margin-top: 30px;
+
+                    li {
+                        a {
+                            display: inline-block;
+                        }
+                    }
+                }
             }
         }
     }

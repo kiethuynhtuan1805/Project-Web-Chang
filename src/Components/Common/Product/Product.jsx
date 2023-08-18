@@ -21,7 +21,7 @@ export default function Product({ dataProduct }) {
                     {dataProduct.code}
                 </p>
                 <p>
-                    {dataProduct.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}
+                    {`${dataProduct.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}
                 </p>
             </div>
         </div>

@@ -60,10 +60,13 @@ function UserHeader(props) {
                                     Đăng nhập
                                     <div></div>
                                 </Col>
+                                <Col span={2} style={{ display: 'flex', alignItems: 'center' }}>
+                                    <Icon icon="ci:line-l" width="24" height="24" />
+                                </Col>
                                 <Col span={9} className='sign-up' onClick={signUp}>
                                     Đăng ký
                                 </Col>
-                                <Col span={6} style={{
+                                <Col span={4} style={{
                                     display: 'flex',
                                     alignItems: 'center',
                                     textAlign: 'right',

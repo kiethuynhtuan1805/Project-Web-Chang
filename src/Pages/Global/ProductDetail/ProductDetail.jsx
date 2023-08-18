@@ -1,13 +1,13 @@
 import { Icon } from '@iconify/react';
 import './ProductDetail.scss';
 import { Trace } from 'Components';
-import { Button, Col, Image, InputNumber, Row, Tooltip } from 'antd';
+import { Button, Col, Image, InputNumber, Pagination, Row, Tooltip } from 'antd';
 import { fakeProduct, fakeListProduct, fakeTrace } from 'data';
 import { ListProduct } from 'Components';
 
 export default function ProductDetail(props) {
     const traceData = {
-        data: ["Home", ...fakeProduct.trace.split('\n'), `${fakeProduct.name} ${fakeProduct.code}`],
+        data: ["Trang chủ", ...fakeProduct.trace.split('\n'), `${fakeProduct.name} ${fakeProduct.code}`],
         route: ['/', ...fakeProduct.type.split('\n')]
     };
 
@@ -45,7 +45,7 @@ export default function ProductDetail(props) {
                         <Col xl={{ span: 12 }}>
                             <div className='product-detail-content'>
                                 <p className='title'>{`${fakeProduct.name} ${fakeProduct.code}`}</p>
-                                <p className='price'>{fakeProduct.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}</p>
+                                <p className='price'>{`${fakeProduct.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
                                 <p className='inventory'>*Hiện tại cửa hàng còn <strong>{fakeProduct.inventory}</strong> sản phẩm này.</p>
                                 <div className='quantity'>
                                     <p>Số lượng</p>
@@ -114,6 +114,13 @@ export default function ProductDetail(props) {
                     </p>
                     <div>
                         <ListProduct data={fakeListProduct.data} btn={false} />
+                        <Pagination
+                            showSizeChanger={false}
+                            // onShowSizeChange={onShowSizeChange}
+                            defaultCurrent={1}
+                            total={500}
+                            className='pagination'
+                        />
                     </div>
                 </div>
             </div>
