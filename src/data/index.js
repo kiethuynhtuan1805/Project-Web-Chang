@@ -1,6 +1,7 @@
 export const fakeUser = {
     id: 0,
     cart: 2,
+    name: 'Kiet HuynhHuynh'
 }
 
 export let fakeNav = [

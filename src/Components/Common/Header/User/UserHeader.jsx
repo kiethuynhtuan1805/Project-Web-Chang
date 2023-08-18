@@ -1,5 +1,5 @@
 import './UserHeader.scss';
-import { Layout, Col, Row, Menu, Tooltip } from 'antd';
+import { Layout, Col, Row, Menu, Tooltip, Image } from 'antd';
 import SearchBar from 'Components/Common/SearchBar/SearchBar';
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
@@ -56,7 +56,7 @@ function UserHeader(props) {
                         </Col>
                         <Col span={6}>
                             <Row align="middle" className='auth-user'>
-                                <Col span={9} className='log-in' onClick={logIn}>
+                                {/* <Col span={9} className='log-in' onClick={logIn}>
                                     Đăng nhập
                                     <div></div>
                                 </Col>
@@ -65,6 +65,19 @@ function UserHeader(props) {
                                 </Col>
                                 <Col span={9} className='sign-up' onClick={signUp}>
                                     Đăng ký
+                                </Col> */}
+                                <Col span={20}>
+                                    <div className='info-wrapper'>
+                                        <Image
+                                            src="123"
+                                            className='avatar'
+                                            preview={false}
+                                            fallback={'https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg'}
+                                        />
+                                        <p>
+                                            {fakeUser.name}
+                                        </p>
+                                    </div>
                                 </Col>
                                 <Col span={4} style={{
                                     display: 'flex',
@@ -103,8 +116,8 @@ function UserHeader(props) {
                         />
                     </div>
                 </div>
-            </Header>
-        </div>
+            </Header >
+        </div >
     )
 }
 
