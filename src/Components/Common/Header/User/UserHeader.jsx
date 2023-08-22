@@ -1,5 +1,5 @@
 import './UserHeader.scss';
-import { Layout, Col, Row, Menu, Tooltip, Image } from 'antd';
+import { Layout, Col, Row, Menu, Tooltip, Image, Dropdown } from 'antd';
 import SearchBar from 'Components/Common/SearchBar/SearchBar';
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
@@ -13,6 +13,40 @@ const headerStyle = {
     paddingInline: 0,
     backgroundColor: '#ffffff',
 };
+
+const items = [
+    {
+        key: '1',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                1st menu item
+            </a>
+        ),
+    },
+    {
+        key: '2',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+                2nd menu item (disabled)
+            </a>
+        ),
+        disabled: true,
+    },
+    {
+        key: '3',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+                3rd menu item (disabled)
+            </a>
+        ),
+        disabled: true,
+    },
+    {
+        key: '4',
+        danger: true,
+        label: 'a danger item',
+    },
+];
 
 function UserHeader(props) {
     // useNavigate
@@ -67,17 +101,27 @@ function UserHeader(props) {
                                     Đăng ký
                                 </Col> */}
                                 <Col span={20}>
-                                    <div className='info-wrapper'>
-                                        <Image
-                                            src="123"
-                                            className='avatar'
-                                            preview={false}
-                                            fallback={'https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg'}
-                                        />
-                                        <p>
-                                            {fakeUser.name}
-                                        </p>
-                                    </div>
+                                    <Dropdown
+                                        menu={{
+                                            items,
+                                        }}
+                                        arrow={{
+                                            pointAtCenter: true,
+                                        }}
+                                        placement="bottom"
+                                    >
+                                        <div className='info-wrapper' onClick={(e) => e.preventDefault()}>
+                                            <Image
+                                                src="123"
+                                                className='avatar'
+                                                preview={false}
+                                                fallback={'https://thinksport.com.au/wp-content/uploads/2020/01/avatar-.jpg'}
+                                            />
+                                            <p>
+                                                {fakeUser.name}
+                                            </p>
+                                        </div>
+                                    </Dropdown>
                                 </Col>
                                 <Col span={4} style={{
                                     display: 'flex',
