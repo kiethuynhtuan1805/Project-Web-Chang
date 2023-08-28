@@ -38,11 +38,10 @@
                 align-items: center;
                 text-align: left;
                 height: 100%;
+                cursor: pointer;
 
-                div {
-                    width: 200px;
-                    height: 100%;
-                    background: url('../../../../assets/images/logo1.jpg') center center/cover;
+                &:hover {
+                    opacity: 0.7;
                 }
             }
 
@@ -69,7 +68,8 @@
                     }
                 }
 
-                .log-in {
+                .log-in,
+                .username {
                     position: relative;
 
                     div {
@@ -87,7 +87,9 @@
                 }
 
                 .log-in,
-                .sign-up {
+                .sign-up,
+                .username,
+                .log-out {
                     font-size: 1rem;
                     height: 30%;
 

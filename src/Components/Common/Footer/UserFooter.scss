@@ -6,37 +6,18 @@
         .footer-left {
             text-align: left;
 
-            .hot-line {
+            .hot-line,
+            .email {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
 
                 div:last-child {
                     text-align: left;
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
 
                     a {
-                        color: rgb(17, 91, 97);
-
-                        &:hover {
-                            color: rgb(0, 72, 255);
-                        }
-                    }
-                }
-            }
-
-            .email {
-                display: flex;
-                flex-direction: row;
-                align-items: flex-end;
-
-                div:last-child {
-                    text-align: left;
-                    font-size: 1.3rem;
-
-                    a {
-                        font-size: 1.1rem;
-                        color: rgb(17, 91, 97);
+                        color: rgb(210, 51, 117);
 
                         &:hover {
                             color: rgb(0, 72, 255);
@@ -62,6 +43,7 @@
         .footer-right {
             display: flex;
             justify-content: right;
+            font-size: 1rem;
 
             .footer-right-wrapper {
                 .signature {

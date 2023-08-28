@@ -8,6 +8,7 @@ import Product from "./Common/Product/Product";
 import FollowMeBanner from "./Common/FollowMeBanner/FollowMeBanner";
 import Trace from "./Common/Trace/Trace";
 import ScrollToTop from "./Common/ScrollToTop/ScrollToTop";
+import AvatarUpload from "./Common/AvatarUpload/AvatarUpload";
 
 export {
     Hero,
@@ -20,4 +21,5 @@ export {
     FollowMeBanner,
     Trace,
     ScrollToTop,
+    AvatarUpload,
 }

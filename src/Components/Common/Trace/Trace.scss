@@ -20,8 +20,9 @@
     }
 
     .trace-data:last-child {
+        color: var(--COLOR-pink-super-deep);
+
         &:hover {
-            color: var(--COLOR-brown-deep);
             cursor: auto;
         }
     }

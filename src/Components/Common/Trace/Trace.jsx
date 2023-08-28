@@ -6,7 +6,7 @@ export default function Trace({ traceData }) {
     const navigate = useNavigate();
 
     const linkTo = (id) => {
-        if (id === '/' || id === 'products') {
+        if (id === '/' || id === '/products' || id === '/profile') {
             return navigate(id);
         } else {
             return navigate(`/collections/${id}`)
