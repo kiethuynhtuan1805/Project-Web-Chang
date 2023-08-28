@@ -9,6 +9,7 @@ import FollowMeBanner from "./Common/FollowMeBanner/FollowMeBanner";
 import Trace from "./Common/Trace/Trace";
 import ScrollToTop from "./Common/ScrollToTop/ScrollToTop";
 import AvatarUpload from "./Common/AvatarUpload/AvatarUpload";
+import UserPageNav from "./Common/UserPageNav/UserPageNav";
 
 export {
     Hero,
@@ -22,4 +23,5 @@ export {
     Trace,
     ScrollToTop,
     AvatarUpload,
+    UserPageNav,
 }

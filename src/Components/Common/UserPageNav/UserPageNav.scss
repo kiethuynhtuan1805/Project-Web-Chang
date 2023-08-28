@@ -1,0 +1,44 @@
+.UserPageNav {
+    .content {
+        p {
+            margin-top: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    }
+
+    .navigation {
+        margin-top: 20px;
+        font-size: 1rem;
+        text-align: left;
+
+        ul {
+            padding-left: 20px;
+            list-style-type: none;
+            color: black;
+
+            li {
+                margin: 10px 0;
+                cursor: pointer;
+
+                &:hover {
+                    color: rgb(62, 169, 252);
+                    opacity: 0.7;
+                }
+            }
+
+            li:last-child {
+                color: red;
+
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .selected {
+            color: var(--COLOR-pink-super-deep);
+            font-weight: bold;
+        }
+    }
+}

@@ -1,6 +1,6 @@
-.Profile {
+.Favorite {
     .container-wrapper {
-        .profile-content {
+        .favorite-content {
             border: 1px solid #ccc;
             border-radius: 10px;
 
@@ -34,22 +34,10 @@
                             padding-top: 5px;
                         }
 
-                        .default-input {
-                            input {
+                        .password {
+                            .ant-form-item-control-input-content>span {
                                 height: 40px;
-                            }
-                        }
-
-                        .default-select {
-                            .ant-col:last-child {
-                                height: 40px;
-
-                                div {
-                                    display: flex;
-                                    align-items: center;
-                                    height: 100%;
-                                    text-align: left;
-                                }
+                                font-size: 1rem;
                             }
                         }
 

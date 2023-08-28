@@ -1,17 +1,9 @@
 import { Trace } from 'Components';
 import './Profile.scss'
-import { Button, Col, DatePicker, Form, Input, InputNumber, Row, Select } from 'antd';
-import { AvatarUpload } from 'Components';
-import { fakeUser } from 'data';
-
-const layout = {
-    labelCol: {
-        span: 4,
-    },
-    wrapperCol: {
-        span: 20,
-    },
-};
+import { Button, Col, DatePicker, Form, Input, Row, Select } from 'antd';
+import { UserPageNav } from 'Components';
+import TextArea from 'antd/es/input/TextArea';
+import { useState } from 'react';
 
 /* eslint-disable no-template-curly-in-string */
 const validateMessages = {
@@ -31,49 +23,38 @@ export default function Profile() {
         route: ['/', "/profile"]
     };
 
+    const [formLayout, setFormLayout] = useState('horizontal');
+    const formItemLayout =
+        formLayout === 'horizontal'
+            ? {
+                labelCol: {
+                    span: 4,
+                },
+                wrapperCol: {
+                    span: 20,
+                },
+            }
+            : null;
+
     return (
         <div className='Profile container'>
             <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
-                    <Col span={6} style={{ border: '1px solid #ccc', padding: '20px', borderRadius: '10px' }}>
-                        <div className='content'>
-                            <AvatarUpload />
-                            <p>
-                                {fakeUser.name}
-                            </p>
-                        </div>
-                        <div className='navigation'>
-                            <ul>
-                                <li className='selected'>
-                                    Thông tin tài khoản
-                                </li>
-                                <li>
-                                    Đổi mật khẩu
-                                </li>
-                                <li>
-                                    Lịch sử đơn hàng
-                                </li>
-                                <li>
-                                    Sản phẩm yêu thích
-                                </li>
-                                <li>
-                                    Đăng xuất
-                                </li>
-                            </ul>
-                        </div>
+                    <Col span={6} style={{ border: '1px solid #ccc', padding: '15px', borderRadius: '10px', height: '360px' }}>
+                        <UserPageNav type={'nav-info'} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={17}>
                         <div className='profile-content'>
                             <div>
                                 <p>Hồ sơ của tôi</p>
-                                <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
+                                <p>Quản lý thông tin hồ sơ để bảo mật tài khoản!</p>
                             </div>
                             <div>
-
                                 <Form
-                                    {...layout}
+                                    {...formItemLayout}
+                                    layout={formLayout}
                                     // onFinish={}
                                     validateMessages={validateMessages}
                                     name="basic"
@@ -144,12 +125,12 @@ export default function Profile() {
                                         label="Địa chỉ chi tiết"
                                         className='default-input'
                                     >
-                                        <Input.TextArea placeholder="Địa chỉ chi tiết" />
+                                        <TextArea placeholder="Địa chỉ chi tiết" rows={4} />
                                     </Form.Item>
 
                                     <Form.Item>
                                         <div className='btn'>
-                                            <Button className='btn-sign-up' size='large' htmlType='submit'>Cập nhật</Button>
+                                            <Button className='btn-update' size='large' htmlType='submit'>Cập nhật</Button>
                                         </div>
                                     </Form.Item>
                                 </Form>

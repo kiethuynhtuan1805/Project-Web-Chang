@@ -1,0 +1,34 @@
+.History {
+    .container-wrapper {
+        .history-content {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+
+            &>div {
+                &:first-child {
+                    padding: 15px;
+                    border-bottom: 1px solid #ccc;
+                    text-align: left;
+                    font-size: 1rem;
+
+                    p:first-child {
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-bottom: 10px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &:last-child {
+                    ul {
+                        .ant-pagination-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
