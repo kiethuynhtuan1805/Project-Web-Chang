@@ -22,47 +22,16 @@
                 &:last-child {
                     display: flex;
                     justify-content: center;
-                    margin: 40px 0;
+                    flex-direction: column;
+                    margin: 30px 5px;
 
-                    form {
-                        width: 100%;
-                        max-width: 800px;
-                        font-size: 1rem;
+                    .pagination {
+                        margin-top: 10px;
+                        margin-bottom: 20px;
 
-                        .ant-col:first-child {
-                            display: flex;
-                            padding-top: 5px;
-                        }
-
-                        .password {
-                            .ant-form-item-control-input-content>span {
-                                height: 40px;
-                                font-size: 1rem;
-                            }
-                        }
-
-                        &>div:last-child {
-                            display: flex;
-                            justify-content: center;
-
-                            div {
-                                justify-content: center;
-
-                                .btn {
-                                    button {
-                                        background-color: var(--COLOR-pink-super-deep);
-                                        color: white;
-                                        font-weight: bold;
-                                        text-transform: uppercase;
-                                        width: 150px;
-
-                                        &:hover {
-                                            outline: none;
-                                            border: none;
-                                            opacity: 0.7;
-                                        }
-                                    }
-                                }
+                        li {
+                            a {
+                                display: inline-block;
                             }
                         }
                     }

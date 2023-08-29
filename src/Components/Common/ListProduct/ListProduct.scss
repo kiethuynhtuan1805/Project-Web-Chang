@@ -3,6 +3,12 @@
     flex-direction: column;
     align-items: center;
 
+    &>div {
+        &>div {
+            padding: 0 5px;
+        }
+    }
+
     .btn-more {
         width: 120px;
         height: 40px;

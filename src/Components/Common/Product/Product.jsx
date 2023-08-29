@@ -1,25 +1,34 @@
 import { Image } from 'antd';
 import './Product.scss';
+import { useNavigate } from 'react-router-dom';
 
-export default function Product({ dataProduct }) {
+export default function Product({ dataProduct, type }) {
+    // useNavigate
+    const navigate = useNavigate();
+
+    const linkTo = () => {
+        return navigate('/products/1');
+    };
     return (
         <div className='Product'>
-            <div style={{ height: '70%' }}>
+            <div onClick={linkTo}>
                 <Image
                     width={'100%'}
-                    height={'100%'}
+                    height={type === 'home' ? '250px' : '200px'}
                     preview={false}
                     src={dataProduct.picSrc[0].src}
                     fallback={require('../../../assets/images/image-not-found.png')}
                 />
             </div>
-            <div style={{ height: '30%' }}>
-                <p>
-                    {dataProduct.name}
-                </p>
-                <p>
-                    {dataProduct.code}
-                </p>
+            <div >
+                <div onClick={linkTo}>
+                    <p>
+                        {dataProduct.name}
+                    </p>
+                    <p>
+                        {dataProduct.code}
+                    </p>
+                </div>
                 <p>
                     {`${dataProduct.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}
                 </p>

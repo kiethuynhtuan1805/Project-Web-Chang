@@ -10,6 +10,7 @@ import Trace from "./Common/Trace/Trace";
 import ScrollToTop from "./Common/ScrollToTop/ScrollToTop";
 import AvatarUpload from "./Common/AvatarUpload/AvatarUpload";
 import UserPageNav from "./Common/UserPageNav/UserPageNav";
+import CustomSearchTable from "./Common/CustomSearchTable/CustomSearchTable";
 
 export {
     Hero,
@@ -24,4 +25,5 @@ export {
     ScrollToTop,
     AvatarUpload,
     UserPageNav,
+    CustomSearchTable,
 }

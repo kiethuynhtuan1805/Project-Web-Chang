@@ -1,9 +1,11 @@
 import { Trace } from 'Components';
 import './Favorite.scss'
-import { Button, Col, Form, Input, Row } from 'antd';
+import { Button, Col, Form, Input, Pagination, Row } from 'antd';
 import { UserPageNav } from 'Components';
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import { ListProduct } from 'Components';
+import { fakeListProduct } from 'data';
 
 export default function Favorite() {
     const traceData = {
@@ -41,80 +43,14 @@ export default function Favorite() {
                                 <p style={{ display: 'flex' }}>Hãy <Icon icon="mdi:heart" color="pink" width={24} height={24} style={{ margin: '0 5px' }} /> sản phẩm bạn yêu thích để xem thuận tiện hơn!</p>
                             </div>
                             <div>
-                                <Form
-                                    {...formItemLayout}
-                                    layout={formLayout}
-                                    // onFinish={}
-                                    name="basic"
-                                    style={{
-                                        width: '100%',
-                                    }}
-                                    initialValues={{
-                                        remember: true,
-                                    }}
-                                    // onFinish={onFinish}
-                                    // onFinishFailed={onFinishFailed}
-                                    autoComplete="off"
-                                >
-                                    <Form.Item
-                                        name="password"
-                                        label="Mật khẩu cũ"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Vui lòng nhập mật khẩu!',
-                                            },
-                                        ]}
-                                        className='password'
-                                    >
-                                        <Input.Password placeholder="Mật khẩu (*)" />
-                                    </Form.Item>
-
-                                    <Form.Item
-                                        name="new-password"
-                                        label="Mật khẩu mới"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Vui lòng nhập mật khẩu!',
-                                            },
-                                        ]}
-                                        className='password'
-                                    >
-                                        <Input.Password placeholder="Mật khẩu (*)" />
-                                    </Form.Item>
-
-                                    <Form.Item
-                                        name="confirm"
-                                        label="Xác nhận mật khẩu"
-                                        dependencies={['new-password']}
-                                        hasFeedback
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: 'Vui lòng nhập lại mật khẩu!',
-                                            },
-                                            ({ getFieldValue }) => ({
-                                                validator(_, value) {
-                                                    if (!value || getFieldValue('password') === value) {
-                                                        return Promise.resolve();
-                                                    }
-                                                    return Promise.reject(new Error('Mật khẩu không khớp!'));
-                                                },
-                                            }),
-                                        ]}
-                                        className='password'
-                                    >
-                                        <Input.Password placeholder={'Xác nhận mật khẩu (*)'} />
-                                    </Form.Item>
-
-
-                                    <Form.Item>
-                                        <div className='btn'>
-                                            <Button className='btn-update' size='large' htmlType='submit'>Cập nhật</Button>
-                                        </div>
-                                    </Form.Item>
-                                </Form>
+                                <ListProduct data={fakeListProduct.data} btn={false} />
+                                <Pagination
+                                    showSizeChanger={false}
+                                    // onShowSizeChange={onShowSizeChange}
+                                    defaultCurrent={1}
+                                    total={500}
+                                    className='pagination'
+                                />
                             </div>
                         </div>
                     </Col>

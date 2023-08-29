@@ -17,7 +17,7 @@ function GlobalHome(props) {
                             return (
                                 <div key={`home-${data.name}-${id}`} className='home-data'>
                                     <p className='home-data-name'>{data.name}</p>
-                                    <ListProduct data={data.data} />
+                                    <ListProduct data={data.data} type={'home'} />
                                 </div>
                             )
                         })

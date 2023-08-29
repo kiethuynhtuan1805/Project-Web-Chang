@@ -1,8 +1,8 @@
 import { Icon } from "@iconify/react";
-import { Button, Input, Space } from "antd";
+import { Button, Input, Space, Table } from "antd";
 import { useRef, useState } from "react";
 
-export default function CustomSearchTable(props) {
+export default function CustomSearchTable({ columns, data }) {
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef(null);
@@ -14,6 +14,9 @@ export default function CustomSearchTable(props) {
     const handleReset = (clearFilters) => {
         clearFilters();
         setSearchText('');
+    };
+    const onChange = (pagination, filters, sorter, extra) => {
+        console.log('params', pagination, filters, sorter, extra);
     };
 
     const getColumnSearchProps = (dataIndex) => ({
@@ -81,20 +84,25 @@ export default function CustomSearchTable(props) {
             </div>
         ),
         filterIcon: (filtered) => (
-            <Icon icon="material-symbols:search" color="red" />
+            <Icon icon="material-symbols:search" color={filtered ? '#1677ff' : 'gray'} width={16} height={16} />
         ),
         onFilter: (value, record) =>
             record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
         onFilterDropdownOpenChange: (visible) => {
             if (visible) {
                 setTimeout(() => searchInput.current?.select(), 100);
+            } else {
             }
         },
     });
 
-    return (
-        <div className="CustomSearchTable">
+    const formatter = (value) => `${`${value.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}`;
 
-        </div>
+    const newData = data.map((item) => item ? { ...item, orderPrice: formatter(item.orderPrice) } : item);
+
+    return (
+        <Table columns={columns.map((item) =>
+            item.isSearched ? { ...item, ...getColumnSearchProps(item.dataIndex) } : item
+        )} dataSource={newData} onChange={onChange} bordered />
     )
 }
