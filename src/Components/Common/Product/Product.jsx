@@ -1,6 +1,7 @@
 import { Image } from 'antd';
 import './Product.scss';
 import { useNavigate } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
 export default function Product({ dataProduct, type }) {
     // useNavigate
@@ -19,6 +20,11 @@ export default function Product({ dataProduct, type }) {
                     src={dataProduct.picSrc[0].src}
                     fallback={require('../../../assets/images/image-not-found.png')}
                 />
+                <div className='product-action'>
+                    <div className='favorite-action'></div>
+                    <Icon icon="pepicons-pop:line-y" width={32} height={32} />
+                    <div className='cart-action'></div>
+                </div>
             </div>
             <div >
                 <div onClick={linkTo}>

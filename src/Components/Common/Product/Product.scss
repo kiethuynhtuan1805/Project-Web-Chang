@@ -9,6 +9,7 @@
     margin-bottom: 30px;
 
     &>div:first-child {
+        position: relative;
         overflow: hidden;
 
         img {
@@ -19,6 +20,55 @@
                 cursor: pointer;
                 transform: scale(1.2);
                 transition: all 300ms;
+            }
+        }
+
+        &:hover {
+            .product-action {
+                opacity: 1;
+                transform: translateY(0%);
+                transition: all 400ms;
+            }
+        }
+
+        .product-action {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 5px 0;
+            background-color: var(--COLOR-pink-smooth);
+            color: white;
+            z-index: 1;
+
+            opacity: 0;
+            transform: translateY(80%);
+            transition: all 400ms;
+
+            .favorite-action {
+                background: url('../../../assets/images/action.png') no-repeat -33px 0;
+                width: 32px;
+                height: 32px;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: all 300ms;
+                    background: url('../../../assets/images/action.png') no-repeat -33px -36px;
+                }
+            }
+
+            .cart-action {
+                background: url('../../../assets/images/action.png') no-repeat 0 0;
+                width: 32px;
+                height: 32px;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: all 300ms;
+                    background: url('../../../assets/images/action.png') no-repeat 0 -32px;
+                }
             }
         }
     }
