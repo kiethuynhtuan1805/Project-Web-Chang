@@ -1,4 +1,5 @@
 import './App.scss';
+import './GlobalCss/Modal.scss';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GlobalHome, ProductDetail, Login, Signup, AllProduct, Profile, ManagePassword, History, Favorite, Cart } from './Pages';

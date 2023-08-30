@@ -55,7 +55,7 @@
                 &:hover {
                     cursor: pointer;
                     transition: all 300ms;
-                    background: url('../../../assets/images/action.png') no-repeat -33px -36px;
+                    background: url('../../../assets/images/action.png') no-repeat -33px -32px;
                 }
             }
 
@@ -101,9 +101,8 @@
             align-items: center;
             justify-content: center;
             min-height: 30px;
-            font-size: 0.9rem;
-            font-weight: 450;
-            color: var(--COLOR-brown-smooth);
+            font-size: 1rem;
+            color: black;
         }
     }
 }

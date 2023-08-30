@@ -7,11 +7,11 @@ export default function ListProduct({ data, btn, type }) {
         <div className='ListProduct'>
             <Row>
                 {
-                    data.map((data, id) => {
+                    data.map((item, id) => {
                         return (
-                            <Col key={`Product-${data}-${id}`} xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{ span: 6 }} xxl={{ span: 4 }}>
+                            <Col key={`Product-${item}-${id}`} xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{ span: 6 }} xxl={{ span: 4 }}>
                                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                    <Product dataProduct={data} type={type ? type : ''} />
+                                    <Product dataProduct={item} type={type ? type : ''} />
                                 </div>
                             </Col>
                         )

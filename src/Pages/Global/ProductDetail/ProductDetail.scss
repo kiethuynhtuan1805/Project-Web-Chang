@@ -36,9 +36,17 @@
                 font-size: 1.1rem;
 
                 .title {
-                    font-size: 1.7rem;
+                    font-size: 1.8rem;
                     font-weight: bold;
                     color: var(--COLOR-brown-smooth);
+                }
+
+                .code {
+                    margin-top: 10px;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    font-style: italic;
+                    color: #9c9c9c;
                 }
 
                 .price {
