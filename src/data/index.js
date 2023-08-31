@@ -95,6 +95,19 @@ export const fakeProduct = {
         {
             id: 4,
             src: 'https://tinyyume.com/cdn/shop/files/AA084copie2_360x.jpg?v=1690404912',
+        },
+        {
+            id: 5,
+            src: 'https://tinyyume.com/cdn/shop/files/AA084copie2_360x.jpg?v=1690404912',
+        },
+        {
+            id: 6,
+            src: 'https://tinyyume.com/cdn/shop/files/AA084copie2_360x.jpg?v=1690404912',
+        }
+        ,
+        {
+            id: 7,
+            src: 'https://tinyyume.com/cdn/shop/files/AA084copie2_360x.jpg?v=1690404912',
         }
     ],
     name: 'Cottagecore stamp stickers',
@@ -104,7 +117,8 @@ export const fakeProduct = {
     onSale: 0,
     trace: 'Phụ kiện\nTrang sức',
     type: 'phu-kien\ntrang-suc',
-    description: '1 matte waterproof vinyl sticker\nEasily removable without glue residue\nSuitable for outdoor use, planners, cell phone, laptop and more! No dishwasher or microwave proof\nMeasures 6,5 x 7 cm\nColors may vary because of your monitor'
+    description: '1 matte waterproof vinyl sticker\nEasily removable without glue residue\nSuitable for outdoor use, planners, cell phone, laptop and more! No dishwasher or microwave proof\nMeasures 6,5 x 7 cm\nColors may vary because of your monitor',
+    favorite: 0,
 }
 
 export const fakeListProduct = {

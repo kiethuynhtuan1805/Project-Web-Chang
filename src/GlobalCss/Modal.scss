@@ -8,11 +8,12 @@
 
         .modal-picture-sub {
             display: flex;
-            align-items: center;
-            height: 80px;
+            justify-content: center;
+            flex-wrap: wrap;
 
             &>div {
                 margin-right: 10px;
+                margin-bottom: 20px;
                 box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
             }
 
@@ -79,12 +80,10 @@
         }
 
         .color-picked {
-            display: flex;
-            align-items: center;
-
             p {
                 font-size: 1.1rem;
                 margin-right: 20px;
+                margin-bottom: 10px;
             }
 
             .color-option {
@@ -98,11 +97,42 @@
             }
         }
 
-        .quantity {
-            margin-top: 30px;
+        .type-picked {
+            margin-top: 5px;
 
             p {
+                font-size: 1.1rem;
+                margin-right: 20px;
+            }
+
+            .type-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+
+                .type {
+                    border: 1px solid #9c9c9c;
+                    border-radius: 5px;
+                    font-size: 0.9rem;
+                    padding: 5px 20px;
+                    margin-right: 15px;
+                    margin-bottom: 10px;
+                    color: #717171;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: var(--COLOR-pink-hover);
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .quantity {
+            p {
+                margin-top: 5px;
                 margin-bottom: 15px;
+                font-size: 1.1rem;
             }
 
             .btn-cart {
