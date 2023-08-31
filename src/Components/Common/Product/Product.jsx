@@ -41,7 +41,7 @@ export default function Product({ dataProduct, type }) {
                     <Icon icon="pepicons-pop:line-y" width={32} height={32} />
                     <div className='cart-action'></div>
                 </div>
-                <Modal open={isModalOpen} onCancel={handleCancel} width={800} footer={null} style={{ top: '50px' }} className='modal-cart'>
+                <Modal open={isModalOpen} onCancel={handleCancel} width={800} footer={null} style={{ top: '50px' }} className='modal-add-cart'>
                     <Row style={{ height: '100%', minHeight: '500px' }}>
                         <Col span={12}>
                             <div className='modal-picture-wrapper'>
@@ -156,6 +156,9 @@ export default function Product({ dataProduct, type }) {
                                     <InputNumber min={1} max={dataProduct.inventory} defaultValue={1} style={{ width: '180px', height: '40px', display: 'flex', alignItems: 'center', fontSize: '1rem' }} />
                                     <Button size={'large'} className='btn-cart'>
                                         Thêm vào giỏ hàng
+                                    </Button>
+                                    <Button size={'large'} className='btn-view'>
+                                        Xem chi tiết
                                     </Button>
                                 </div>
                             </div>

@@ -1,4 +1,4 @@
-.modal-cart {
+.modal-add-cart {
     color: var(--COLOR-brown-super-deep);
 
     .modal-picture-wrapper {
@@ -135,7 +135,8 @@
                 font-size: 1.1rem;
             }
 
-            .btn-cart {
+            .btn-cart,
+            .btn-view {
                 width: 100%;
                 height: 50px;
                 margin-top: 30px;
@@ -148,6 +149,15 @@
                     background-color: var(--COLOR-pink-hover);
                     outline: none;
                     border: none;
+                }
+            }
+
+            .btn-view {
+                margin-top: 10px;
+                background-color: var(--COLOR-blue);
+
+                &:hover {
+                    background-color: var(--COLOR-blue-hover);
                 }
             }
         }

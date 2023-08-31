@@ -1,9 +1,3 @@
-export const fakeUser = {
-    id: 0,
-    cart: 2,
-    name: 'Kiet HuynhHuynh'
-}
-
 export let fakeNav = [
     {
         label: 'HOME',
@@ -119,6 +113,12 @@ export const fakeProduct = {
     type: 'phu-kien\ntrang-suc',
     description: '1 matte waterproof vinyl sticker\nEasily removable without glue residue\nSuitable for outdoor use, planners, cell phone, laptop and more! No dishwasher or microwave proof\nMeasures 6,5 x 7 cm\nColors may vary because of your monitor',
     favorite: 0,
+}
+
+export const fakeUser = {
+    id: 0,
+    cart: [fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct],
+    name: 'Kiet HuynhHuynh'
 }
 
 export const fakeListProduct = {

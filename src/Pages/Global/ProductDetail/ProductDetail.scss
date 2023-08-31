@@ -32,7 +32,10 @@
                 &>div {
                     margin-right: 10px;
                     margin-bottom: 20px;
-                    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+                    img {
+                        box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+                    }
                 }
 
                 &>div:last-child {
@@ -48,11 +51,11 @@
 
                 .title-wrapper {
                     display: flex;
+                    justify-content: space-between;
 
                     .title {
                         font-size: 1.8rem;
                         font-weight: bold;
-                        margin-right: 20px;
                     }
 
                     .favorite {
@@ -157,17 +160,18 @@
 
                     .btn-wrapper {
                         display: flex;
+                        justify-content: space-between;
                         margin-top: 30px;
 
                         .btn-cart,
                         .btn-buy {
-                            width: 240px;
+                            width: 48%;
+                            min-width: 240px;
                             height: 50px;
                             background-color: var(--COLOR-pink-super-deep);
                             color: white;
                             font-weight: bold;
                             font-size: 1.2rem;
-                            margin-right: 30px;
 
                             &:hover {
                                 background-color: var(--COLOR-pink-hover);
@@ -186,6 +190,7 @@
 
                         ul {
                             li {
+                                text-align: justify;
                                 margin: 5px 0;
                             }
                         }
@@ -198,6 +203,7 @@
 
                     p:first-child {
                         margin-bottom: 40px;
+                        text-align: justify;
                     }
 
                     p:last-child {

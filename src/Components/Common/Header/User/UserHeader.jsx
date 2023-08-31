@@ -1,5 +1,5 @@
 import './UserHeader.scss';
-import { Layout, Col, Row, Menu, Tooltip, Image } from 'antd';
+import { Layout, Col, Row, Menu, Tooltip, Image, Dropdown } from 'antd';
 import SearchBar from 'Components/Common/SearchBar/SearchBar';
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
@@ -16,6 +16,7 @@ const headerStyle = {
 };
 
 function UserHeader(props) {
+    // useState
     const [isLogIn, setLogIn] = useState(false);
 
     // useNavigate
@@ -26,18 +27,17 @@ function UserHeader(props) {
         setLogIn(true);
         // return navigate('/login');
     }
-
     const signUp = () => {
         return navigate('/signup');
     }
-
     const logOut = () => {
         setLogIn(false);
     }
-
     const linkTo = (e) => {
         navigate(e.key);
     }
+
+    // Variables
 
     return (
         <div className='UserHeader'>
@@ -110,10 +110,17 @@ function UserHeader(props) {
                                     <div className='icon-cart'>
                                         {
                                             fakeUser ? (
-                                                <Tooltip placement='bottom' title={fakeUser === 0 ? ('Bạn chưa thêm sản phẩm nào vào giỏ hàng!') : ('Nhấn vào để thanh toán!')}>
-                                                    <Icon icon="solar:bag-heart-bold" color="pink" width={48} height={48} />
-                                                    <input defaultValue={fakeUser.cart} className='number-cart' disabled />
-                                                </Tooltip>
+                                                fakeUser.cart.length === 0 ? (
+                                                    <Tooltip placement='bottom' title={'Bạn chưa thêm sản phẩm nào vào giỏ hàng!'}>
+                                                        <Icon icon="solar:bag-heart-bold" color="pink" width={48} height={48} />
+                                                        <input defaultValue={0} className='number-cart' disabled />
+                                                    </Tooltip>
+                                                ) : (
+                                                    <>
+                                                        <Icon icon="solar:bag-heart-bold" color="pink" width={48} height={48} />
+                                                        <input defaultValue={fakeUser.cart.length} className='number-cart' disabled />
+                                                    </>
+                                                )
                                             ) : (
                                                 <Tooltip placement='bottom' title={'Bạn chưa thêm sản phẩm nào vào giỏ hàng!'}>
                                                     <Icon icon="solar:bag-heart-bold" color="pink" width={48} height={48} />
@@ -121,6 +128,29 @@ function UserHeader(props) {
                                                 </Tooltip>
                                             )
                                         }
+                                        <div className='cart-dropdown'>
+                                            <ul>
+                                                <li className='cart-item'>
+                                                    <Row>
+                                                        <Col span={6}>
+                                                            1
+                                                        </Col>
+                                                        <Col span={14}>
+                                                            1
+                                                        </Col>
+                                                        <Col span={4}>
+                                                            1
+                                                        </Col>
+                                                    </Row>
+                                                </li>
+                                                <li>
+
+                                                </li>
+                                            </ul>
+                                            <div>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </Col>
                             </Row>
