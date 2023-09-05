@@ -117,7 +117,41 @@ export const fakeProduct = {
 
 export const fakeUser = {
     id: 0,
-    cart: [fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct],
+    cart: [
+        {
+            product: fakeProduct,
+            quantity: 2,
+        },
+        {
+            product: fakeProduct,
+            quantity: 3,
+        },
+        {
+            product: fakeProduct,
+            quantity: 4,
+        },
+        {
+            product: fakeProduct,
+            quantity: 3,
+        },
+        {
+            product: fakeProduct,
+            quantity: 2,
+        },
+        {
+            product: fakeProduct,
+            quantity: 2,
+        },
+        {
+            product: fakeProduct,
+            quantity: 2,
+        },
+        {
+            product: fakeProduct,
+            quantity: 2,
+        }
+    ],
+    totalPrice: 1000000,
     name: 'Kiet HuynhHuynh'
 }
 

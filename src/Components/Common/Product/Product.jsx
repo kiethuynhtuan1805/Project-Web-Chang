@@ -36,10 +36,10 @@ export default function Product({ dataProduct, type }) {
                     fallback={require('../../../assets/images/image-not-found.png')}
                     onClick={linkTo}
                 />
-                <div className='product-action' onClick={showModal}>
+                <div className='product-action'>
                     <div className='favorite-action'></div>
                     <Icon icon="pepicons-pop:line-y" width={32} height={32} />
-                    <div className='cart-action'></div>
+                    <div className='cart-action' onClick={showModal}></div>
                 </div>
                 <Modal open={isModalOpen} onCancel={handleCancel} width={800} footer={null} style={{ top: '50px' }} className='modal-add-cart'>
                     <Row style={{ height: '100%', minHeight: '500px' }}>

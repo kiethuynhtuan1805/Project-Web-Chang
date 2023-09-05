@@ -1,5 +1,5 @@
 import './UserHeader.scss';
-import { Layout, Col, Row, Menu, Tooltip, Image, Dropdown } from 'antd';
+import { Layout, Col, Row, Menu, Tooltip, Image, Button } from 'antd';
 import SearchBar from 'Components/Common/SearchBar/SearchBar';
 import { Icon } from '@iconify/react';
 import { useNavigate } from 'react-router-dom';
@@ -105,7 +105,7 @@ function UserHeader(props) {
                                 <Col span={5} style={{
                                     display: 'flex',
                                     alignItems: 'center',
-                                    textAlign: 'right',
+                                    justifyContent: 'end',
                                 }}>
                                     <div className='icon-cart'>
                                         {
@@ -130,25 +130,52 @@ function UserHeader(props) {
                                         }
                                         <div className='cart-dropdown'>
                                             <ul>
-                                                <li className='cart-item'>
-                                                    <Row>
-                                                        <Col span={6}>
-                                                            1
-                                                        </Col>
-                                                        <Col span={14}>
-                                                            1
-                                                        </Col>
-                                                        <Col span={4}>
-                                                            1
-                                                        </Col>
-                                                    </Row>
-                                                </li>
-                                                <li>
-
-                                                </li>
+                                                {fakeUser.cart.map((item, id) => {
+                                                    return (
+                                                        <li className='cart-item' key={`cart-item-${item}-${id}`}>
+                                                            <Row style={{ height: '80px' }}>
+                                                                <Col span={6}>
+                                                                    <Image
+                                                                        width={'100%'}
+                                                                        height={'100%'}
+                                                                        preview={false}
+                                                                        src={item.product.picSrc[0].src}
+                                                                        fallback={require('../../../../assets/images/logo1.jpg')}
+                                                                    />
+                                                                </Col>
+                                                                <Col span={14} style={{ display: 'flex', alignItems: 'center' }}>
+                                                                    <div className='cart-item-content'>
+                                                                        <a className='title' href='#'>
+                                                                            {item.product.name}
+                                                                        </a>
+                                                                        <p className='price'>
+                                                                            Đơn giá: {`${item.product.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}
+                                                                        </p>
+                                                                    </div>
+                                                                </Col>
+                                                                <Col span={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                                    <div className='cart-item-action'>
+                                                                        <p className='quantity'>
+                                                                            x{item.quantity}
+                                                                        </p>
+                                                                        <div className='btn-delete'>
+                                                                            <Icon icon="material-symbols:delete" width={22} height={22} />
+                                                                        </div>
+                                                                    </div>
+                                                                </Col>
+                                                            </Row>
+                                                        </li>
+                                                    )
+                                                })}
                                             </ul>
-                                            <div>
-
+                                            <div className='cart-bottom'>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                    <p>Thành tiền</p>
+                                                    <p style={{ color: '#e53935' }}>{`${fakeUser.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
+                                                </div>
+                                                <Button size={'large'} className='btn-view-cart'>
+                                                    Xem giỏ hàng
+                                                </Button>
                                             </div>
                                         </div>
                                     </div>

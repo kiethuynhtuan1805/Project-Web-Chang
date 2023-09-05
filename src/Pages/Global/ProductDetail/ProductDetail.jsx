@@ -62,25 +62,25 @@ export default function ProductDetail(props) {
                                 <div className='color-picked'>
                                     <p>Màu sắc:</p>
                                     <Tooltip title={'Hồng nhạt'} >
-                                        <Icon icon="fluent:color-16-filled" color="pink" width={48} height={48} className='color-option selected' />
+                                        <Icon icon="fluent:color-16-filled" color="pink" width={44} height={44} className='color-option selected' />
                                     </Tooltip>
                                     <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={48} height={48} className='color-option' />
+                                        <Icon icon="fluent:color-24-filled" color="red" width={44} height={44} className='color-option' />
                                     </Tooltip>
                                     <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={48} height={48} className='color-option' />
+                                        <Icon icon="fluent:color-24-filled" color="red" width={44} height={44} className='color-option' />
                                     </Tooltip>
                                     <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={48} height={48} className='color-option' />
+                                        <Icon icon="fluent:color-24-filled" color="red" width={44} height={44} className='color-option' />
                                     </Tooltip>
                                     <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={48} height={48} className='color-option' />
+                                        <Icon icon="fluent:color-24-filled" color="red" width={44} height={44} className='color-option' />
                                     </Tooltip>
                                     <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={48} height={48} className='color-option' />
+                                        <Icon icon="fluent:color-24-filled" color="red" width={44} height={44} className='color-option' />
                                     </Tooltip>
                                     <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={48} height={48} className='color-option' />
+                                        <Icon icon="fluent:color-24-filled" color="red" width={44} height={44} className='color-option' />
                                     </Tooltip>
                                 </div>
                                 <div className='type-picked'>
@@ -120,7 +120,7 @@ export default function ProductDetail(props) {
                                 </div>
                                 <div className='quantity'>
                                     <p>Số lượng:</p>
-                                    <InputNumber min={1} max={fakeProduct.inventory} defaultValue={1} style={{ width: '200px', height: '40px', display: 'flex', alignItems: 'center', fontSize: '1.2rem' }} />
+                                    <InputNumber min={1} max={fakeProduct.inventory} defaultValue={1} style={{ width: '200px', height: '40px', display: 'flex', alignItems: 'center', fontSize: '1rem' }} />
                                     <div className='btn-wrapper'>
                                         <Button size={'large'} className='btn-cart'>
                                             Thêm vào giỏ hàng
@@ -131,7 +131,7 @@ export default function ProductDetail(props) {
                                     </div>
                                 </div>
                                 <div className='description'>
-                                    <p><Icon icon="twemoji:christmas-tree" width="24" height="24" /> Mô tả chi tiết:</p>
+                                    <p><Icon icon="twemoji:christmas-tree" width="24" height="24" /> Chi tiết sản phẩm:</p>
                                     <div className='description-wrapper'>
                                         <ul>
                                             {
