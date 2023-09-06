@@ -96,13 +96,16 @@ export default function CustomSearchTable({ columns, data }) {
         },
     });
 
-    const formatter = (value) => `${`${value.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}`;
+    // const formatter = (value) => `${`${value.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}`;
 
-    const newData = data.map((item) => item ? { ...item, orderPrice: formatter(item.orderPrice) } : item);
+    // const newData = data.map((item) => item ? { ...item, orderPrice: formatter(item.orderPrice) } : item);
 
     return (
+        // <Table columns={columns.map((item) =>
+        //     item.isSearched ? { ...item, ...getColumnSearchProps(item.dataIndex) } : item
+        // )} dataSource={newData} onChange={onChange} bordered />
         <Table columns={columns.map((item) =>
             item.isSearched ? { ...item, ...getColumnSearchProps(item.dataIndex) } : item
-        )} dataSource={newData} onChange={onChange} bordered />
+        )} dataSource={data} onChange={onChange} bordered />
     )
 }

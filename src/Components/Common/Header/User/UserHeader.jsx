@@ -110,7 +110,7 @@ function UserHeader(props) {
                                     <div className='icon-cart'>
                                         {
                                             fakeUser ? (
-                                                fakeUser.cart.length === 0 ? (
+                                                fakeUser.cart.data.length === 0 ? (
                                                     <Tooltip placement='bottom' title={'Bạn chưa thêm sản phẩm nào vào giỏ hàng!'}>
                                                         <Icon icon="solar:bag-heart-bold" color="pink" width={48} height={48} />
                                                         <input defaultValue={0} className='number-cart' disabled />
@@ -118,7 +118,7 @@ function UserHeader(props) {
                                                 ) : (
                                                     <>
                                                         <Icon icon="solar:bag-heart-bold" color="pink" width={48} height={48} />
-                                                        <input defaultValue={fakeUser.cart.length} className='number-cart' disabled />
+                                                        <input defaultValue={fakeUser.cart.data.length} className='number-cart' disabled />
                                                     </>
                                                 )
                                             ) : (
@@ -130,20 +130,20 @@ function UserHeader(props) {
                                         }
                                         <div className='cart-dropdown'>
                                             <ul>
-                                                {fakeUser.cart.map((item, id) => {
+                                                {fakeUser.cart.data.map((item, id) => {
                                                     return (
                                                         <li className='cart-item' key={`cart-item-${item}-${id}`}>
-                                                            <Row style={{ height: '80px' }}>
-                                                                <Col span={6}>
+                                                            <Row style={{ height: '100%' }}>
+                                                                <Col span={7} style={{ display: 'flex', alignItems: 'center' }}>
                                                                     <Image
-                                                                        width={'100%'}
-                                                                        height={'100%'}
+                                                                        width={'90px'}
+                                                                        height={'90px'}
                                                                         preview={false}
                                                                         src={item.product.picSrc[0].src}
                                                                         fallback={require('../../../../assets/images/logo1.jpg')}
                                                                     />
                                                                 </Col>
-                                                                <Col span={14} style={{ display: 'flex', alignItems: 'center' }}>
+                                                                <Col span={15} style={{ display: 'flex', alignItems: 'center' }}>
                                                                     <div className='cart-item-content'>
                                                                         <a className='title' href='#'>
                                                                             {item.product.name}
@@ -153,7 +153,7 @@ function UserHeader(props) {
                                                                         </p>
                                                                     </div>
                                                                 </Col>
-                                                                <Col span={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                                <Col span={2} style={{ display: 'flex', alignItems: 'center', justifyContent: 'end' }}>
                                                                     <div className='cart-item-action'>
                                                                         <p className='quantity'>
                                                                             x{item.quantity}
@@ -171,9 +171,11 @@ function UserHeader(props) {
                                             <div className='cart-bottom'>
                                                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                                     <p>Thành tiền</p>
-                                                    <p style={{ color: '#e53935' }}>{`${fakeUser.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
+                                                    <p style={{ color: '#e53935' }}>{`${fakeUser.cart.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
                                                 </div>
-                                                <Button size={'large'} className='btn-view-cart'>
+                                                <Button size={'large'} className='btn-view-cart' onClick={() => {
+                                                    return navigate('cart');
+                                                }}>
                                                     Xem giỏ hàng
                                                 </Button>
                                             </div>

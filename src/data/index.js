@@ -1,6 +1,6 @@
 export let fakeNav = [
     {
-        label: 'HOME',
+        label: 'TRANG CHỦ',
         key: '/',
     },
     {
@@ -104,7 +104,7 @@ export const fakeProduct = {
             src: 'https://tinyyume.com/cdn/shop/files/AA084copie2_360x.jpg?v=1690404912',
         }
     ],
-    name: 'Cottagecore stamp stickers',
+    name: 'Postcard idol EXO 4-cut EXOcial Club Cream Soda set7 - Mix',
     price: 260000,
     inventory: 6,
     code: '#AA082',
@@ -115,44 +115,84 @@ export const fakeProduct = {
     favorite: 0,
 }
 
+export const order = [
+    {
+        key: '1',
+        orderId: 'AB325-CD085-DAF33',
+        date: '16:46:00 29/08/2023',
+        orderCount: 3,
+        orderPrice: 300000,
+        status: 'Đang giao',
+    },
+    {
+        key: '2',
+        orderId: 'AB325-CD085-DAF34',
+        date: '16:47:00 30/08/2023',
+        orderCount: 4,
+        orderPrice: 400000,
+        status: 'Đã giao',
+    },
+    {
+        key: '3',
+        orderId: 'AB325-CD085-DAF35',
+        date: '16:48:00 31/08/2023',
+        orderCount: 2,
+        orderPrice: 200000,
+        status: 'Đang xử lý',
+    },
+    {
+        key: '4',
+        orderId: 'AB325-CD085-DAF36',
+        date: '16:50:00 27/08/2023',
+        orderCount: 1,
+        orderPrice: 100000,
+        status: 'Đã hủy',
+    },
+]
+
 export const fakeUser = {
     id: 0,
-    cart: [
-        {
-            product: fakeProduct,
-            quantity: 2,
-        },
-        {
-            product: fakeProduct,
-            quantity: 3,
-        },
-        {
-            product: fakeProduct,
-            quantity: 4,
-        },
-        {
-            product: fakeProduct,
-            quantity: 3,
-        },
-        {
-            product: fakeProduct,
-            quantity: 2,
-        },
-        {
-            product: fakeProduct,
-            quantity: 2,
-        },
-        {
-            product: fakeProduct,
-            quantity: 2,
-        },
-        {
-            product: fakeProduct,
-            quantity: 2,
-        }
-    ],
-    totalPrice: 1000000,
-    name: 'Kiet HuynhHuynh'
+    name: 'Kiet HuynhHuynh',
+    cart: {
+        data: [
+            {
+                product: fakeProduct,
+                quantity: 2,
+            },
+            {
+                product: fakeProduct,
+                quantity: 3,
+            },
+            {
+                product: fakeProduct,
+                quantity: 4,
+            },
+            {
+                product: fakeProduct,
+                quantity: 3,
+            },
+            {
+                product: fakeProduct,
+                quantity: 2,
+            },
+            {
+                product: fakeProduct,
+                quantity: 2,
+            },
+            {
+                product: fakeProduct,
+                quantity: 2,
+            },
+            {
+                product: fakeProduct,
+                quantity: 2,
+            }
+        ],
+        totalPrice: 1000000,
+    },
+    orderHistory: [
+        ...order
+    ]
 }
 
 export const fakeListProduct = {

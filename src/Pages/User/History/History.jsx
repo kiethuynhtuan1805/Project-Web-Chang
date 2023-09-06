@@ -5,6 +5,7 @@ import { UserPageNav } from 'Components';
 import { useState } from 'react';
 import { CustomSearchTable } from 'Components';
 import { Icon } from '@iconify/react';
+import { fakeUser } from 'data';
 
 const columns = [
     {
@@ -133,41 +134,6 @@ const columns = [
     },
 ];
 
-const data = [
-    {
-        key: '1',
-        orderId: 'AB325-CD085-DAF33',
-        date: '16:46:00 29/08/2023',
-        orderCount: 3,
-        orderPrice: 300000,
-        status: 'Đang giao',
-    },
-    {
-        key: '2',
-        orderId: 'AB325-CD085-DAF34',
-        date: '16:47:00 30/08/2023',
-        orderCount: 4,
-        orderPrice: 400000,
-        status: 'Đã giao',
-    },
-    {
-        key: '3',
-        orderId: 'AB325-CD085-DAF35',
-        date: '16:48:00 31/08/2023',
-        orderCount: 2,
-        orderPrice: 200000,
-        status: 'Đang xử lý',
-    },
-    {
-        key: '4',
-        orderId: 'AB325-CD085-DAF36',
-        date: '16:50:00 27/08/2023',
-        orderCount: 1,
-        orderPrice: 100000,
-        status: 'Đã hủy',
-    },
-];
-
 export default function History() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Quản lý lịch sử đơn hàng"],
@@ -203,7 +169,7 @@ export default function History() {
                                 <p>Cảm ơn bạn vì đã tin tưởng và đặt hàng tại Chang House!</p>
                             </div>
                             <div>
-                                <CustomSearchTable columns={columns} data={data} />
+                                <CustomSearchTable columns={columns} data={fakeUser.orderHistory} />
                             </div>
                         </div>
                     </Col>
