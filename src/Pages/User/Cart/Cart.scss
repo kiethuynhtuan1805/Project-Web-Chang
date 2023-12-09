@@ -1,1 +1,17 @@
-.Cart {}
+.Cart {
+    .container-wrapper {
+        table {
+            thead {
+                th {
+                    text-align: center;
+                }
+            }
+
+            tbody {
+                td {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

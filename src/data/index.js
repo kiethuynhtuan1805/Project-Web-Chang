@@ -107,6 +107,44 @@ export const fakeProduct = {
     name: 'Postcard idol EXO 4-cut EXOcial Club Cream Soda set7 - Mix',
     price: 260000,
     inventory: 6,
+    color: [
+        {
+            name: 'Đen',
+            type: 'black',
+            inventory: 0,
+        },
+        {
+            name: 'Đỏ',
+            type: 'red',
+            inventory: 1,
+        },
+        {
+            name: 'Đỏ',
+            type: 'red',
+            inventory: 1,
+        },
+        {
+            name: 'Đỏ',
+            type: 'red',
+            inventory: 1,
+        },
+        {
+            name: 'Đỏ',
+            type: 'red',
+            inventory: 1,
+        },
+        {
+            name: 'Đỏ',
+            type: 'red',
+            inventory: 1,
+        },
+        {
+            name: 'Đỏ',
+            type: 'red',
+            inventory: 1,
+        }
+    ],
+    classify: ['12x12', '24x24', '32x32'],
     code: '#AA082',
     onSale: 0,
     trace: 'Phụ kiện\nTrang sức',
@@ -117,7 +155,6 @@ export const fakeProduct = {
 
 export const order = [
     {
-        key: '1',
         orderId: 'AB325-CD085-DAF33',
         date: '16:46:00 29/08/2023',
         orderCount: 3,
@@ -125,7 +162,6 @@ export const order = [
         status: 'Đang giao',
     },
     {
-        key: '2',
         orderId: 'AB325-CD085-DAF34',
         date: '16:47:00 30/08/2023',
         orderCount: 4,
@@ -133,7 +169,6 @@ export const order = [
         status: 'Đã giao',
     },
     {
-        key: '3',
         orderId: 'AB325-CD085-DAF35',
         date: '16:48:00 31/08/2023',
         orderCount: 2,
@@ -141,7 +176,6 @@ export const order = [
         status: 'Đang xử lý',
     },
     {
-        key: '4',
         orderId: 'AB325-CD085-DAF36',
         date: '16:50:00 27/08/2023',
         orderCount: 1,

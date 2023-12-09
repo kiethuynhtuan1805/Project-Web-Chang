@@ -169,7 +169,7 @@ export default function History() {
                                 <p>Cảm ơn bạn vì đã tin tưởng và đặt hàng tại Chang House!</p>
                             </div>
                             <div>
-                                <CustomSearchTable columns={columns} data={fakeUser.orderHistory} />
+                                <CustomSearchTable columns={columns} data={fakeUser.orderHistory} type={'History'} />
                             </div>
                         </div>
                     </Col>

@@ -41,7 +41,7 @@ export default function Product({ dataProduct, type }) {
                     <Icon icon="pepicons-pop:line-y" width={32} height={32} />
                     <div className='cart-action' onClick={showModal}></div>
                 </div>
-                <Modal open={isModalOpen} onCancel={handleCancel} width={800} footer={null} style={{ top: '50px' }} className='modal-add-cart'>
+                <Modal open={isModalOpen} onCancel={handleCancel} width={800} footer={null} style={{ top: '30px' }} className='modal-add-cart'>
                     <Row style={{ height: '100%', minHeight: '500px' }}>
                         <Col span={12}>
                             <div className='modal-picture-wrapper'>
@@ -94,61 +94,32 @@ export default function Product({ dataProduct, type }) {
                                 <p className='inventory'>* Hiện tại cửa hàng còn <strong>{dataProduct.inventory}</strong> sản phẩm này.</p>
                                 <div className='color-picked'>
                                     <p>Màu sắc:</p>
-                                    <Tooltip title={'Hồng nhạt'} >
-                                        <Icon icon="fluent:color-16-filled" color="pink" width={40} height={40} className='color-option selected' />
-                                    </Tooltip>
-                                    <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={40} height={40} className='color-option' />
-                                    </Tooltip>
-                                    <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={40} height={40} className='color-option' />
-                                    </Tooltip>
-                                    <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={40} height={40} className='color-option' />
-                                    </Tooltip>
-                                    <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={40} height={40} className='color-option' />
-                                    </Tooltip>
-                                    <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={40} height={40} className='color-option' />
-                                    </Tooltip>
-                                    <Tooltip title={'Đỏ'} >
-                                        <Icon icon="fluent:color-24-filled" color="red" width={40} height={40} className='color-option' />
-                                    </Tooltip>
+                                    <div style={{ display: 'flex' }}>
+                                        {
+                                            dataProduct.color.map(color => (
+                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type}>
+                                                    <div className='color'>
+                                                        <Icon icon="fluent:color-16-filled" color={color.type} width={40} height={40} className='color-option selected' />
+                                                    </div>
+                                                </Tooltip>
+                                            ))
+                                        }
+                                    </div>
                                 </div>
                                 <div className='type-picked'>
                                     <p>Kích thước/kiểu:</p>
                                     <div className='type-wrapper'>
-                                        <Tooltip title={'12x12'} >
-                                            <div className='type'>
-                                                12x12
-                                            </div>
-                                        </Tooltip>
-                                        <Tooltip title={'24x24'} >
-                                            <div className='type'>
-                                                24x24
-                                            </div>
-                                        </Tooltip>
-                                        <Tooltip title={'24x24'} >
-                                            <div className='type'>
-                                                24x24
-                                            </div>
-                                        </Tooltip>
-                                        <Tooltip title={'24x24'} >
-                                            <div className='type'>
-                                                24x24
-                                            </div>
-                                        </Tooltip>
-                                        <Tooltip title={'24x24'} >
-                                            <div className='type'>
-                                                24x24
-                                            </div>
-                                        </Tooltip>
-                                        <Tooltip title={'24x24'} >
-                                            <div className='type'>
-                                                24x24
-                                            </div>
-                                        </Tooltip>
+                                        <div style={{ display: 'flex' }}>
+                                            {
+                                                dataProduct.classify.map(classify => (
+                                                    <Tooltip title={classify} >
+                                                        <div className='type'>
+                                                            {classify}
+                                                        </div>
+                                                    </Tooltip>
+                                                ))
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                                 <div className='quantity'>

@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import { Button, Input, Space, Table } from "antd";
 import { useRef, useState } from "react";
 
-export default function CustomSearchTable({ columns, data }) {
+export default function CustomSearchTable({ columns, data, type }) {
     const [searchText, setSearchText] = useState('');
     const [searchedColumn, setSearchedColumn] = useState('');
     const searchInput = useRef(null);
@@ -96,16 +96,19 @@ export default function CustomSearchTable({ columns, data }) {
         },
     });
 
-    // const formatter = (value) => `${`${value.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}`;
+    const formatter = (value) => `${`${value.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}`;
 
-    // const newData = data.map((item) => item ? { ...item, orderPrice: formatter(item.orderPrice) } : item);
+    let indexKey = 0;
+    let newData = data.map((item) => item ? { ...item, key: `${type + '-' + indexKey++}` } : item);
+    if (type === 'History') {
+        newData = newData.map((item) => item ? { ...item, orderPrice: formatter(item.orderPrice) } : item);
+    } else if (type === 'Cart') {
+
+    }
 
     return (
-        // <Table columns={columns.map((item) =>
-        //     item.isSearched ? { ...item, ...getColumnSearchProps(item.dataIndex) } : item
-        // )} dataSource={newData} onChange={onChange} bordered />
         <Table columns={columns.map((item) =>
             item.isSearched ? { ...item, ...getColumnSearchProps(item.dataIndex) } : item
-        )} dataSource={data} onChange={onChange} bordered />
+        )} dataSource={newData} onChange={onChange} bordered />
     )
 }
