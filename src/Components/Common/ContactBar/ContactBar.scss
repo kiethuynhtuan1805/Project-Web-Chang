@@ -1,0 +1,32 @@
+.contact-bar {
+    display: flex;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0px 15px;
+    z-index: 1000;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+
+    p {
+        transform: rotate(180deg);
+        margin-top: 10px;
+        font-style: italic;
+        cursor: default;
+    }
+
+    .icon-group {
+        a {
+            margin-top: 5px;
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}

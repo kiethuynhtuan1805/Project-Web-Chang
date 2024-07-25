@@ -2,7 +2,7 @@ import { Trace } from 'Components';
 import './History.scss'
 import { Button, Col, Popconfirm, Row, Space, Tag, Tooltip } from 'antd';
 import { UserPageNav } from 'Components';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { CustomSearchTable } from 'Components';
 import { Icon } from '@iconify/react';
 import { fakeUser } from 'data';
@@ -137,21 +137,21 @@ const columns = [
 export default function History() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Quản lý lịch sử đơn hàng"],
-        route: ['/', "/profile"]
+        route: ['/home', "/home/profile"]
     };
 
-    const [formLayout, setFormLayout] = useState('horizontal');
-    const formItemLayout =
-        formLayout === 'horizontal'
-            ? {
-                labelCol: {
-                    span: 5,
-                },
-                wrapperCol: {
-                    span: 19,
-                },
-            }
-            : null;
+    // const [formLayout, setFormLayout] = useState('horizontal');
+    // const formItemLayout =
+    //     formLayout === 'horizontal'
+    //         ? {
+    //             labelCol: {
+    //                 span: 5,
+    //             },
+    //             wrapperCol: {
+    //                 span: 19,
+    //             },
+    //         }
+    //         : null;
 
     return (
         <div className='History container'>

@@ -20,10 +20,10 @@ const validateMessages = {
 export default function Profile() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Hồ sơ"],
-        route: ['/', "/profile"]
+        route: ['/home', "/home/profile"]
     };
 
-    const [formLayout, setFormLayout] = useState('horizontal');
+    const [formLayout] = useState('horizontal');
     const formItemLayout =
         formLayout === 'horizontal'
             ? {

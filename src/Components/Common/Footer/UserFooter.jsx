@@ -1,6 +1,5 @@
-import { Icon } from '@iconify/react';
 import './UserFooter.scss';
-import { Col, Row } from "antd";
+import { Col, Row, Image } from "antd";
 
 export default function UserFooter() {
     return (
@@ -8,7 +7,7 @@ export default function UserFooter() {
             <div className="container-wrapper">
                 <Row>
                     <Col span={9} className="footer-left">
-                        <div className='hot-line'>
+                        {/* <div className='hot-line'>
                             <Icon icon="gg:phone" width="48" height="48" />
                             <div>
                                 Hotline
@@ -24,6 +23,11 @@ export default function UserFooter() {
                                 <br />
                                 <a href="mailto:kiet.huynhtuan1805@gmail.com">kiet.huynhtuan1805@gmail.com</a>
                             </div>
+                        </div> */}
+                        <div>VỀ CHÚNG TÔI</div>
+                        <br />
+                        <div>
+                            HỆ THỐNG CỬA HÀNG
                         </div>
                         <br />
                         <div>
@@ -40,16 +44,16 @@ export default function UserFooter() {
                     <Col span={9} className='footer-right'>
                         <div className='footer-right-wrapper'>
                             <div className='signature'>
-
+                                <Image
+                                    width={'360px'}
+                                    height={'180px'}
+                                    preview={false}
+                                    src={''}
+                                    fallback={require('../../../assets/images/signature.jpg')}
+                                />
                             </div>
-                            <div>
-                                Hãy kết nối với chúng mình
-                            </div>
-                            <br />
-                            <div className='contact'>
-                                <Icon icon="devicon:facebook" width="36" height="36" style={{ marginRight: '10px' }} />
-                                <Icon icon="skill-icons:instagram" width="36" height="36" style={{ marginRight: '10px' }} />
-                                <Icon icon="logos:tiktok-icon" width="36" height="36" />
+                            <div className="note">
+                                Cảm ơn vì đã quan tâm đến sản phẩm của chúng tôi!
                             </div>
                         </div>
                     </Col>

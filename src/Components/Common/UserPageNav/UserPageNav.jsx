@@ -24,27 +24,27 @@ export default function UserPageNav({ type }) {
             <div className='navigation'>
                 <ul>
                     <li onClick={() => {
-                        return navigate('/profile');
+                        return navigate('profile');
                     }} id='nav-info'>
                         Thông tin tài khoản
                     </li>
                     <li onClick={() => {
-                        return navigate('/profile/change-password');
+                        return navigate('profile/change-password');
                     }} id='nav-password'>
                         Đổi mật khẩu
                     </li>
                     <li onClick={() => {
-                        return navigate('/profile/history');
+                        return navigate('profile/history');
                     }} id='nav-history'>
                         Lịch sử đơn hàng
                     </li>
                     <li onClick={() => {
-                        return navigate('/profile/favorite');
+                        return navigate('profile/favorite');
                     }} id='nav-favorite'>
                         Sản phẩm yêu thích
                     </li>
                     <li onClick={() => {
-                        return navigate('/');
+                        return navigate('/home');
                     }} id='nav-log-out'>
                         Đăng xuất
                     </li>

@@ -47,7 +47,7 @@ export default function AllProduct(props) {
 
     const traceData = {
         data: ["Trang chủ", ...fakeListProduct.trace.split('\n')],
-        route: ['/', ...fakeListProduct.type.split('\n')]
+        route: ['/home', ...fakeListProduct.type.split('\n')]
     };
 
     return (

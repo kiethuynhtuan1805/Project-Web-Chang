@@ -14,9 +14,9 @@ const contentStyle = {
 };
 const footerStyle = {
     textAlign: 'center',
-    color: '#fff',
+    color: '#886060',
     fontWeight: 'bold',
-    backgroundColor: '#ffb0bd',
+    backgroundColor: '#ffffff',
     paddingLeft: 0,
     paddingRight: 0,
 };

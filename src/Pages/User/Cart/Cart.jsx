@@ -1,8 +1,7 @@
 import './Cart.scss'
 import { Trace } from 'Components';
-import { Button, Image, Popconfirm, Space, Tag, Tooltip } from 'antd';
+import { Image } from 'antd';
 import { CustomSearchTable } from 'Components';
-import { Icon } from '@iconify/react';
 import { fakeUser } from 'data';
 
 const columns = [
@@ -65,7 +64,7 @@ const columns = [
 export default function Cart() {
     const traceData = {
         data: ["Trang chủ", "Quản lý giỏ hàng"],
-        route: ['/']
+        route: ['/home']
     };
     console.log(fakeUser);
 

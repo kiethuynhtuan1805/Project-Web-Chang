@@ -1,0 +1,12 @@
+.OnTopButton {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+
+    opacity: 0.6;
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+}

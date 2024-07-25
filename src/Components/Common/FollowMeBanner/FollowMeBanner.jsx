@@ -7,7 +7,7 @@ import { fakeBanner } from 'data';
 export default function FollowMeBanner() {
     return (
         <div className="FollowMeBanner">
-            <p>FOLLOW ME ON TIKTOK <a href="#">@kiet.ne</a></p>
+            <p>Theo dõi mình tại Tiktok <a href="/">@kiet.ne</a></p>
             <Row>
                 <Col xs={{ span: 24 }} sm={{ span: 12 }} xl={{ span: 6 }}>
                     <div className='banner-wrapper'>

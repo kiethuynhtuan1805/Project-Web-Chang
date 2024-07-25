@@ -2,7 +2,7 @@ import './App.scss';
 import './GlobalCss/Modal.scss';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { GlobalHome, ProductDetail, Login, Signup, AllProduct, Profile, ManagePassword, History, Favorite, Cart } from './Pages';
+import { GlobalHome, WelcomePage, ProductDetail, Login, Signup, AllProduct, Profile, ManagePassword, History, Favorite, Cart } from './Pages';
 import { ScrollToTop, UserLayout } from 'Components';
 
 export default function App() {
@@ -10,10 +10,11 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path='' element={<UserLayout />}>
-          {/* Auth */}
-          <Route path='login' element={<Login />}></Route>
-          <Route path='signup' element={<Signup />}></Route>
+        {/* Auth */}
+        <Route path='' element={<WelcomePage />} />
+        <Route path='login' element={<Login />}></Route>
+        <Route path='signup' element={<Signup />}></Route>
+        <Route path='home' element={<UserLayout />}>
           {/* <Route path="forgot-password" element={<AuthForgotPassword />} />
           <Route path="verify-email/:accessToken" element={<AuthActiveEmail />} />
           <Route

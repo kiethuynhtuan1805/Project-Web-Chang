@@ -1,15 +1,15 @@
 export let fakeNav = [
     {
         label: 'TRANG CHỦ',
-        key: '/',
+        key: '/home',
     },
     {
         label: 'TẤT CẢ',
-        key: '/products',
+        key: '/home/products',
     },
     {
         label: 'HOT',
-        key: '/products/0',
+        key: '/home/products/0',
     },
     {
         label: 'Option 1',
@@ -17,15 +17,15 @@ export let fakeNav = [
         children: [
             {
                 label: 'Toàn bộ',
-                key: '/products/1',
+                key: '/home/products/1',
             },
             {
                 label: 'Gấu đen',
-                key: '/products/2',
+                key: '/home/products/2',
                 children: [
                     {
                         label: 'Gấu đen tím',
-                        key: '/products/3',
+                        key: '/home/products/3',
                     },
                 ],
             },
@@ -33,35 +33,35 @@ export let fakeNav = [
     },
     {
         label: 'Option 2',
-        key: '/collections/option-2',
+        key: '/home/collections/option-2',
     },
     {
         label: 'Option 3',
-        key: '/collections/option-3',
+        key: '/home/collections/option-3',
     },
     {
         label: 'Option 4',
-        key: '/collections/option-4',
+        key: '/home/collections/option-4',
     },
     {
         label: 'Option 5',
-        key: '/collections/option-5',
+        key: '/home/collections/option-5',
     },
     {
         label: 'Option 6',
-        key: '/collections/option-6',
+        key: '/home/collections/option-6',
     },
     {
         label: 'Option 7',
-        key: '/collections/option-7',
+        key: '/home/collections/option-7',
     },
     {
         label: 'Option 8',
-        key: '/collections/option-8',
+        key: '/home/collections/option-8',
     },
     {
         label: 'Khác',
-        key: '/collections/khac',
+        key: '/home/collections/khac',
     },
 ]
 
@@ -255,3 +255,101 @@ export const fakeApiHome = [{
     name: "sản phẩm lỗi",
     data: fakeListProduct.data,
 }]
+
+export const fakeWelcomeProduct1 = {
+    type: 'HOT',
+    description: 'Một số sản phẩm bán chạy của chúng tôi!',
+    listProduct: [
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        }
+    ]
+}
+
+export const fakeWelcomeProduct2 = {
+    type: 'SALE',
+    description: 'Một số sản phẩm đang khuyến mãi!',
+    listProduct: [
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Cup',
+            description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
+        }
+    ]
+}
+
+export const fakeWelcomeProduct3 = {
+    type: 'MỚI',
+    description: 'Một số sản phẩm mới!',
+    listProduct: [
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        }
+    ]
+}
+
+export const fakeWelcomeProduct = [fakeWelcomeProduct1, fakeWelcomeProduct2, fakeWelcomeProduct3]

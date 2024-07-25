@@ -11,6 +11,10 @@ import ScrollToTop from "./Common/ScrollToTop/ScrollToTop";
 import AvatarUpload from "./Common/AvatarUpload/AvatarUpload";
 import UserPageNav from "./Common/UserPageNav/UserPageNav";
 import CustomSearchTable from "./Common/CustomSearchTable/CustomSearchTable";
+import WelcomeProduct from "./Common/WelcomeProduct/WelcomeProduct";
+import ContactBar from "./Common/ContactBar/ContactBar";
+import CommonHeader from "./Common/CommonHeader/CommonHeader";
+import OnTopButton from "./Common/OnTopButton/OnTopButton";
 
 export {
     Hero,
@@ -26,4 +30,8 @@ export {
     AvatarUpload,
     UserPageNav,
     CustomSearchTable,
+    WelcomeProduct,
+    ContactBar,
+    CommonHeader,
+    OnTopButton,
 }

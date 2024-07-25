@@ -1,39 +1,61 @@
 .SearchBar {
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+    height: 35px;
+    width: 100%;
 
-    span {
+    .search-bar {
+        position: absolute;
+        left: 0;
+        border: 2px solid var(--COLOR-brown);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        width: 90%;
         height: 100%;
+        padding: 5px 5px 5px 10px;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        transform: translateY(-100%);
+        opacity: 0;
+        background-color: #ffffff;
 
-        input {
-            height: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
-            border: 2px solid var(--COLOR-pink-deep) !important;
+        .search-input {
+            width: 95%;
+            border: none;
+            outline: none;
+        }
 
-            &:focus {
-                box-shadow: none;
+        .close-icon {
+            opacity: 0.4;
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
             }
         }
 
-        .ant-input-group-addon {
-            height: 100%;
-            border: 2px solid var(--COLOR-pink-deep) !important;
-
-            button {
-                height: 100%;
-                background-color: var(--COLOR-pink-deep);
-                font-size: 1.2rem;
-
-                .anticon-search {
-                    display: flex;
-                    align-items: center;
-                    font-size: 1.3rem;
-                }
-
-                &:hover {
-                    background-color: var(--COLOR-pink-hover) !important;
-                }
-            }
+        &:hover {
+            border-color: var(--COLOR-brown-hover);
         }
+    }
+
+    .search-icon {
+        display: flex;
+        align-items: center;
+        color: var(--COLOR-brown);
+
+        &:hover {
+            cursor: pointer;
+            color: var(--COLOR-brown-hover);
+        }
+    }
+}
+
+.SearchBar.active {
+    .search-bar {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

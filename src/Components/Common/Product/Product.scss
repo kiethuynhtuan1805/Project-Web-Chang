@@ -13,8 +13,7 @@
         overflow: hidden;
 
         img {
-            transform: scale(1);
-            object-fit: scale-down;
+            object-fit: cover;
 
             &:hover {
                 cursor: pointer;

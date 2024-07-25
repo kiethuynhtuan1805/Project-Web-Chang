@@ -13,14 +13,14 @@ export default function Product({ dataProduct, type }) {
 
     // Function
     const linkTo = () => {
-        return navigate('/products/1');
+        return navigate('/home/products/1');
     };
     const showModal = () => {
         setIsModalOpen(true);
     };
-    const handleOk = () => {
-        setIsModalOpen(false);
-    };
+    // const handleSubmit = () => {
+    //     setIsModalOpen(false);
+    // };
     const handleCancel = () => {
         setIsModalOpen(false);
     };
@@ -96,8 +96,8 @@ export default function Product({ dataProduct, type }) {
                                     <p>Màu sắc:</p>
                                     <div style={{ display: 'flex' }}>
                                         {
-                                            dataProduct.color.map(color => (
-                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type}>
+                                            dataProduct.color.map((color, id) => (
+                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type + '-' + id}>
                                                     <div className='color'>
                                                         <Icon icon="fluent:color-16-filled" color={color.type} width={40} height={40} className='color-option selected' />
                                                     </div>
@@ -112,7 +112,7 @@ export default function Product({ dataProduct, type }) {
                                         <div style={{ display: 'flex' }}>
                                             {
                                                 dataProduct.classify.map(classify => (
-                                                    <Tooltip title={classify} >
+                                                    <Tooltip title={classify} key={"tooltip-" + classify}>
                                                         <div className='type'>
                                                             {classify}
                                                         </div>

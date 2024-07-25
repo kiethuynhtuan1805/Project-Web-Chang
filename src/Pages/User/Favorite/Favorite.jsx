@@ -1,8 +1,8 @@
 import { Trace } from 'Components';
 import './Favorite.scss'
-import { Button, Col, Form, Input, Pagination, Row } from 'antd';
+import { Col, Pagination, Row } from 'antd';
 import { UserPageNav } from 'Components';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { ListProduct } from 'Components';
 import { fakeListProduct } from 'data';
@@ -10,22 +10,21 @@ import { fakeListProduct } from 'data';
 export default function Favorite() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Sản phẩm yêu thích"],
-        route: ['/', "/profile"]
+        route: ['/home', "/home/profile"]
     };
 
-    const [formLayout, setFormLayout] = useState('horizontal');
-    const formItemLayout =
-        formLayout === 'horizontal'
-            ? {
-                labelCol: {
-                    span: 5,
-                },
-                wrapperCol: {
-                    span: 19,
-                },
-            }
-            : null;
-
+    // const [formLayout, setFormLayout] = useState('horizontal');
+    // const formItemLayout =
+    //     formLayout === 'horizontal'
+    //         ? {
+    //             labelCol: {
+    //                 span: 5,
+    //             },
+    //             wrapperCol: {
+    //                 span: 19,
+    //             },
+    //         }
+    //         : null;
 
     return (
         <div className='Favorite container'>

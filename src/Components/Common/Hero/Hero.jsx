@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import './Hero.scss';
 import { Carousel } from 'antd';
 import { fakeHero } from 'data';

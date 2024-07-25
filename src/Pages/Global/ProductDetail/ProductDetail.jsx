@@ -8,7 +8,7 @@ import { ListProduct } from 'Components';
 export default function ProductDetail(props) {
     const traceData = {
         data: ["Trang chủ", ...fakeProduct.trace.split('\n'), `${fakeProduct.name} ${fakeProduct.code}`],
-        route: ['/', ...fakeProduct.type.split('\n')]
+        route: ['/home', ...fakeProduct.type.split('\n')]
     };
 
     return (
@@ -63,8 +63,8 @@ export default function ProductDetail(props) {
                                     <p>Màu sắc:</p>
                                     <div style={{ display: 'flex' }}>
                                         {
-                                            fakeProduct.color.map(color => (
-                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type}>
+                                            fakeProduct.color.map((color, id) => (
+                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type + '-' + id}>
                                                     <div className='color'>
                                                         <Icon icon="fluent:color-16-filled" color={color.type} width={45} height={45} className='color-option selected' />
                                                     </div>
@@ -78,8 +78,8 @@ export default function ProductDetail(props) {
                                     <div className='type-wrapper'>
                                         <div style={{ display: 'flex' }}>
                                             {
-                                                fakeProduct.classify.map(classify => (
-                                                    <Tooltip title={classify} >
+                                                fakeProduct.classify.map((classify, id) => (
+                                                    <Tooltip title={classify} key={'Type-' + id}>
                                                         <div className='type'>
                                                             {classify}
                                                         </div>

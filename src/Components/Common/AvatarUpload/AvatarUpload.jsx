@@ -1,22 +1,22 @@
 import { useCallback } from 'react';
 import './AvatarUpload.scss'
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { Button, Image, message } from 'antd';
 import { Icon } from '@iconify/react';
 
 export default function AvatarUpload() {
     // Dispatch
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     // Message
     const [messageApi, contextMessage] = message.useMessage();
-    const messageError = useCallback(() => {
-        messageApi.open({
-            type: "error",
-            content: "Failed!",
-            duration: 2,
-        });
-    }, [messageApi]);
+    // const messageError = useCallback(() => {
+    //     messageApi.open({
+    //         type: "error",
+    //         content: "Failed!",
+    //         duration: 2,
+    //     });
+    // }, [messageApi]);
     const messageLoading = useCallback(() => {
         messageApi.open({
             type: "loading",
@@ -25,13 +25,13 @@ export default function AvatarUpload() {
         });
     }, [messageApi]);
 
-    const messageSuccess = useCallback(() => {
-        messageApi.open({
-            type: "success",
-            content: "Success!",
-            duration: 3,
-        });
-    }, [messageApi]);
+    // const messageSuccess = useCallback(() => {
+    //     messageApi.open({
+    //         type: "success",
+    //         content: "Success!",
+    //         duration: 3,
+    //     });
+    // }, [messageApi]);
 
     // Async function
     const handleUpdate = async (formData) => {

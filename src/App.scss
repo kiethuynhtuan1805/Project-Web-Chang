@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Lora", serif;
   line-height: 1.4;
 }
 
@@ -30,15 +31,15 @@ body {
     margin: 0;
   }
 
-  --COLOR-pink: #ffb0bd;
+  --COLOR-pink: #ffc0cb;
   --COLOR-pink-smooth: #ffb0bde6;
   --COLOR-pink-deep: #FFB0BD;
-  --COLOR-pink-super-deep: #FB6565;
+  --COLOR-pink-super-deep: #fb7474;
   --COLOR-pink-hover: #FD8FA1;
-  --COLOR-brown: #8A4762;
+  --COLOR-brown: #886060;
   --COLOR-brown-smooth: #C75D26;
-  --COLOR-brown-deep: #9C491E;
-  --COLOR-brown-super-deep: #6e2e0e;
+  --COLOR-brown-deep: #9f5733;
+  --COLOR-brown-super-deep: #6e3c23;
   --COLOR-brown-hover: #E56266;
   --COLOR-blue: #0048ff;
   --COLOR-blue-hover: #1877F2;
