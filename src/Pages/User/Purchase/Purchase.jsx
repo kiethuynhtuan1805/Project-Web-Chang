@@ -159,7 +159,7 @@ export default function Purchase() {
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5}>
-                        <UserPageNav type={'nav-purchase'} />
+                        <UserPageNav type={'nav-purchase'} haveDropDown={""} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>

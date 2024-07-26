@@ -12,6 +12,10 @@ import ManagePassword from "./User/ManagePassword/ManagePassword";
 import Cart from "./User/Cart/Cart";
 import Favorite from "./User/Favorite/Favorite";
 import Purchase from "./User/Purchase/Purchase";
+import NotificationOrder from "./User/NotificationOrder/NotificationOrder";
+import NotificationPromotion from "./User/NotificationPromotion/NotificationPromotion";
+import NotificationUpdate from "./User/NotificationUpdate/NotificationUpdate";
+
 
 export {
     GlobalHome,
@@ -25,4 +29,7 @@ export {
     Cart,
     Favorite,
     Purchase,
+    NotificationOrder,
+    NotificationPromotion,
+    NotificationUpdate,
 };

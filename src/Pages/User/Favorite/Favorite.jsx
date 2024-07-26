@@ -32,7 +32,7 @@ export default function Favorite() {
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5}>
-                        <UserPageNav type={'nav-favorite'} />
+                        <UserPageNav type={'nav-favorite'} haveDropDown={""}/>
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>

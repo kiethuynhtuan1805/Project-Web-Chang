@@ -30,7 +30,7 @@ export default function ManagePassword() {
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5} >
-                        <UserPageNav type={'nav-password'} />
+                        <UserPageNav type={'nav-password'} haveDropDown={"nav-info"} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>

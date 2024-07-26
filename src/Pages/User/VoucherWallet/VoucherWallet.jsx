@@ -42,7 +42,7 @@ export default function Profile() {
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5} >
-                        <UserPageNav type={'nav-info'} haveDropDown={"nav-info"} />
+                        <UserPageNav type={'nav-info'} haveDropDown={""} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>

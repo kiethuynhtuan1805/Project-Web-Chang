@@ -1,8 +1,12 @@
 import './App.scss';
 import './GlobalCss/Modal.scss';
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { GlobalHome, WelcomePage, ProductDetail, Login, Signup, AllProduct, Profile, ManagePassword, Purchase, Favorite, Cart } from './Pages';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import {
+  GlobalHome, WelcomePage, ProductDetail, Login, Signup, AllProduct,
+  Profile, ManagePassword, Purchase, Favorite, Cart, NotificationOrder, NotificationPromotion, NotificationUpdate
+
+} from './Pages';
 import { ScrollToTop, UserLayout } from 'Components';
 
 export default function App() {
@@ -31,17 +35,22 @@ export default function App() {
 
         {/* User */}
         <Route path='user' element={<UserLayout />}>
-          <Route index element={<Profile />}></Route>
+          <Route path='' element={<Navigate to="profile" replace />}></Route>
+          <Route path='profile' element={<Profile />}></Route>
           <Route path='password' element={<ManagePassword />}></Route>
           <Route path='purchase' element={<Purchase />}></Route>
           <Route path='favorite' element={<Favorite />}></Route>
           <Route path='cart' element={<Cart />}></Route>
-          <Route path='setting/notification'>
-            <Route path='order'></Route>
-            <Route path='promotion'></Route>
-          </Route>
+          <Route path='setting/notification'></Route>
           <Route path='setting/privacy'></Route>
+          <Route path='notifications'>
+            <Route path='' element={<Navigate to="order" replace />}></Route>
+            <Route path='order' element={<NotificationOrder />}></Route>
+            <Route path='promotion' element={<NotificationPromotion />}></Route>
+            <Route path='new-update' element={<NotificationUpdate />}></Route>
+          </Route>
           <Route path='voucher-wallet'></Route>
+          <Route path='*' element={<Navigate to="profile" replace />}></Route>
         </Route>
 
         {/* Privacy */}
