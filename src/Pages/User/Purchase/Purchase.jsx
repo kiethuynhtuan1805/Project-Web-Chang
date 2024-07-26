@@ -137,7 +137,7 @@ const columns = [
 export default function Purchase() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Quản lý lịch sử đơn hàng"],
-        route: ['/home', "/home/profile"]
+        route: ['/home', "/user"]
     };
 
     // const [formLayout, setFormLayout] = useState('horizontal');

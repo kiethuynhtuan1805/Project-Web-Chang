@@ -20,7 +20,7 @@ const validateMessages = {
 export default function Profile() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Hồ sơ"],
-        route: ['/home', "/home/profile"]
+        route: ['/home', "/user"]
     };
 
     const [formLayout] = useState('horizontal');

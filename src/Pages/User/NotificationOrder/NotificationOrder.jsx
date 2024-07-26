@@ -5,8 +5,8 @@ import { UserPageNav } from 'Components';
 
 export default function NotificationOrder() {
     const traceData = {
-        data: ["Trang chủ", "Thông tin tài khoản", "Thông báo"],
-        route: ['/home', "/user", "/user/notifacations"]
+        data: ["Trang chủ", "Thông tin tài khoản", "Cập nhật đơn hàng"],
+        route: ['/home', "/user", "/user/notifacations/order"]
     };
 
     return (
@@ -21,7 +21,7 @@ export default function NotificationOrder() {
                     <Col span={18}>
                         <div className='notification-content'>
                             <div>
-                                <p>Thông báo</p>
+                                <p>Cập nhật đơn hàng</p>
                                 <p>Một số thông báo gần đây về đơn hàng của bạn!</p>
                             </div>
                             <div>

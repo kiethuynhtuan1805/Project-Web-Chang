@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function ManagePassword() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Đổi mật khẩu"],
-        route: ['/home', "/home/profile"]
+        route: ['/home', "/user"]
     };
 
     const [formLayout] = useState('horizontal');

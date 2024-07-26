@@ -45,10 +45,10 @@ export default function UserPageNav({ type, haveDropDown }) {
                             }} id='nav-password' className='nav-target'>Đổi mật khẩu</div>
                             <div onClick={() => {
                                 return navigate('/user/setting/notification');
-                            }} id='nav-notification' className='nav-target'>Cài đặt thông báo</div>
+                            }} id='nav-setting-notification' className='nav-target'>Cài đặt thông báo</div>
                             <div onClick={() => {
                                 return navigate('/user/setting/privacy');
-                            }} id='nav-privacy' className='nav-target'>Thiết lập riêng tư</div>
+                            }} id='nav-setting-privacy' className='nav-target'>Thiết lập riêng tư</div>
                         </div>
                     </div>
                     <div onClick={() => {
@@ -70,7 +70,7 @@ export default function UserPageNav({ type, haveDropDown }) {
                         <p>Kho voucher</p>
                     </div>
                     <div className='nav-notifications-wrapper'>
-                        <div id={type === 'nav-notification' ? '' : 'nav-notification'} className='nav-target have-icon' onClick={() => {
+                        <div id={type === 'nav-notification-order' ? '' : 'nav-notification-order'} className='nav-target have-icon' onClick={() => {
                             if (haveDropDown !== 'nav-notification') {
                                 return navigate('/user/notifications/order');
                             }

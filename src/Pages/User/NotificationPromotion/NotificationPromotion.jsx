@@ -5,8 +5,8 @@ import { UserPageNav } from 'Components';
 
 export default function NotificationPromotion() {
     const traceData = {
-        data: ["Trang chủ", "Thông tin tài khoản", "Thông báo"],
-        route: ['/home', "/user", "/user/notifacations"]
+        data: ["Trang chủ", "Thông tin tài khoản", "Thông báo khuyến mãi"],
+        route: ['/home', "/user", "/user/notifacations/promotion"]
     };
 
     return (
@@ -21,8 +21,8 @@ export default function NotificationPromotion() {
                     <Col span={18}>
                         <div className='notification-content'>
                             <div>
-                                <p>Thông báo</p>
-                                <p>Một số thông báo gần đây về đơn hàng của bạn!</p>
+                                <p>Thông báo khuyến mãi</p>
+                                <p>Những khuyến mãi khả dụng!</p>
                             </div>
                             <div>
                                 hh

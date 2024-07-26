@@ -10,7 +10,7 @@ import { fakeListProduct } from 'data';
 export default function Favorite() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Sản phẩm yêu thích"],
-        route: ['/home', "/home/profile"]
+        route: ['/home', "/user"]
     };
 
     // const [formLayout, setFormLayout] = useState('horizontal');
@@ -32,7 +32,7 @@ export default function Favorite() {
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5}>
-                        <UserPageNav type={'nav-favorite'} haveDropDown={""}/>
+                        <UserPageNav type={'nav-favorite'} haveDropDown={""} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>

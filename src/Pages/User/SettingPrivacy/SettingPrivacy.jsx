@@ -1,29 +1,28 @@
 import { Trace } from 'Components';
-import './NotificationUpdate.scss'
+import './SettingPrivacy.scss'
 import { Col, Row } from 'antd';
 import { UserPageNav } from 'Components';
 
-
-export default function NotificationUpdate() {
+export default function SettingPrivacy() {
     const traceData = {
-        data: ["Trang chủ", "Thông tin tài khoản", "Cập nhật"],
-        route: ['/home', "/user", "/user/notifacations/new-update"]
+        data: ["Trang chủ", "Thông tin tài khoản", "Thiết lập riêng tư"],
+        route: ['/home', "/user", "/user/setting/privacy"]
     };
 
     return (
-        <div className='NotificationUpdate container'>
+        <div className='SettingPrivacy container'>
             <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5} >
-                        <UserPageNav type={'nav-notification-new-update'} haveDropDown={"nav-notification"} />
+                        <UserPageNav type={'nav-setting-privacy'} haveDropDown={"nav-info"} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>
-                        <div className='notification-content'>
+                        <div className='setting-privacy-content'>
                             <div>
-                                <p>Cập nhật</p>
-                                <p>Những cập nhật gần đây!</p>
+                                <p>Thiết lập riêng tư</p>
+                                <p>Những thiết lập riêng tư dành cho bạn!</p>
                             </div>
                             <div>
                                 hh

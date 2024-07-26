@@ -12,10 +12,13 @@ import ManagePassword from "./User/ManagePassword/ManagePassword";
 import Cart from "./User/Cart/Cart";
 import Favorite from "./User/Favorite/Favorite";
 import Purchase from "./User/Purchase/Purchase";
+import Payment from "./User/Payment/Payment";
+import SettingNotification from "./User/SettingNotification/SettingNotification";
+import SettingPrivacy from "./User/SettingPrivacy/SettingPrivacy";
 import NotificationOrder from "./User/NotificationOrder/NotificationOrder";
 import NotificationPromotion from "./User/NotificationPromotion/NotificationPromotion";
 import NotificationUpdate from "./User/NotificationUpdate/NotificationUpdate";
-
+import VoucherWallet from "./User/VoucherWallet/VoucherWallet";
 
 export {
     GlobalHome,
@@ -29,7 +32,11 @@ export {
     Cart,
     Favorite,
     Purchase,
+    Payment,
+    SettingNotification,
+    SettingPrivacy,
     NotificationOrder,
     NotificationPromotion,
     NotificationUpdate,
+    VoucherWallet,
 };
