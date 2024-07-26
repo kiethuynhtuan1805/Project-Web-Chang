@@ -11,7 +11,7 @@ import Profile from "./User/Profile/Profile";
 import ManagePassword from "./User/ManagePassword/ManagePassword";
 import Cart from "./User/Cart/Cart";
 import Favorite from "./User/Favorite/Favorite";
-import History from "./User/History/History";
+import Purchase from "./User/Purchase/Purchase";
 
 export {
     GlobalHome,
@@ -24,5 +24,5 @@ export {
     ManagePassword,
     Cart,
     Favorite,
-    History
+    Purchase,
 };

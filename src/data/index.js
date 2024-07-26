@@ -224,8 +224,8 @@ export const fakeUser = {
         ],
         totalPrice: 1000000,
     },
-    orderHistory: [
-        ...order
+    orderPurchase: [
+        ...order    
     ]
 }
 

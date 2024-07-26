@@ -10,19 +10,12 @@ function CommonHeader(props) {
     const navigate = useNavigate();
 
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isHided, setIsHide] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
                 setIsScrolled(true);
-                if (window.scrollY > 400) {
-                    setIsHide(true);
-                } else {
-                    setIsHide(false);
-                }
             } else {
-                setIsHide(false);
                 setIsScrolled(false);
             }
         };
@@ -33,7 +26,7 @@ function CommonHeader(props) {
 
     return (
         <div className='CommonHeader'>
-            <Row align="middle" className={props.type === 'WP' ? `header ${isScrolled ? 'scrolled' : ''} ${isHided ? 'hided' : ''}` : `header`}>
+            <Row align="middle" className={props.type === 'WP' ? `header ${isScrolled ? 'scrolled' : ''}` : `header`}>
                 <Col span={3} className='logo' onClick={() => {
                     return navigate('/home');
                 }}>

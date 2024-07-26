@@ -31,11 +31,11 @@ export default function Favorite() {
             <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
-                    <Col span={6} style={{ border: '1px solid #ccc', padding: '15px', borderRadius: '10px', height: '360px' }}>
+                    <Col span={5}>
                         <UserPageNav type={'nav-favorite'} />
                     </Col>
                     <Col span={1}></Col>
-                    <Col span={17}>
+                    <Col span={18}>
                         <div className='favorite-content'>
                             <div>
                                 <p>Sản phẩm yêu thích</p>

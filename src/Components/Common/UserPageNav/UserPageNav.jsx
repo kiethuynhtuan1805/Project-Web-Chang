@@ -9,6 +9,12 @@ export default function UserPageNav({ type }) {
     const navigate = useNavigate();
 
     useEffect(() => {
+        const smoothElement = document.getElementById('smooth-element');
+        if (type === 'nav-info') {
+            setTimeout(() => {
+                smoothElement.classList.add('dropdown-open');
+            }, 100);
+        };
         document.getElementById(type).classList.add('selected');
         return () => {
         };
@@ -22,33 +28,50 @@ export default function UserPageNav({ type }) {
                 </p>
             </div>
             <div className='navigation'>
-                <ul>
-                    <li onClick={() => {
-                        return navigate('profile');
-                    }} id='nav-info'>
-                        Thông tin tài khoản
-                    </li>
-                    <li onClick={() => {
-                        return navigate('profile/change-password');
-                    }} id='nav-password'>
-                        Đổi mật khẩu
-                    </li>
-                    <li onClick={() => {
-                        return navigate('profile/history');
-                    }} id='nav-history'>
+                <div className='navigation-wrapper'>
+                    <div onClick={() => {
+                        return navigate('/user');
+                    }} className='nav-info-wrapper'>
+                        <p id={type === 'nav-info' ? '' : 'nav-info'} className='nav-target'>Tài khoản của tôi</p>
+                        <div id='smooth-element'>
+                            <div onClick={() => {
+                                return navigate('/user');
+                            }} id='nav-info' className='nav-target'>Hồ sơ cá nhân</div>
+                            <div onClick={() => {
+                                return navigate('/user/payment');
+                            }} id='nav-payment' className='nav-target'>Ngân hàng</div>
+                            <div onClick={() => {
+                                return navigate('/user/password');
+                            }} id='nav-password' className='nav-target'>Đổi mật khẩu</div>
+                            <div onClick={() => {
+                                return navigate('/user/setting/notification');
+                            }} id='nav-notification' className='nav-target'>Cài đặt thông báo</div>
+                            <div onClick={() => {
+                                return navigate('/user/setting/privacy');
+                            }} id='nav-privacy' className='nav-target'>Thiết lập riêng tư</div>
+                        </div>
+                    </div>
+                    <div onClick={() => {
+                        return navigate('/user/purchase');
+                    }} id='nav-purchase' className='nav-target'>
                         Lịch sử đơn hàng
-                    </li>
-                    <li onClick={() => {
-                        return navigate('profile/favorite');
-                    }} id='nav-favorite'>
+                    </div>
+                    <div onClick={() => {
+                        return navigate('/user/favorite');
+                    }} id='nav-favorite' className='nav-target'>
                         Sản phẩm yêu thích
-                    </li>
-                    <li onClick={() => {
+                    </div>
+                    <div onClick={() => {
+                        return navigate('/user/change-password');
+                    }} id='nav-password' className='nav-target'>
+                        Đổi mật khẩu
+                    </div>
+                    <div onClick={() => {
                         return navigate('/home');
-                    }} id='nav-log-out'>
+                    }} id='nav-log-out' className='nav-target'>
                         Đăng xuất
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     )

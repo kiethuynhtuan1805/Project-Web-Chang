@@ -102,7 +102,7 @@ export default function CustomSearchTable({ columns, data, type }) {
 
     let indexKey = 0;
     let newData = data.map((item) => item ? { ...item, key: `${type + '-' + indexKey++}` } : item);
-    if (type === 'History') {
+    if (type === 'Purchase') {
         newData = newData.map((item) => item ? { ...item, orderPrice: formatter(item.orderPrice) } : item);
     } else if (type === 'Cart') {
 

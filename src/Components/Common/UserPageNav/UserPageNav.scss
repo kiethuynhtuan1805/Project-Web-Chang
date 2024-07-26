@@ -12,22 +12,43 @@
         font-size: 1rem;
         text-align: left;
 
-        ul {
+        .navigation-wrapper {
             padding-left: 20px;
             list-style-type: none;
             color: black;
 
-            li {
+            div {
                 margin: 10px 0;
                 cursor: pointer;
+            }
 
+            .nav-info-wrapper {
+                &>div {
+                    height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: height .3s cubic-bezier(0.4, 0, 0.2, 1), opacity .3s cubic-bezier(.4, 0, .2, 1);
+                    padding-left: 20px;
+                }
+
+                .dropdown-open {
+                    height: auto;
+                    opacity: 1;
+                }
+
+                #smooth-element {
+                    margin: 0;
+                }
+            }
+
+            .nav-target {
                 &:hover {
                     color: rgb(62, 169, 252);
                     opacity: 0.7;
                 }
             }
 
-            li:last-child {
+            &>.nav-target:last-child {
                 color: red;
 
                 &:hover {

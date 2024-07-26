@@ -1,5 +1,5 @@
 import { Trace } from 'Components';
-import './History.scss'
+import './Purchase.scss'
 import { Button, Col, Popconfirm, Row, Space, Tag, Tooltip } from 'antd';
 import { UserPageNav } from 'Components';
 // import { useState } from 'react';
@@ -134,7 +134,7 @@ const columns = [
     },
 ];
 
-export default function History() {
+export default function Purchase() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Quản lý lịch sử đơn hàng"],
         route: ['/home', "/home/profile"]
@@ -154,22 +154,22 @@ export default function History() {
     //         : null;
 
     return (
-        <div className='History container'>
+        <div className='Purchase container'>
             <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
-                    <Col span={6} style={{ border: '1px solid #ccc', padding: '15px', borderRadius: '10px', height: '360px' }}>
-                        <UserPageNav type={'nav-history'} />
+                    <Col span={5}>
+                        <UserPageNav type={'nav-purchase'} />
                     </Col>
                     <Col span={1}></Col>
-                    <Col span={17}>
-                        <div className='history-content'>
+                    <Col span={18}>
+                        <div className='Purchase-content'>
                             <div>
                                 <p>Lịch sử đơn hàng</p>
                                 <p>Cảm ơn bạn vì đã tin tưởng và đặt hàng tại Chang House!</p>
                             </div>
                             <div>
-                                <CustomSearchTable columns={columns} data={fakeUser.orderHistory} type={'History'} />
+                                <CustomSearchTable columns={columns} data={fakeUser.orderPurchase} type={'Purchase'} />
                             </div>
                         </div>
                     </Col>
