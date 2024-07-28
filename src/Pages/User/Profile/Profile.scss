@@ -29,9 +29,17 @@
                         max-width: 800px;
                         font-size: 1rem;
 
+                        label {
+                            font-size: 1rem;
+                        }
+
                         .ant-col:first-child {
                             display: flex;
-                            padding-top: 5px;
+                            justify-content: space-between;
+                        }
+
+                        .ant-col {
+                            // margin-right: 10px;
                         }
 
                         .default-input {
@@ -75,6 +83,11 @@
                                     }
                                 }
                             }
+                        }
+
+                        .ant-form-item-explain-error {
+                            text-align: left;
+                            padding: 8px 0;
                         }
                     }
                 }

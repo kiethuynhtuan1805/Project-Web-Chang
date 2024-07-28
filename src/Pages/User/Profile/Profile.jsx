@@ -28,10 +28,10 @@ export default function Profile() {
         formLayout === 'horizontal'
             ? {
                 labelCol: {
-                    span: 4,
+                    span: 5,
                 },
                 wrapperCol: {
-                    span: 20,
+                    span: 19,
                 },
             }
             : null;

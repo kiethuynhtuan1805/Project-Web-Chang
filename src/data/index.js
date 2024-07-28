@@ -225,8 +225,18 @@ export const fakeUser = {
         totalPrice: 1000000,
     },
     orderPurchase: [
-        ...order    
+        ...order
     ]
+};
+
+export const fakePayment = {
+    userId: '1213adada',
+    // momo: '0964643875momo',
+    // zalopay: '0964643875zalopay',
+    // bank: ['0964643875bank1', '0964643875bank2'],
+    momo: '',
+    zalopay: '',
+    bank: [],
 }
 
 export const fakeListProduct = {

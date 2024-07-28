@@ -95,7 +95,7 @@ export default function ManagePassword() {
                                             },
                                             ({ getFieldValue }) => ({
                                                 validator(_, value) {
-                                                    if (!value || getFieldValue('password') === value) {
+                                                    if (!value || getFieldValue('new-password') === value) {
                                                         return Promise.resolve();
                                                     }
                                                     return Promise.reject(new Error('Mật khẩu không khớp!'));

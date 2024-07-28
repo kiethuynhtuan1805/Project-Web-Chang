@@ -6,20 +6,74 @@
 
             &>div {
                 &:first-child {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
                     padding: 15px;
                     border-bottom: 1px solid #fbcdf6;
                     text-align: left;
                     font-size: 1rem;
 
-                    p:first-child {
-                        font-weight: bold;
-                        font-size: 1.2rem;
-                        margin-bottom: 10px;
-                        text-transform: uppercase;
+                    &>div:first-child {
+                        p:first-child {
+                            font-weight: bold;
+                            font-size: 1.2rem;
+                            margin-bottom: 10px;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    &>div:last-child {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        background-color: var(--COLOR-brown-smooth);
+                        color: #ffffff;
+                        padding: 2px 15px;
+                        border-radius: 5px;
+
+                        p {
+                            margin: 0;
+                            margin-right: 10px;
+                        }
+
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
                     }
                 }
 
-                &:last-child {}
+                &:last-child {
+                    text-align: left;
+                    padding: 15px;
+
+                    &>div {
+                        margin-bottom: 20px;
+                        min-height: 300px;
+
+                        &>p:first-child {
+                            font-size: 1rem;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            border-bottom: 1px solid #ccc;
+                            height: 35px;
+                        }
+
+                        &>div {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 265px;
+
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
