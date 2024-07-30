@@ -23,14 +23,14 @@ export default function App() {
         <Route path='home' element={<UserLayout />}>
           <Route index element={<GlobalHome />} />
           <Route path='search/:searchId' element={<AllProduct title={'Kết quả tìm kiếm:'} />}></Route>
+          <Route path='*' element={<Navigate to="" replace />}></Route>
         </Route>
 
         {/* Product */}
         <Route path='products' element={<UserLayout />}>
-          <Route path='' element={<AllProduct title={'Sản phẩm'} />}>
-            <Route path=':productId' element={<ProductDetail />}></Route>
-            <Route path='collections/:collectionsType' element={<AllProduct />}></Route>
-          </Route>
+          <Route path='' element={<AllProduct title={'Sản phẩm'} />}></Route>
+          <Route path=':productId' element={<ProductDetail />}></Route>
+          <Route path='collections/:collectionsType' element={<AllProduct />}></Route>
         </Route>
 
         {/* User */}

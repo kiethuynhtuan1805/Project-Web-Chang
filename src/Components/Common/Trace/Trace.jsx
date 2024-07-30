@@ -9,7 +9,7 @@ export default function Trace({ traceData }) {
         if (id === '/home' || id === '/products' || id === '/user') {
             return navigate(id);
         } else {
-            return navigate(`collections/${id}`)
+            return navigate(`/products/collections/${id}`)
         }
     }
 

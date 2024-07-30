@@ -24,6 +24,13 @@ export default function VoucherWallet() {
                                 <p>Voucher</p>
                                 <p>Những khuyến mãi dành cho bạn!</p>
                             </div>
+                            <div className='option'>
+                                <div className='selected'>Tất cả (0)</div>
+                                <div>Chang (0)</div>
+                                <div>Dành cho riêng bạn (0)</div>
+                                <div>Dịch vụ tài chính (0)</div>
+                                <div>Từ đối tác (0)</div>
+                            </div>
                             <div>
                                 hh
                             </div>

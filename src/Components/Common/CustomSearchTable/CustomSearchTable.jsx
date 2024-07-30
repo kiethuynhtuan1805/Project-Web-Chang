@@ -3,15 +3,16 @@ import { Button, Input, Space, Table } from "antd";
 import { useRef, useState } from "react";
 
 export default function CustomSearchTable({ columns, data, type }) {
-    // const [searchText, setSearchText] = useState('');
-    // const [searchedColumn, setSearchedColumn] = useState('');
-    const [setSearchText] = useState('');
-    const [setSearchedColumn] = useState('');
+    const [searchText, setSearchText] = useState('');
+    const [searchedColumn, setSearchedColumn] = useState('');
+
     const searchInput = useRef(null);
     const handleSearch = (selectedKeys, confirm, dataIndex) => {
         confirm();
         setSearchText(selectedKeys[0]);
         setSearchedColumn(dataIndex);
+        console.log(searchText);
+        console.log(searchedColumn);
     };
     const handleReset = (clearFilters) => {
         clearFilters();

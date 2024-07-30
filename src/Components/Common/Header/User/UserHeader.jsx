@@ -22,7 +22,7 @@ function UserHeader(props) {
     }
 
     return (
-        <div className='UserHeader'>
+        <div className='UserHeader container'>
             <Header style={headerStyle}>
                 <ContactBar />
                 <div className="container-wrapper">

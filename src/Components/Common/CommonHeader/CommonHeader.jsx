@@ -25,7 +25,7 @@ function CommonHeader(props) {
     }, []);
 
     return (
-        <div className='CommonHeader'>
+        <div className='CommonHeader container'>
             <Row align="middle" className={props.type === 'WP' ? `header ${isScrolled ? 'scrolled' : ''}` : `header`}>
                 <Col span={3} className='logo' onClick={() => {
                     return navigate('/home');
@@ -40,7 +40,7 @@ function CommonHeader(props) {
                                 fallback={require('../../../assets/images/logo1.jpg')}
                             />
                         ) : (
-                            <a href='/home'>CHANG HOUSE</a>
+                            <a href='/home' style={{ margin: 0 }}>CHANG HOUSE</a>
                         )
                     }
                 </Col>

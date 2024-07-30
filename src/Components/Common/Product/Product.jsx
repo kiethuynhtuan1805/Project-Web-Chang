@@ -13,7 +13,7 @@ export default function Product({ dataProduct, type }) {
 
     // Function
     const linkTo = () => {
-        return navigate('/home/products/1');
+        return navigate('/products/1');
     };
     const showModal = () => {
         setIsModalOpen(true);

@@ -21,6 +21,37 @@
 
                 &:last-child {}
             }
+
+            .option {
+                display: flex;
+                margin: 10px 20px;
+                border-radius: 5px;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 25px;
+
+                    cursor: pointer;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    &:hover {
+                        opacity: 0.8;
+                        color: var(--COLOR-pink-super-deep);
+                    }
+                }
+
+                .selected {
+                    border-bottom: 2px solid rgba(0, 0, 0, .09);
+                    border-color: var(--COLOR-pink-super-deep);
+                    color: var(--COLOR-pink-super-deep);
+                    font-weight: bold;
+                }
+            }
         }
     }
 }

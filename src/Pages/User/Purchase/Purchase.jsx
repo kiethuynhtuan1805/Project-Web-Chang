@@ -163,10 +163,19 @@ export default function Purchase() {
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>
-                        <div className='Purchase-content'>
+                        <div className='purchase-content'>
                             <div>
                                 <p>Lịch sử đơn hàng</p>
                                 <p>Cảm ơn bạn vì đã tin tưởng và đặt hàng tại Chang House!</p>
+                            </div>
+                            <div className='option'>
+                                <div className='selected'>Tất cả</div>
+                                <div >Chờ thanh toán</div>
+                                <div>Vận chuyển</div>
+                                <div>Chờ giao hàng</div>
+                                <div>Hoàn thành</div>
+                                <div>Đã hủy</div>
+                                <div>Trả hàng/Hoàn tiền</div>
                             </div>
                             <div>
                                 <CustomSearchTable columns={columns} data={fakeUser.orderPurchase} type={'Purchase'} />

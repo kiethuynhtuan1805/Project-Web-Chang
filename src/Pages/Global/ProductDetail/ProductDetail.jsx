@@ -66,7 +66,7 @@ export default function ProductDetail(props) {
                                             fakeProduct.color.map((color, id) => (
                                                 <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type + '-' + id}>
                                                     <div className='color'>
-                                                        <Icon icon="fluent:color-16-filled" color={color.type} width={45} height={45} className='color-option selected' />
+                                                        <div className="color-option" style={{ backgroundColor: color.type }}></div>
                                                     </div>
                                                 </Tooltip>
                                             ))
