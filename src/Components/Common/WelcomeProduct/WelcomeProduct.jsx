@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import './WelcomeProduct.scss'
-import { Card, Button } from 'antd'
+import { Card, Button, Col } from 'antd'
 
 const { Meta } = Card
 
@@ -22,15 +22,19 @@ function WelcomeProduct({ data }) {
                 {
                     data.listProduct.map((item, id) => {
                         return (
-                            <Card
-                                hoverable
-                                style={{ width: 220 }}
-                                cover={<div className="image-container"><img alt="example" src={item.url} /></div>}
-                                className='card-product'
-                                key={'Welcome-product-' + id}
-                            >
-                                <Meta title={item.name} description={item.description} />
-                            </Card>
+                            <Col key={`Product-${item}-${id}`} xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{ span: 6 }} xxl={{ span: 4 }}>
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    <Card
+                                        hoverable
+                                        style={{ maxWidth: '280px', width: '100%' }}
+                                        cover={<div className="image-container"><img alt="example" src={item.url} /></div>}
+                                        className='card-product'
+                                        key={'Welcome-product-' + id}
+                                    >
+                                        <Meta title={item.name} description={item.description} />
+                                    </Card>
+                                </div>
+                            </Col>
                         )
                     })
                 }

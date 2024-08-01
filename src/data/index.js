@@ -65,6 +65,24 @@ export let fakeNav = [
     },
 ]
 
+export let fakeNavVoucher = [
+    {
+        label: 'Tất cả (0)',
+    },
+    {
+        label: 'Chang (0)',
+    },
+    {
+        label: 'Dành cho riêng bạn (0)',
+    },
+    {
+        label: 'Dịch vụ tài chính (0)',
+    },
+    {
+        label: 'Từ đối tác (0)',
+    },
+]
+
 export const fakeHero = "https://img.freepik.com/free-vector/bright-geometrical-black-friday-sale-banner-design-vector_1055-9127.jpg?w=2000\nhttps://img.freepik.com/premium-vector/big-sale-with-shopping-cart-design_181623-283.jpg?w=1380\nhttps://img.freepik.com/premium-vector/super-sale-banner-with-podium-template-design-emoji-icon_181623-569.jpg?w=1380";
 
 export const fakeProduct = {
@@ -362,4 +380,21 @@ export const fakeWelcomeProduct3 = {
     ]
 }
 
-export const fakeWelcomeProduct = [fakeWelcomeProduct1, fakeWelcomeProduct2, fakeWelcomeProduct3]
+export const fakeWelcomeProduct = [fakeWelcomeProduct1, fakeWelcomeProduct2, fakeWelcomeProduct3];
+
+export const fakeVoucher = {
+    title: 'CHANG',
+    type: '1',
+    name: 'Giảm 8% Giảm tối đa ₫100k cho đơn Tối Thiểu ₫99k',
+    effectiveTime: '30/07/2024',
+    endTime: '04/08/2024',
+    amount: '10',
+    description: 'Lượt sử dụng có hạn. Nhanh tay kẻo lỡ bạn nhé!Giảm 8% Đơn Tối Thiểu ₫99k Giảm tối đa ₫100k.',
+    productApplied: 'Chỉ áp dụng trên App cho một số sản phẩm và một số người dùng tham gia chương trình khuyến mãi nhất định',
+    paymentApplied: 'Tất cả các hình thức thanh toán',
+    shippingUnit: ['Standard Express', 'Hỏa tốc', 'Giao hàng nhanh'],
+    device: ['IOS', 'Android', 'PC', 'Laptop'],
+    detail: 'Mã HC0108 giảm 8% tối đa 100000Đ cho đơn từ 99000Đ. HSD: 23:59 1/8/2024. Số lượng có hạn.'
+};
+
+export const fakeListVoucher = [fakeVoucher, fakeVoucher, fakeVoucher]

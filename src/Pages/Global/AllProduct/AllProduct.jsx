@@ -132,7 +132,7 @@ export default function AllProduct(props) {
                                     />
                                 </div>
                                 <div>
-                                    <ListProduct data={fakeListProduct.data} btn={false} />
+                                    <ListProduct data={fakeListProduct.data} btn={false} type='' />
                                     <Pagination
                                         showSizeChanger={false}
                                         onShowSizeChange={onShowSizeChange}

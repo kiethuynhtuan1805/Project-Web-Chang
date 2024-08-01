@@ -1,13 +1,29 @@
 import { Trace } from 'Components';
 import './VoucherWallet.scss'
-import { Col, Row } from 'antd';
-import { UserPageNav } from 'Components';
+import { Col, Row, Menu } from 'antd';
+import { UserPageNav, ListVoucher } from 'Components';
+import { fakeListVoucher, fakeNavVoucher } from 'data';
+import { useEffect, useState } from 'react';
 
 export default function VoucherWallet() {
+    // useState
+    const [opt, setOpt] = useState(1);
+
+    const handleNav = () => {
+        setOpt(0);
+    }
+
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Voucher"],
         route: ['/home', "/user/voucher-wallet"]
     };
+
+    useEffect(() => {
+        const optPicked = document.getElementsByClassName("option")[0].childNodes[0];
+        optPicked.classList.add("selected");
+        return () => {
+        };
+    }, []);
 
     return (
         <div className='VoucherWallet container'>
@@ -24,16 +40,15 @@ export default function VoucherWallet() {
                                 <p>Voucher</p>
                                 <p>Những khuyến mãi dành cho bạn!</p>
                             </div>
-                            <div className='option'>
-                                <div className='selected'>Tất cả (0)</div>
-                                <div>Chang (0)</div>
-                                <div>Dành cho riêng bạn (0)</div>
-                                <div>Dịch vụ tài chính (0)</div>
-                                <div>Từ đối tác (0)</div>
-                            </div>
-                            <div>
-                                hh
-                            </div>
+                            <Menu
+                                theme="#FFB0BD"
+                                mode="horizontal"
+                                selectedKeys={[`${opt}`]}
+                                items={fakeNavVoucher}
+                                className='option'
+                                onClick={handleNav}
+                            />
+                            <ListVoucher data={fakeListVoucher} btn={false} type={''} />
                         </div>
                     </Col>
                 </Row>

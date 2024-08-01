@@ -45,7 +45,7 @@ export default function UserFooter() {
                         <div className='footer-right-wrapper'>
                             <div className='signature'>
                                 <Image
-                                    width={'360px'}
+                                    width={'100%'}
                                     height={'180px'}
                                     preview={false}
                                     src={''}
