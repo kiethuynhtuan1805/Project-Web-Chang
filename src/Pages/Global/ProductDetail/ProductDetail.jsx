@@ -58,7 +58,29 @@ export default function ProductDetail(props) {
                                 </div>
                                 <p className='code'>Mã sản phẩm: {fakeProduct.code}</p>
                                 <p className='price'>{`${fakeProduct.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
-                                <p className='inventory'>*Hiện tại cửa hàng còn <strong>{fakeProduct.inventory}</strong> sản phẩm này.</p>
+                                <p className='inventory'>* Hiện tại cửa hàng còn <strong>{fakeProduct.inventory}</strong> sản phẩm này.</p>
+                                <div className="shipping">
+                                    <p>Vận chuyển:</p>
+                                    <div className='shipping-wrapper'>
+                                        <div className='free-shipping'>
+                                            <img src={require('../../../assets/images/freeship.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                                            <p>Miễn phí vận chuyển</p>
+                                        </div>
+                                        <div className='shipping-content'>
+                                            <img src={require('../../../assets/images/freeship.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                                            <div>
+                                                <div>
+                                                    <p>Vận chuyển tới</p>
+                                                    <select name="" id=""></select>
+                                                </div>
+                                                <div>
+                                                    <p>Phí vận chuyển</p>
+                                                    <select name="" id=""></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className='color-picked'>
                                     <p>Màu sắc:</p>
                                     <div style={{ display: 'flex' }}>
@@ -66,7 +88,7 @@ export default function ProductDetail(props) {
                                             fakeProduct.color.map((color, id) => (
                                                 <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type + '-' + id}>
                                                     <div className='color'>
-                                                        <div className="color-option" style={{ backgroundColor: color.type }}></div>
+                                                        <Icon icon="fluent:color-16-filled" color={color.type} width={48} height={48} className='color-option selected' />
                                                     </div>
                                                 </Tooltip>
                                             ))

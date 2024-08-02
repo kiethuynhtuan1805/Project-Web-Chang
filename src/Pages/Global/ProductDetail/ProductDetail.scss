@@ -102,25 +102,77 @@
                     }
                 }
 
+                .shipping {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 15px;
+
+                    .shipping-wrapper {
+                        margin-left: 15px;
+
+                        .free-shipping {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            p {
+                                margin-left: 10px;
+                                font-size: 0.9rem;
+                            }
+                        }
+
+                        .shipping-content {
+                            display: flex;
+                            flex-direction: row;
+                            margin-top: 10px;
+
+                            &>div {
+                                margin-top: 5px;
+                                margin-left: 10px;
+
+                                &>div {
+                                    display: flex;
+                                    flex-direction: row;
+                                }
+
+                                &>div:last-child {
+                                    margin-top: 10px;
+                                }
+
+                                p {
+                                    width: 120px;
+                                    font-size: 0.9rem;
+                                    margin-right: 10px;
+                                }
+
+                                select {
+                                    width: 300px;
+                                }
+                            }
+                        }
+
+                        img {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+
                 .color-picked {
                     p {
                         font-size: 1.1rem;
                         margin-right: 20px;
-                        margin-top: 20px;
                     }
 
                     .color-option {
-                        width: 80px;
-                        height: 35px;
-                        border-radius: 5px;
                         cursor: pointer;
                         margin-right: 5px;
                         margin-top: 10px;
-                        margin-bottom: 10px;
+                        margin-bottom: 5px;
                     }
 
                     .selected {
-                        border: 1px solid rgba(0, 0, 0, 0.5);
+                        border: 1px solid #fb67e9;
                         border-radius: 50%;
                     }
                 }

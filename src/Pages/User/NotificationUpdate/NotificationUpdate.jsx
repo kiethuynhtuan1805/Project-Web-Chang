@@ -25,8 +25,9 @@ export default function NotificationUpdate() {
                                 <p>Cập nhật</p>
                                 <p>Những cập nhật gần đây!</p>
                             </div>
-                            <div>
-                                hh
+                            <div className='content-wrapper'>
+                                <img src={require('../../../assets/images/notificationChang.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                                <p>Chưa có cập nhật mới từ Chang House!</p>
                             </div>
                         </div>
                     </Col>

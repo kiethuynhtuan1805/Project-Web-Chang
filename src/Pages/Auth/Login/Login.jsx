@@ -14,6 +14,7 @@ export default function Login() {
 
     const onFinish = (values) => {
         console.log('Success:', values);
+        navigate('/user')
     };
 
     const onFinishFailed = (errorInfo) => {

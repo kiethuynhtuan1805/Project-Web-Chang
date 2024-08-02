@@ -9,6 +9,9 @@
         height: 100px;
 
         #btn-upload {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 50%;
             border: none;
             cursor: pointer;
@@ -23,6 +26,10 @@
 
             &:hover {
                 background-color: rgba(129, 128, 128, 0.9);
+            }
+
+            span {
+                font-size: 1rem;
             }
         }
     }

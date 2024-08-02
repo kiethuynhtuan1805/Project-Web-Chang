@@ -1,32 +1,40 @@
 import './Cart.scss'
+import { CartPayment } from 'Components';
 import { Trace } from 'Components';
-import { Image } from 'antd';
 import { CustomSearchTable } from 'Components';
 import { fakeUser } from 'data';
 
 const columns = [
     {
+        title: () => {
+            return (
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <input type="checkbox" style={{ width: '15px', height: '15px' }} />
+                </div>
+            )
+        },
         dataIndex: 'product',
         render: (product, record) => {
             return (
-                <Image
-                    width={'200px'}
-                    height={'100%'}
-                    preview={false}
-                    src={''}
-                    fallback={require('../../../assets/images/logo1.jpg')}
-                />
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <input type="checkbox" style={{ width: '15px', height: '15px' }} />
+                </div>
             )
         },
-        width: '15%',
+        width: '5%',
     },
     {
         title: 'Sản phẩm',
         dataIndex: 'product',
         render: (product) => {
-            return product.name
+            return (
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <img src={require('../../../assets/images/souvenir.jpg')} alt={require('../../../assets/images/image-not-found.png')} style={{ width: '100px', height: '100%' }} />
+                    <p style={{ paddingLeft: '5px' }}>{product.name}</p>
+                </div>
+            )
         },
-        width: '20%',
+        width: '30%',
     },
     {
         title: 'Đơn giá',
@@ -76,6 +84,7 @@ export default function Cart() {
                     <CustomSearchTable columns={columns} data={fakeUser.cart.data} type={'Cart'} />
                 </div>
             </div>
+            <CartPayment />
         </div>
     )
 }

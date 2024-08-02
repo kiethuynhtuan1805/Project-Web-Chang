@@ -24,8 +24,9 @@ export default function NotificationOrder() {
                                 <p>Cập nhật đơn hàng</p>
                                 <p>Một số thông báo gần đây về đơn hàng của bạn!</p>
                             </div>
-                            <div>
-                                hh
+                            <div className='content-wrapper'>
+                                <img src={require('../../../assets/images/notificationOrder.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                                <p>Chưa có cập nhật đơn hàng!</p>
                             </div>
                         </div>
                     </Col>

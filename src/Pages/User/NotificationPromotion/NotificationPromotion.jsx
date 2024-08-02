@@ -24,8 +24,9 @@ export default function NotificationPromotion() {
                                 <p>Thông báo khuyến mãi</p>
                                 <p>Những khuyến mãi khả dụng!</p>
                             </div>
-                            <div>
-                                hh
+                            <div className='content-wrapper'>
+                                <img src={require('../../../assets/images/notificationChang.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                                <p>Chưa có Khuyến mãi từ Chang House!</p>
                             </div>
                         </div>
                     </Col>

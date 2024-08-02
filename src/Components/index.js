@@ -16,6 +16,7 @@ import ContactBar from "./Common/ContactBar/ContactBar";
 import CommonHeader from "./Common/CommonHeader/CommonHeader";
 import OnTopButton from "./Common/OnTopButton/OnTopButton";
 import ListVoucher from "./Common/ListVoucher/ListVoucher";
+import CartPayment from "./Common/CartPayment/CartPayment";
 
 export {
     Hero,
@@ -36,4 +37,5 @@ export {
     CommonHeader,
     OnTopButton,
     ListVoucher,
+    CartPayment,
 }

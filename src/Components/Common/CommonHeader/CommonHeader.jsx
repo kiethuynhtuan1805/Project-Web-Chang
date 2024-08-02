@@ -128,7 +128,7 @@ function CommonHeader(props) {
                                                 <p style={{ color: '#e53935' }}>{`${fakeUser.cart.totalPrice.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
                                             </div>
                                             <Button size={'large'} className='btn-view-cart' onClick={() => {
-                                                return navigate('cart');
+                                                return navigate('/user/cart');
                                             }}>
                                                 Xem giỏ hàng
                                             </Button>
