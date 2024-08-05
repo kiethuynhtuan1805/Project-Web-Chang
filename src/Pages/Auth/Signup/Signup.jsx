@@ -29,7 +29,7 @@ export default function Signup() {
                             height={'100%'}
                             preview={false}
                             src={'https://i.pinimg.com/736x/a7/d0/61/a7d061088228fc7151aea42f0b6c01ef.jpg'}
-                            fallback={require('../../../assets/images/logo1.jpg')}
+                            fallback={require('assets/images/logo1.jpg')}
                         />
                     </Col>
                     <Col span={12} className='signup-wrapper'>

@@ -24,18 +24,18 @@ export default function UserFooter() {
                                 <a href="mailto:kiet.huynhtuan1805@gmail.com">kiet.huynhtuan1805@gmail.com</a>
                             </div>
                         </div> */}
-                        <div>VỀ CHÚNG TÔI</div>
-                        <br />
                         <div>
                             HỆ THỐNG CỬA HÀNG
                         </div>
                         <br />
                         <div>
-                            CHÍNH SÁCH BÁN HÀNG
+                            HƯỚNG DẪN MUA HÀNG
                         </div>
                         <br />
+                        <div>CHĂM SÓC KHÁCH HÀNG</div>
+                        <br />
                         <div>
-                            HƯỚNG DẪN MUA HÀNG
+                            CHÍNH SÁCH THANH TOÁN - GIAO HÀNG - ĐỔI TRẢ
                         </div>
                     </Col>
                     <Col span={6} className='footer-middle'>
@@ -49,7 +49,7 @@ export default function UserFooter() {
                                     height={'180px'}
                                     preview={false}
                                     src={''}
-                                    fallback={require('../../../assets/images/signature.jpg')}
+                                    fallback={require('assets/images/signature.jpg')}
                                 />
                             </div>
                             <div className="note">

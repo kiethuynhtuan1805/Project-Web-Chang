@@ -1,7 +1,6 @@
-import { Trace } from 'Components';
 import './Profile.scss'
 import { Button, Col, DatePicker, Form, Input, Row, Select } from 'antd';
-import { UserPageNav } from 'Components';
+import { UserPageNav, Trace } from 'Components';
 import TextArea from 'antd/es/input/TextArea';
 import { useEffect, useState } from 'react';
 

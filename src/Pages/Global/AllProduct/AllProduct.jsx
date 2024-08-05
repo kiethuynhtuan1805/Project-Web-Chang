@@ -31,6 +31,7 @@ const formatter = (value) => `${`${value.toLocaleString('it-IT', { style: 'curre
 export default function AllProduct(props) {
     const [inputValue, setInputValue] = useState(0);
     const [nav, setNav] = useState(true);
+    const traceRoute = [...fakeListProduct.type.split('\n')];
 
     const onShowSizeChange = (current, pageSize) => {
         console.log(current, pageSize);
@@ -47,7 +48,9 @@ export default function AllProduct(props) {
 
     const traceData = {
         data: ["Trang chủ", ...fakeListProduct.trace.split('\n')],
-        route: ['/home', ...fakeListProduct.type.split('\n')]
+        route: ['/home', ...traceRoute.map((value, index) => {
+            return `/products/collections/${traceRoute.slice(0, index + 1).join('/')}`;
+        })]
     };
 
     return (

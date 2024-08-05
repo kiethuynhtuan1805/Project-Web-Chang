@@ -6,9 +6,13 @@ import { fakeProduct, fakeListProduct } from 'data';
 import { ListProduct } from 'Components';
 
 export default function ProductDetail(props) {
+    const traceRoute = [...fakeProduct.type.split('\n')];
+
     const traceData = {
         data: ["Trang chủ", ...fakeProduct.trace.split('\n'), `${fakeProduct.name} ${fakeProduct.code}`],
-        route: ['/home', ...fakeProduct.type.split('\n')]
+        route: ['/home', ...traceRoute.map((value, index) => {
+            return `/products/collections/${traceRoute.slice(0, index + 1).join('/')}`;
+        })]
     };
 
     return (
@@ -23,7 +27,7 @@ export default function ProductDetail(props) {
                                     src={fakeProduct.picSrc[0].src}
                                     width={'100%'}
                                     height={'100%'}
-                                    fallback={require('../../../assets/images/image-not-found.png')}
+                                    fallback={require('assets/images/image-not-found.png')}
                                     style={{ maxWidth: '700px' }}
                                 />
                             </div>
@@ -36,7 +40,7 @@ export default function ProductDetail(props) {
                                                 src={data.src}
                                                 width={'140px'}
                                                 height={'140px'}
-                                                fallback={require('../../../assets/images/image-not-found.png')}
+                                                fallback={require('assets/images/image-not-found.png')}
                                             />
                                         )
                                     })
@@ -63,11 +67,11 @@ export default function ProductDetail(props) {
                                     <p>Vận chuyển:</p>
                                     <div className='shipping-wrapper'>
                                         <div className='free-shipping'>
-                                            <img src={require('../../../assets/images/freeship.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                                            <img src={require('assets/images/freeship.png')} alt={require('assets/images/image-not-found.png')} />
                                             <p>Miễn phí vận chuyển</p>
                                         </div>
                                         <div className='shipping-content'>
-                                            <img src={require('../../../assets/images/freeship.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                                            <img src={require('assets/images/freeship.png')} alt={require('assets/images/image-not-found.png')} />
                                             <div>
                                                 <div>
                                                     <p>Vận chuyển tới</p>

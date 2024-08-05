@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 export default function SettingNotification() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Cài đặt thông báo"],
-        route: ['/home', "/user", "/user/setting/notifacation"]
+        route: ['/home', "/user"]
     };
 
     const [notificationEmail, setNotificationEmail] = useState(false);

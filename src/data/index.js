@@ -261,8 +261,8 @@ export const fakeListProduct = {
     data: [
         fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct, fakeProduct
     ],
-    trace: 'Phụ kiện\nTrang sức',
-    type: 'phu-kien\ntrang-suc',
+    trace: 'Phụ kiện\nTrang sức\nDây chuyền',
+    type: 'phu-kien\ntrang-suc\nday-chuyen',
 }
 
 export const fakeBanner = ["https://tinyyume.com/cdn/shop/files/Snapinsta.app_338458269_879996006396274_990222832187670111_n_1080_360x.jpg?v=1680243210",

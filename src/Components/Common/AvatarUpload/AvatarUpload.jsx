@@ -70,7 +70,7 @@ export default function AvatarUpload() {
                     height={'100px'}
                     preview={false}
                     src={'https://haycafe.vn/wp-content/uploads/2022/02/Hinh-avatar-de-thuong-cho-Facebook.jpg'}
-                    fallback={require('../../../assets/images/image-not-found.png')}
+                    fallback={require('assets/images/image-not-found.png')}
                     style={{ borderRadius: '50%', border: '1px solid #ccc' }}
                     className='avatar-view'
                 />

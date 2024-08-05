@@ -37,7 +37,7 @@ function CommonHeader(props) {
                                 height={'100%'}
                                 preview={false}
                                 src={''}
-                                fallback={require('../../../assets/images/logo1.jpg')}
+                                fallback={require('assets/images/logo1.jpg')}
                             />
                         ) : (
                             <a href='/home' style={{ margin: 0 }}>CHANG HOUSE</a>
@@ -53,8 +53,8 @@ function CommonHeader(props) {
                         <Col span={10} className='header-content'>
                             <a href="/login">ĐĂNG NHẬP</a>
                             <a href="/signup">ĐĂNG KÝ</a>
-                            <a href="/about-us">VỀ CHÚNG TÔI</a>
-                            <a href="/privacy">CHÍNH SÁCH</a>
+                            <a href="/blog/policy">CHÍNH SÁCH</a>
+                            <a href="/blog/user/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
                         </Col>
                     ) : (
                         <Col span={10} className='header-content'>
@@ -94,7 +94,7 @@ function CommonHeader(props) {
                                                                     height={'90px'}
                                                                     preview={false}
                                                                     src={item.product.picSrc[0].src}
-                                                                    fallback={require('../../../assets/images/logo1.jpg')}
+                                                                    fallback={require('assets/images/logo1.jpg')}
                                                                 />
                                                             </Col>
                                                             <Col span={15} style={{ display: 'flex', alignItems: 'center' }}>

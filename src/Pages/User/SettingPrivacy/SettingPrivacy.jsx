@@ -7,7 +7,7 @@ import { useState } from 'react';
 export default function SettingPrivacy() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Thiết lập riêng tư"],
-        route: ['/home', "/user", "/user/setting/privacy"]
+        route: ['/home', "/user"]
     };
 
     const [btnDelete, setBtnDelete] = useState(false);

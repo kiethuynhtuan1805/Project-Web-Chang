@@ -1,32 +1,32 @@
 import { Trace } from 'Components';
-import './NotificationPromotion.scss'
+import './NotificationOrder.scss'
 import { Col, Row } from 'antd';
 import { UserPageNav } from 'Components';
 
-export default function NotificationPromotion() {
+export default function NotificationOrder() {
     const traceData = {
-        data: ["Trang chủ", "Thông tin tài khoản", "Thông báo khuyến mãi"],
-        route: ['/home', "/user", "/user/notifacations/promotion"]
+        data: ["Trang chủ", "Thông tin tài khoản", "Cập nhật đơn hàng"],
+        route: ['/home', "/user"]
     };
 
     return (
-        <div className='NotificationPromotion container'>
+        <div className='NotificationOrder container'>
             <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5} >
-                        <UserPageNav type={'nav-notification-promotion'} haveDropDown={"nav-notification"} />
+                        <UserPageNav type={'nav-notification-order'} haveDropDown={"nav-notification"} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>
                         <div className='notification-content'>
                             <div>
-                                <p>Thông báo khuyến mãi</p>
-                                <p>Những khuyến mãi khả dụng!</p>
+                                <p>Cập nhật đơn hàng</p>
+                                <p>Một số thông báo gần đây về đơn hàng của bạn!</p>
                             </div>
                             <div className='content-wrapper'>
-                                <img src={require('../../../assets/images/notificationChang.png')} alt={require('../../../assets/images/image-not-found.png')} />
-                                <p>Chưa có Khuyến mãi từ Chang House!</p>
+                                <img src={require('assets/images/notificationOrder.png')} alt={require('assets/images/image-not-found.png')} />
+                                <p>Chưa có cập nhật đơn hàng!</p>
                             </div>
                         </div>
                     </Col>

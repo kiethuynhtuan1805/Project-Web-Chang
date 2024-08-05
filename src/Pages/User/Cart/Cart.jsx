@@ -29,7 +29,7 @@ const columns = [
         render: (product) => {
             return (
                 <div style={{ display: 'flex', alignItems: 'center' }}>
-                    <img src={require('../../../assets/images/souvenir.jpg')} alt={require('../../../assets/images/image-not-found.png')} style={{ width: '100px', height: '100%' }} />
+                    <img src={require('assets/images/souvenir.jpg')} alt={require('assets/images/image-not-found.png')} style={{ width: '100px', height: '100%' }} />
                     <p style={{ paddingLeft: '5px' }}>{product.name}</p>
                 </div>
             )

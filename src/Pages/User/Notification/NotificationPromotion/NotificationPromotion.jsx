@@ -1,33 +1,32 @@
 import { Trace } from 'Components';
-import './NotificationUpdate.scss'
+import './NotificationPromotion.scss'
 import { Col, Row } from 'antd';
 import { UserPageNav } from 'Components';
 
-
-export default function NotificationUpdate() {
+export default function NotificationPromotion() {
     const traceData = {
-        data: ["Trang chủ", "Thông tin tài khoản", "Cập nhật"],
-        route: ['/home', "/user", "/user/notifacations/new-update"]
+        data: ["Trang chủ", "Thông tin tài khoản", "Thông báo khuyến mãi"],
+        route: ['/home', "/user"]
     };
 
     return (
-        <div className='NotificationUpdate container'>
+        <div className='NotificationPromotion container'>
             <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <Row style={{ marginBottom: '100px' }}>
                     <Col span={5} >
-                        <UserPageNav type={'nav-notification-new-update'} haveDropDown={"nav-notification"} />
+                        <UserPageNav type={'nav-notification-promotion'} haveDropDown={"nav-notification"} />
                     </Col>
                     <Col span={1}></Col>
                     <Col span={18}>
                         <div className='notification-content'>
                             <div>
-                                <p>Cập nhật</p>
-                                <p>Những cập nhật gần đây!</p>
+                                <p>Thông báo khuyến mãi</p>
+                                <p>Những khuyến mãi khả dụng!</p>
                             </div>
                             <div className='content-wrapper'>
-                                <img src={require('../../../assets/images/notificationChang.png')} alt={require('../../../assets/images/image-not-found.png')} />
-                                <p>Chưa có cập nhật mới từ Chang House!</p>
+                                <img src={require('assets/images/notificationChang.png')} alt={require('assets/images/image-not-found.png')} />
+                                <p>Chưa có Khuyến mãi từ Chang House!</p>
                             </div>
                         </div>
                     </Col>

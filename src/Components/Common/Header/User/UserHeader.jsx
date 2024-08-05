@@ -30,8 +30,8 @@ function UserHeader(props) {
                         <div className='container-wrapper'>
                             <div>
                                 <a href="/">HỆ THỐNG CỬA HÀNG</a>
-                                <a href="/about-us">VỀ CHÚNG TÔI</a>
-                                <a href="/privacy">CHÍNH SÁCH</a>
+                                <a href="/blog/user/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
+                                <a href="/blog/policy">CHÍNH SÁCH THANH TOÁN - GIAO HÀNG - ĐỔI TRẢ</a>
                             </div>
                         </div>
                     </div>

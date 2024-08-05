@@ -10,7 +10,7 @@ export default function Voucher({ dataVoucher, type }) {
         <div className='Voucher'>
             <Row style={{ height: '100%' }}>
                 <Col span={8} style={{ height: '100%' }} className='voucher-type'>
-                    <img src={require('../../../assets/images/freeship.png')} alt={require('../../../assets/images/image-not-found.png')} />
+                    <img src={require('assets/images/freeship.png')} alt={require('assets/images/image-not-found.png')} />
                 </Col>
                 <Col span={16} style={{ height: '100%' }} className='voucher-main'>
                     <div className='voucher-content'>

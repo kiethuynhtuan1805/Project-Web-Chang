@@ -7,7 +7,7 @@ import { fakePayment } from 'data';
 export default function Payment() {
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Ngân hàng"],
-        route: ['/home', "/user", "/user/payment"]
+        route: ['/home', "/user"]
     };
 
     return (

@@ -29,7 +29,7 @@ function WelcomePage(props) {
                         height={'100%'}
                         preview={false}
                         src={''}
-                        fallback={require('../../../assets/images/hero.jpg')}
+                        fallback={require('assets/images/hero.jpg')}
                     />
                 </div>
                 <div className='content'>

@@ -33,7 +33,7 @@ export default function Product({ dataProduct, type }) {
                     height={type === 'home' ? '250px' : '200px'}
                     preview={false}
                     src={dataProduct.picSrc[0].src}
-                    fallback={require('../../../assets/images/image-not-found.png')}
+                    fallback={require('assets/images/image-not-found.png')}
                     onClick={linkTo}
                 />
                 <div className='product-action'>
@@ -50,7 +50,7 @@ export default function Product({ dataProduct, type }) {
                                         width={'100%'}
                                         height={'400px'}
                                         src={dataProduct.picSrc[0].src}
-                                        fallback={require('../../../assets/images/image-not-found.png')}
+                                        fallback={require('assets/images/image-not-found.png')}
                                     />
                                 </div>
                                 <div className='modal-picture-sub' style={{ marginTop: '20px' }}>
@@ -62,7 +62,7 @@ export default function Product({ dataProduct, type }) {
                                                     src={data.src}
                                                     width={'80px'}
                                                     height={'100%'}
-                                                    fallback={require('../../../assets/images/image-not-found.png')}
+                                                    fallback={require('assets/images/image-not-found.png')}
                                                 />
                                             )
                                         })

@@ -16,7 +16,7 @@ export default function FollowMeBanner() {
                             height={'300px'}
                             preview={false}
                             src={fakeBanner[0]}
-                            fallback={require('../../../assets/images/image-not-found.png')}
+                            fallback={require('assets/images/image-not-found.png')}
                         />
                     </div>
                 </Col>
@@ -27,7 +27,7 @@ export default function FollowMeBanner() {
                             height={'300px'}
                             preview={false}
                             src={fakeBanner[1]}
-                            fallback={require('../../../assets/images/image-not-found.png')}
+                            fallback={require('assets/images/image-not-found.png')}
                         />
                     </div>
                 </Col>
@@ -38,7 +38,7 @@ export default function FollowMeBanner() {
                             height={'300px'}
                             preview={false}
                             src={fakeBanner[2]}
-                            fallback={require('../../../assets/images/image-not-found.png')}
+                            fallback={require('assets/images/image-not-found.png')}
                         />
                     </div>
                 </Col>
@@ -49,7 +49,7 @@ export default function FollowMeBanner() {
                             height={'300px'}
                             preview={false}
                             src={fakeBanner[3]}
-                            fallback={require('../../../assets/images/image-not-found.png')}
+                            fallback={require('assets/images/image-not-found.png')}
                         />
                     </div>
                 </Col>

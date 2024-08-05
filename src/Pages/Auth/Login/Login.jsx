@@ -31,7 +31,7 @@ export default function Login() {
                             height={'100%'}
                             preview={false}
                             src={'https://img.freepik.com/premium-photo/white-kitten-with-pink-background-that-says-white-kitten_962508-11696.jpg'}
-                            fallback={require('../../../assets/images/logo1.jpg')}
+                            fallback={require('assets/images/logo1.jpg')}
                         />
                     </Col>
                     <Col span={12} className='login-wrapper'>

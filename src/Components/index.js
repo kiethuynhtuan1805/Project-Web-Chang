@@ -17,6 +17,7 @@ import CommonHeader from "./Common/CommonHeader/CommonHeader";
 import OnTopButton from "./Common/OnTopButton/OnTopButton";
 import ListVoucher from "./Common/ListVoucher/ListVoucher";
 import CartPayment from "./Common/CartPayment/CartPayment";
+import Blog from "./Common/Blog/Blog";
 
 export {
     Hero,
@@ -38,4 +39,5 @@ export {
     OnTopButton,
     ListVoucher,
     CartPayment,
+    Blog,
 }

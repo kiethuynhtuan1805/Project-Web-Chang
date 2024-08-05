@@ -15,7 +15,7 @@ export default function VoucherWallet() {
 
     const traceData = {
         data: ["Trang chủ", "Thông tin tài khoản", "Voucher"],
-        route: ['/home', "/user/voucher-wallet"]
+        route: ['/home', "/user"]
     };
 
     useEffect(() => {
