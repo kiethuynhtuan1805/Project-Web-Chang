@@ -442,4 +442,52 @@ export const fakeVoucher = {
     detail: 'Mã HC0108 giảm 8% tối đa 100000Đ cho đơn từ 99000Đ. HSD: 23:59 1/8/2024. Số lượng có hạn.'
 };
 
-export const fakeListVoucher = [fakeVoucher, fakeVoucher, fakeVoucher]
+export const fakeListVoucher = [fakeVoucher, fakeVoucher, fakeVoucher];
+
+export const fakeBlogPaymentPolicy = {
+    id: '01',
+    title: 'Chính sách thanh toán',
+    tag: 0,
+    author: 'Chang House',
+    createdAt: Date(),
+    updatedAt: Date(),
+    viewed: 10,
+    image: 'https://cdn.tgdd.vn//GameApp/1302823//anhh2-800x450.jpg',
+    content: [
+        {
+            section: '',
+            subsection: [
+                {
+                    title: '',
+                    content: 'abc\n&bcd',
+                }
+            ],
+            content: '',
+            image: [],
+        },
+        {
+            section: '',
+            subsection: [
+                {
+                    title: '',
+                    content: 'abc\n&bcd',
+                }
+            ],
+            content: '',
+            image: [],
+        },
+        {
+            section: '',
+            subsection: [
+                {
+                    title: '',
+                    content: 'abc\n&bcd',
+                }
+            ],
+            content: '',
+            image: [],
+        },
+    ],
+};
+
+export const fakeBlog = [fakeBlogPaymentPolicy];
