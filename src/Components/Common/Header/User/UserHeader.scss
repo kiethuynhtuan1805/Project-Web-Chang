@@ -11,9 +11,6 @@
 
         .container-wrapper {
             .header-top {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 width: 100vw;
                 margin-left: calc(50% - 50vw);
                 height: 30px;
@@ -241,12 +238,12 @@
             .navigation {
                 display: flex;
                 justify-content: center;
-                width: 100vw;
-                margin-left: calc(50% - 50vw);
                 height: 40px;
                 background-color: #ffffff;
 
                 .container-wrapper {
+                    padding: 0;
+
                     .menu-nav {
                         align-items: center;
                         justify-content: left;
@@ -278,6 +275,10 @@
                                 display: flex;
                                 align-items: center;
                                 height: 100%;
+                            }
+
+                            &:first-child {
+                                padding-left: 0;
                             }
                         }
                     }

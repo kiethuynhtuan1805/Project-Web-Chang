@@ -59,7 +59,7 @@ export default function App() {
         </Route>
 
         {/* Policy, User Care */}
-        <Route path='/blog'>
+        <Route path='/blog' element={<UserLayout />}>
           <Route path='' element={<Navigate to="policy" replace />}></Route>
           <Route path='policy'>
             <Route path='' element={<Navigate to="payment-policy" replace />}></Route>

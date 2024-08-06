@@ -13,7 +13,7 @@ const headerStyle = {
     backgroundColor: '#ffffff',
 };
 
-function UserHeader(props) {
+function UserHeader() {
     // useNavigate
     const navigate = useNavigate();
 

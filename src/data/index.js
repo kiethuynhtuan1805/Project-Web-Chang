@@ -449,8 +449,8 @@ export const fakeBlogPaymentPolicy = {
     title: 'Chính sách thanh toán',
     tag: 0,
     author: 'Chang House',
-    createdAt: Date(),
-    updatedAt: Date(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
     viewed: 10,
     image: 'https://cdn.tgdd.vn//GameApp/1302823//anhh2-800x450.jpg',
     content: [
@@ -459,32 +459,23 @@ export const fakeBlogPaymentPolicy = {
             subsection: [
                 {
                     title: '',
-                    content: 'abc\n&bcd',
-                }
-            ],
-            content: '',
-            image: [],
-        },
-        {
-            section: '',
-            subsection: [
+                    content: '&Website thương mại điện tử của Langfarm hiện đang chấp nhận 3 hình thức thanh toán như sau:Thanh toán tiền mặt khi nhận hàng (Thanh toán COD):Chuyển khoản qua ngân hàng:Thanh toán online (Cổng thanh toán VNPAY)'
+                },
                 {
-                    title: '',
-                    content: 'abc\n&bcd',
-                }
-            ],
-            content: '',
-            image: [],
-        },
-        {
-            section: '',
-            subsection: [
+                    title: 'Lưu ý',
+                    content: 'Hình thức thanh toán COD chỉ áp dụng cho đơn hàng có giá trị từ 2,000,000đ trở xuống',
+                },
                 {
-                    title: '',
-                    content: 'abc\n&bcd',
-                }
+                    title: 'Thông tin tài khoản ngân hàng chính thức',
+                    content: 'Công Ty TNHH Ola Việt Nam\nSố tài khoản: 0561000606363\nMở tại ngân hàng TMCP Ngoại Thương Việt Nam - Chi nhánh Lâm Đồng',
+                },
+                {
+                    title: 'Lưu ý',
+                    content: `
+                        Nội dung chuyển khoản xin vui lòng ghi rõ họ tên hoăc công ty và chuyển cho đơn hàng nào. Sau khi chuyển khoản, nhân viên sẽ liên hệ xác nhận thanh toán và tiến hành giao hàng. Nếu sau thời gian thỏa thuận mà chúng tôi chưa giao hàng hoặc chưa phản hồi lại, quý khách vui lòng liên hệ tổng đài điện thoại 19009065 để được hỗ trợ.\nĐối với khách hàng có nhu cầu mua số lượng lớn vui lòng liên hệ trực tiếp với chúng tôi qua tổng đài điện thoại 19009065 để có chính sách giá cả hợp lý. Việc thanh toán sẽ được thực hiện theo hợp đồng.\nĐối với các đơn hàng đã thanh toán thành công qua ngân hàng hoặc cổng thanh toán VNPay, khách hàng có nhu cầu huỷ đơn hàng và hoàn trả tiền đã thanh toán, vui lòng liên hệ đến bộ phận chăm sóc khách hàng (tổng đài điện thoại 19009065) để yêu cầu huỷ đơn hàng và hoàn trả tiền đã thanh toán. Khách hàng sẽ nhận được hoàn trả sau 2-4 ngày (không tính Thứ 7 và Chủ nhật) kể từ ngày bộ phận chăm sóc khách hàng L’angfarm xác nhận huỷ đơn hàng và hoàn trả tiền đã thanh toán.
+                    `,
+                },
             ],
-            content: '',
             image: [],
         },
     ],
