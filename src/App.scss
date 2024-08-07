@@ -5,9 +5,26 @@
   // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-family: "Lora", serif;
   line-height: 1.4;
+  word-spacing: 0.025rem;
 }
 
 body {
+  --COLOR-pink: #ffc0cb;
+  --COLOR-pink-smooth: #ffb0bde6;
+  --COLOR-pink-deep: #FFB0BD;
+  --COLOR-pink-super-deep: #fb7474;
+  --COLOR-pink-hover: #FD8FA1;
+  --COLOR-brown: #886060;
+  --COLOR-brown-smooth: #C75D26;
+  --COLOR-brown-deep: #9f5733;
+  --COLOR-brown-super-deep: #6e3c23;
+  --COLOR-brown-hover: #E56266;
+  --COLOR-blue: #2200ff;
+  --COLOR-blue-hover: #1877F2;
+  --COLOR-black: #000000;
+  --COLOR-gray: #00000066;
+  --COLOR-gray-deep: #9c9c9c;
+
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -31,21 +48,14 @@ body {
     margin: 0;
   }
 
-  --COLOR-pink: #ffc0cb;
-  --COLOR-pink-smooth: #ffb0bde6;
-  --COLOR-pink-deep: #FFB0BD;
-  --COLOR-pink-super-deep: #fb7474;
-  --COLOR-pink-hover: #FD8FA1;
-  --COLOR-brown: #886060;
-  --COLOR-brown-smooth: #C75D26;
-  --COLOR-brown-deep: #9f5733;
-  --COLOR-brown-super-deep: #6e3c23;
-  --COLOR-brown-hover: #E56266;
-  --COLOR-blue: #0048ff;
-  --COLOR-blue-hover: #1877F2;
-  --COLOR-black: #000000;
-  --COLOR-gray: #00000066;
-  --COLOR-gray-deep: #9c9c9c;
+  a {
+    color: var(--COLOR-blue);
+
+    &:hover {
+      color: var(--COLOR-blue-hover);
+      opacity: 0.6;
+    }
+  }
 }
 
 /* width */
