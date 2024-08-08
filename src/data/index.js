@@ -606,4 +606,165 @@ export const fakeBlogSecurityPolicy = {
     ],
 };
 
-export const fakeBlog = [fakeBlogPaymentPolicy];
+export const fakeBlogTermsOfUse = {
+    id: '02',
+    title: 'Điều khoản sử dụng',
+    tag: 1,
+    author: 'Chang House',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    viewed: 10,
+    image: 'https://nextcrm.vn/wp-content/uploads/2022/12/dieu-khoan-su-dung-1024x538-1.jpg',
+    content: [
+        {
+            section: '',
+            subsection: [
+                {
+                    title: 'Giới thiệu',
+                    content: `Chào mừng quý khách hàng đến với website thương mại điện tử uỷ quyền chính thức của <b>Langfarm</b>. <b>Langfarm</b> là một thương hiệu của công ty TNHH Quảng Thái, được thành lập vào năm 2002 tại TP. Đà Lạt. Hiện nay, <b>Langfarm</b> là thương hiệu đặc sản Đà Lạt hàng đầu, cung cấp sản phẩm nông sản chế biến chất lượng cao, an toàn, tin cậy, phải chăng, đẹp mắt, hài lòng như: Trà atisô, bánh mứt đặc sản, cà phê, hạt, nước cốt, thảo mộc, thịt khô, trà pha ấm, trà túi lọc, trái cây sấy dẻo, trái cây sấy giòn, bột trà xanh matcha, trà sencha hoa,…\nKhi quý khách truy cập và sử dụng dịch vụ tại website thương mại điện tử này đồng nghĩa với việc đồng ý với điều khoản sử dụng của website. Chúng tôi có quyền thay đổi, chỉnh sửa, bổ sung hoặc lược bớt bất kỳ phần nào trong điều khoản sử dụng này vào bất cứ lúc nào. Các thay đổi có hiệu lực ngay khi được đăng trên website mà không cần thông báo trước. Và khi quý khách hàng tiếp tục sử dụng website, sau khi các thay đổi vè điều khoản sử dụng được đăng tải, có nghĩa là quý khách đã đồng ý với những thay đổi đó.`
+                },
+                {
+                    title: 'Hướng dẫn sử dụng',
+                    content: 'Khi quý khách truy cập và sử dụng dịch vụ tại website thương mại điện tử này, khách hàng phải đảm bảo trên 18 tuổi, hoặc truy cập dưới sự giám sát của cha mẹ hoặc người bảo hộ hợp pháp. Khách hàng phải đảm bảo có đủ hành vị dân sự để thực hiện các giao dịch mua bán hàng hoá theo quy định hiện hành của pháp luật Việt Nam.\nNghiêm cấm sử dụng bất kỳ phần nào của website này với mục đích thương mại nào khác hoặc nhân danh bất kỳ đối tác thứ ba nào nếu không được chúng tôi cho phép bằng văn bản.',
+                },
+                {
+                    title: 'Bình luận của khách hàng',
+                    content: 'Tất cả nội dung trên website này và bình luận phê bình của khách hàng đều là tài sản của chúng tôi. Nếu chúng tôi phát hiện bất kỳ thông tin nào mang tính chất giả mạo, phát tán, truyền bá hay cổ vũ nội dung khiêu dâm, phản động chống phá Nhà Nước Việt Nam, chúng tôi có quyền xoá mà không cần thông báo trước hoặc áp dụng các biện pháp chế khác theo quy định của pháp luật Việt Nam.',
+                },
+                {
+                    title: 'Chấp nhận đơn hàng và giá cả',
+                    content: `
+                        Chúng tôi cam kết cung cấp thông tin sản phẩm và giá cả chính xác nhất cho khách hàng. Tuy nhiên, đôi lúc vẫn có sai sót xảy ra, ví dụ như trường hợp giá sản phẩm không hiển thị chính xác trên website hoặc sai giá. Tùy theo từng trường hợp, chúng tôi có quyền từ chối hoặc huỷ đơn hàng của quý khách vì lý do liên quan đến lỗi kỹ thuật, hệ thống một các khách quan. Nhân viên sẽ liên hệ hướng dẫn hoặc thông báo hủy đơn hàng đó, đồng thời hoàn tiền cho khách hàng đã thanh toán (nếu có).
+                    `,
+                },
+                {
+                    title: 'Thương hiệu và bản quyền',
+                    content: `
+                        Mọi quyền sở hữu trí tuệ (đã đăng ký hoặc chưa đăng ký), nội dung thông tin và tất cả các thiết kế, văn bản, đồ họa, phần mềm, hình ảnh, video, âm nhạc, âm thanh, biên dịch phần mềm, mã nguồn và phần mềm cơ bản đều là tài sản của chúng tôi. Toàn bộ nội dung của website được bảo vệ bởi luật bản quyền của Việt Nam và các công ước quốc tế. Bản quyền đã được bảo lưu.
+                    `,
+                },
+                {
+                    title: 'Quyền pháp lý',
+                    content: `
+                        Các điều kiện, điều khoản và nội dung của website này được điều chỉnh bởi luật pháp Việt Nam. Tòa án có thẩm quyền tại Việt Nam sẽ giải quyết bất kỳ tranh chấp nào phát sinh từ việc sử dụng trái phép trang web này.
+                    `,
+                },
+                {
+                    title: 'Quy định về bảo mật và an toàn giao dịch',
+                    content: `
+                        Website của chúng tôi coi trọng việc bảo mật thông tin và sử dụng các biện pháp tốt nhất bảo vệ thông tin và việc thanh toán của quý khách. Thông tin của quý khách trong quá trình thanh toán sẽ được mã hóa để đảm bảo an toàn. Sau khi quý khách hoàn thành quá trình đặt hàng, quý khách sẽ thoát khỏi chế độ an toàn. Chúng tôi sử dụng các dịch vụ để bảo vệ thông tin về nội dung trên website. Để đảm bảo các giao dịch được tiến hành thành công, hạn chế tối đa rủi ro có thể phát sinh.\nQuý khách không được sử dụng bất kỳ chương trình, công cụ hay hình thức nào khác để can thiệp vào hệ thống hay làm thay đổi cấu trúc dữ liệu. Trang web cũng nghiêm cấm việc phát tán, truyền bá hay cổ vũ cho bất kỳ hoạt động nào nhằm can thiệp, phá hoại hay xâm nhập vào dữ liệu của hệ thống. Cá nhân hay tổ chức vi phạm sẽ bị tước bỏ mọi quyền lợi cũng như sẽ bị truy tố trước pháp luật nếu cần thiết. Mọi thông tin giao dịch sẽ được bảo mật ngoại trừ trong trường hợp cơ quan pháp luật có thẩm quyền yêu cầu.
+                    `,
+                },
+                {
+                    title: 'Luật pháp và thẩm quyền trên lãnh thổ Việt Nam',
+                    content: `
+                        Tất cả các điều khoản và điều kiện này và hợp đồng và nghĩa vụ phát sinh ngoài hợp đồng (Nếu có) sẽ bị chi phối bởi và được hiểu theo luật pháp của Việt Nam. Nếu có tranh chấp phát sinh bởi các quy định sử dụng này, quý khách hàng có quyền gửi khiếu nại hoặc khiếu kiện lên tòa án có thẩm quyền tại Việt Nam để giải quyết.
+                    `,
+                },
+            ],
+            image: [],
+        },
+    ],
+};
+
+export const fakeBlogGuide = {
+    id: '02',
+    title: 'Hướng dẫn mua hàng',
+    tag: 1,
+    author: 'Chang House',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    viewed: 10,
+    image: 'https://langfarmstore.com/_next/image?url=https%3A%2F%2Flangfarm-backend.s3.amazonaws.com%2Fhuonddan.png&w=1080&q=75',
+    content: [
+        {
+            section: '',
+            subsection: [
+                {
+                    title: '',
+                    content: `Các bước mua hàng trên website điện tử này được thực hiện như sau:`
+                },
+                {
+                    title: 'Bước 1: Tìm kiếm sản phẩm',
+                    content: '&Quý khách có thể tìm kiếm sản phẩm theo 1 trong 3 cách:Gõ tên sản phẩm vào thanh tìm kiếm.:Tìm theo danh mục.:Tìm theo các sản phẩm nổi bật hoặc bán chạy.',
+                },
+                {
+                    title: 'Bước 2: Thêm sản phẩm vào giỏ hàng',
+                    content: '&Khi đã tìm được sản phẩm mong muốn, quý khách vui lòng bấm vào hình hoặc tên của sản phẩm để vào trang thông tin chi tiết của sản phẩm, sau đó:Kiểm tra thông tin sản phẩm, giá cả, thông tin khuyến mãi.:Chọn số lượng mong muốn.:Thêm sản phẩm vào giỏ hàng.',
+                },
+                {
+                    title: 'Bước 3: Kiểm tra giỏ hàng và đặt hàng',
+                    content: `&Để đặt nhiều sản phẩm khác nhau vào cùng một đơn hàng, vui lòng thực hiện theo các bước sau:Thêm sản phẩm vào giỏ hàng như ở Bước 2.:Quá trình này có thể lặp lại đến khi quý khách hoàn tất việc bỏ tất cả sản phẩm vào giỏ hàng.:Điều chỉnh số lượng và cập nhật giỏ hàng.:Bấm “Thanh Toán” để bắt đầu đặt hàng.:<b>Có thể click vào logo để quay lại trang chủ.</b>`,
+                },
+                {
+                    title: 'Bước 4: Điền địa chỉ giao hàng',
+                    content: `
+                        Điền các thông tin về địa chỉ giao hàng.
+                    `,
+                },
+                {
+                    title: 'Bước 5: Chọn phương thức vận chuyển và phương thức thanh toán',
+                    content: `
+                        Chọn phương thức vận chuyển và thanh toán phù hợp.
+                    `,
+                },
+                {
+                    title: 'Bước 6: Bấm vào “Hoàn tất đơn hàng”',
+                    content: ``,
+                }
+            ],
+            image: [],
+        },
+    ],
+};
+
+export const fakeBlog = [
+    {
+        title: 'Chính sách',
+        data: [
+            {
+                label: 'Chính sách thanh toán',
+                blog: fakeBlogPaymentPolicy,
+                url: '/blog/policy/payment-policy',
+                key: 'cstt',
+            },
+            {
+                label: 'Chính sách giao hàng',
+                blog: fakeBlogTransportPolicy,
+                url: '/blog/policy/transport-policy',
+                key: 'csgh',
+            },
+            {
+                label: 'Chính sách đổi trả hàng',
+                blog: fakeBlogReturnPolicy,
+                url: '/blog/policy/return-policy',
+                key: 'csdth',
+            }
+        ],
+        type: 'cs',
+    },
+    {
+        title: 'Chăm sóc khách hàng',
+        data: [
+            {
+                label: 'Chính sách bảo mật',
+                blog: fakeBlogSecurityPolicy,
+                url: '/blog/user-care/security-policy',
+                key: 'csbm',
+            },
+            {
+                label: 'Điều khoản sử dụng',
+                blog: fakeBlogTermsOfUse,
+                url: '/blog/user-care/terms-of-use',
+                key: 'dksd',
+            },
+            {
+                label: 'Hướng dẫn mua hàng',
+                blog: fakeBlogGuide,
+                url: '/blog/user-care/guide',
+                key: 'hdmh',
+            }
+        ],
+        type: 'cskh',
+    }
+];

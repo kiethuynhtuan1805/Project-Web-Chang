@@ -6,6 +6,7 @@
 
             &>div {
                 &>div:first-child {
+                    margin: 0;
                     padding: 0 15px;
                     color: var(--COLOR-brown-deep);
                     border-bottom: 1px solid var(--COLOR-brown-deep);
@@ -13,13 +14,24 @@
 
                 &>div:last-child {
                     padding: 0;
-                    padding-top: 10px;
 
                     &>ul {
                         border-inline-end: none;
+
+                        li {
+                            margin: 5px 0;
+                            background-color: #ffffff;
+                            border-radius: 0;
+                            width: 100%;
+                        }
                     }
 
                     .ant-menu-submenu {
+                        &>div {
+                            width: 100%;
+                            margin: 0;
+                        }
+
                         &>ul {
                             background-color: white !important;
 
@@ -27,6 +39,12 @@
                                 &:hover {
                                     color: black;
                                     opacity: 1;
+                                }
+                            }
+
+                            &>li.ant-menu-item-active {
+                                &:hover {
+                                    color: #1677ff;
                                 }
                             }
                         }

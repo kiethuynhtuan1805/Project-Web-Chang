@@ -54,7 +54,7 @@ function CommonHeader(props) {
                             <a href="/login">ĐĂNG NHẬP</a>
                             <a href="/signup">ĐĂNG KÝ</a>
                             <a href="/blog/policy">CHÍNH SÁCH</a>
-                            <a href="/blog/user/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
+                            <a href="/blog/user-care/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
                         </Col>
                     ) : (
                         <Col span={10} className='header-content'>

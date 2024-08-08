@@ -7,6 +7,7 @@ import {
   Profile, ManagePassword, Purchase, Favorite, Cart, Payment, SettingNotification, SettingPrivacy,
   NotificationOrder, NotificationPromotion, NotificationUpdate, VoucherWallet,
   PaymentPolicy, ReturnPolicy, TransportPolicy, SecurityPolicy,
+  TermsOfUse, Guide,
 } from './Pages';
 import { ScrollToTop, UserLayout } from 'Components';
 
@@ -66,12 +67,12 @@ export default function App() {
             <Route path='payment-policy' element={<PaymentPolicy />}></Route>
             <Route path='return-policy' element={<ReturnPolicy />}></Route>
             <Route path='transport-policy' element={<TransportPolicy />}></Route>
-            <Route path='security-policy' element={<SecurityPolicy />}></Route>
           </Route>
-          <Route path='user'>
+          <Route path='user-care'>
             <Route path='' element={<Navigate to="terms-of-use" replace />}></Route>
-            <Route path='terms-of-use'></Route>
-            <Route path='guide'></Route>
+            <Route path='security-policy' element={<SecurityPolicy />}></Route>
+            <Route path='terms-of-use' element={<TermsOfUse />}></Route>
+            <Route path='guide' element={<Guide />}></Route>
           </Route>
         </Route>
 

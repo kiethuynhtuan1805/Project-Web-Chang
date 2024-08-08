@@ -10,6 +10,8 @@ import PaymentPolicy from "./Global/Policy/PaymentPolicy/PaymentPolicy";
 import ReturnPolicy from "./Global/Policy/ReturnPolicy/ReturnPolicy";
 import TransportPolicy from "./Global/Policy/TransportPolicy/TransportPolicy";
 import SecurityPolicy from "./Global/Policy/SecurityPolicy/SecurityPolicy";
+import TermsOfUse from "./Global/UserCare/TermsOfUse/TermsOfUse";
+import Guide from "./Global/UserCare/Guide/Guide";
 // User
 import Profile from "./User/Profile/Profile";
 import ManagePassword from "./User/ManagePassword/ManagePassword";
@@ -35,6 +37,8 @@ export {
     ReturnPolicy,
     TransportPolicy,
     SecurityPolicy,
+    TermsOfUse,
+    Guide,
     Profile,
     ManagePassword,
     Cart,

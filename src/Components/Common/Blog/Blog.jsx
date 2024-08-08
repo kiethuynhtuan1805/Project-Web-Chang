@@ -3,22 +3,14 @@ import { useState } from 'react';
 import { Trace } from 'Components';
 import { Tag, Button, Card, Row, Col, Menu } from 'antd';
 import { Icon } from '@iconify/react';
-import { faketest } from 'data';
+import { fakeBlog } from 'data';
+import { useNavigate } from 'react-router-dom';
 
-export default function Blog({ data, trace, items1, items2, defaultItem }) {
-    const [nav1, setNav1] = useState(true);
-    let parser = new DOMParser();
+export default function Blog({ data, trace, defaultItem }) {
+    const navigate = useNavigate();
 
-    const hide1 = () => {
-        setNav1(!nav1);
-        return;
-    }
-
-    const [nav2, setNav2] = useState(true);
-
-    const hide2 = () => {
-        setNav2(!nav2);
-        return;
+    const handleNav = (data, item) => {
+        return navigate(item.find(element => element.key === data.key).url);
     }
 
     const formattedDate = (value) => {
@@ -32,58 +24,35 @@ export default function Blog({ data, trace, items1, items2, defaultItem }) {
                 <Row>
                     <Col span={6}>
                         <div className='list-select'>
-                            <Card
-                                size="middle"
-                                title="Chính sách"
-                                extra={
-                                    <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={hide1}>
-                                        {
-                                            nav1 === true && <Icon icon="ic:baseline-minus" width={20} height={20} />
-                                        }
-                                        {
-                                            nav1 === false && <Icon icon="ic:baseline-plus" width={20} height={20} />
-                                        }
-                                    </Button>
-                                }
-                                bordered={false}
-                            >
-                                {
-                                    nav1 === true && (
-                                        <Menu
-                                            // onClick={onClick}
-                                            defaultSelectedKeys={[defaultItem]}
-                                            mode="inline"
-                                            items={items1}
-                                        />
+                            {
+                                fakeBlog.map((item, index) => {
+                                    return (
+                                        <Card
+                                            size="middle"
+                                            title={item.title}
+                                            extra={
+                                                <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={() => {
+                                                    document.getElementById(item.type).classList.toggle('hide');
+                                                }}>
+                                                    <Icon icon="ic:baseline-minus" width={20} height={20} />
+                                                </Button>
+                                            }
+                                            bordered={false}
+                                            key={'blog-list-' + item + '-' + index}
+                                        >
+                                            <Menu
+                                                onClick={(data) => {
+                                                    return handleNav(data, item.data)
+                                                }}
+                                                defaultSelectedKeys={[defaultItem]}
+                                                mode="inline"
+                                                items={item.data}
+                                                id={item.type}
+                                            />
+                                        </Card>
                                     )
-                                }
-                            </Card>
-                            <Card
-                                size="middle"
-                                title="Chăm sóc khách hàng"
-                                extra={
-                                    <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={hide2}>
-                                        {
-                                            nav2 === true && <Icon icon="ic:baseline-minus" width={20} height={20} />
-                                        }
-                                        {
-                                            nav2 === false && <Icon icon="ic:baseline-plus" width={20} height={20} />
-                                        }
-                                    </Button>
-                                }
-                                bordered={false}
-                            >
-                                {
-                                    nav2 === true && (
-                                        <Menu
-                                            // onClick={onClick}
-                                            defaultSelectedKeys={[defaultItem]}
-                                            mode="inline"
-                                            items={items2}
-                                        />
-                                    )
-                                }
-                            </Card>
+                                })
+                            }
                         </div>
                     </Col>
                     <Col span={18}>
@@ -98,7 +67,10 @@ export default function Blog({ data, trace, items1, items2, defaultItem }) {
                                     </Tag>
                                     <p>Đăng bởi <b>CHANG HOUSE</b></p>
                                 </div>
-                                <p>{data.viewed} lượt xem</p>
+                                <div>
+                                    <Icon icon="carbon:view" width={22} height={22} />
+                                    <p>{data.viewed} lượt xem</p>
+                                </div>
                             </div>
                             <div className='date'>
                                 <p>Đăng ngày: {formattedDate(data.createdAt)}</p>
