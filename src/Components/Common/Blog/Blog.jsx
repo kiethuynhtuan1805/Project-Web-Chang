@@ -2,8 +2,8 @@ import './Blog.scss';
 import { Trace } from 'Components';
 import { Tag, Button, Card, Row, Col, Menu } from 'antd';
 import { Icon } from '@iconify/react';
-import { fakeBlog } from 'data';
 import { useNavigate } from 'react-router-dom';
+import { fakeBlogList } from 'data';
 
 export default function Blog({ data, trace, defaultItem }) {
     const navigate = useNavigate();
@@ -24,7 +24,7 @@ export default function Blog({ data, trace, defaultItem }) {
                     <Col span={6}>
                         <div className='list-select'>
                             {
-                                fakeBlog.map((item, index) => {
+                                fakeBlogList.map((item, index) => {
                                     return (
                                         <Card
                                             size="middle"
@@ -37,7 +37,7 @@ export default function Blog({ data, trace, defaultItem }) {
                                                 </Button>
                                             }
                                             bordered={false}
-                                            key={'blog-list-' + item + '-' + index}
+                                            key={'blog-list-' + index}
                                         >
                                             <Menu
                                                 onClick={(data) => {
@@ -75,12 +75,14 @@ export default function Blog({ data, trace, defaultItem }) {
                                 <p>Đăng ngày: {formattedDate(data.createdAt)}</p>
                                 <p>Cập nhật mới nhất ngày: {formattedDate(data.updatedAt)}</p>
                             </div>
-                            <img src={data.image} alt={"Hình ảnh chính sách thanh toán"} style={{ width: '100%' }} />
+                            <div className='image'>
+                                <img src={data.image} alt={"Hình ảnh chính sách thanh toán"} />
+                            </div>
                             <div className='content'>
                                 {
                                     data.content.map((item, index) => {
                                         return (
-                                            <div key={'section-' + item + '-' + index} className='section'>
+                                            <div key={'section-' + index} className='section'>
                                                 {
                                                     item.section !== '' && (
                                                         <p className="title">{item.section}</p>
@@ -89,26 +91,33 @@ export default function Blog({ data, trace, defaultItem }) {
                                                 {
                                                     item.subsection.map((itemSub, indexSub) => {
                                                         return (
-                                                            <div key={'sub-section-' + itemSub + '-' + indexSub} className='sub-section'>
+                                                            <div key={'sub-section-' + indexSub} className='sub-section'>
                                                                 <p className='sub-title'>{itemSub.title}</p>
                                                                 {
                                                                     itemSub.content.split('\n').map((contentSub, indexContentSub) => {
-                                                                        if (contentSub[0] === '&') {
+                                                                        if (contentSub[0] === '&' && contentSub[1] === 'l') {
                                                                             return (
-                                                                                <div key={'sub-section-content-' + contentSub + '-' + indexContentSub} className='normal-content'>
-                                                                                    <p dangerouslySetInnerHTML={{ __html: `${contentSub.split(':')[0].split('&')[1]}:` }}></p>
+                                                                                <div key={'sub-section-content-' + indexContentSub} className='normal-content'>
+                                                                                    <p dangerouslySetInnerHTML={{ __html: `${contentSub.split(':')[0].split('&l')[1]}:` }}></p>
                                                                                     <ul>
                                                                                         {contentSub.split(':').slice(1).map((listItem, indexListItem) => {
-                                                                                            return <li key={'list-item-' + listItem + '-' + indexListItem}>
+                                                                                            return <li key={'list-item-' + indexListItem}>
                                                                                                 <p dangerouslySetInnerHTML={{ __html: `${listItem}` }}></p>
                                                                                             </li>
                                                                                         })}
                                                                                     </ul>
                                                                                 </div>
                                                                             )
+                                                                        } else if (contentSub[0] === '&' && contentSub[1] === 'i') {
+                                                                            const index = parseInt(contentSub.split('&i')[1], 10);
+                                                                            return (
+                                                                                <div className='sub-image' key={'sub-section-content-' + indexContentSub}>
+                                                                                    <img src={itemSub.image[index]} alt="Ảnh bị lỗi!" />
+                                                                                </div>
+                                                                            )
                                                                         } else {
                                                                             return (
-                                                                                <div key={'sub-section-content-' + contentSub + '-' + indexContentSub} className='normal-content'>
+                                                                                <div key={'sub-section-content-' + indexContentSub} className='normal-content'>
                                                                                     <p dangerouslySetInnerHTML={{ __html: `${contentSub}` }}></p>
                                                                                 </div>
                                                                             )
@@ -123,6 +132,43 @@ export default function Blog({ data, trace, defaultItem }) {
                                         )
                                     })
                                 }
+                                <div className='key-wrapper'>
+                                    <p className='title'>Từ khóa</p>
+                                    <div>
+                                        {
+                                            data.keywords.map((item, index) => {
+                                                return (
+                                                    <p key={`keywords-${index}`}>
+                                                        #{item}
+                                                    </p>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                </div>
+                                <div className='relative-blog'>
+                                    <p className='title'>Các bài viết liên quan</p>
+                                    <ul>
+                                        <li>
+                                            <a href="/blog/policy/transport">Chính sách giao hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/policy/transport">Chính sách giao hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/policy/transport">Chính sách giao hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/policy/transport">Chính sách giao hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/policy/transport">Chính sách giao hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/policy/transport">Chính sách giao hàng</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </Col>

@@ -86,7 +86,7 @@ function CommonHeader(props) {
                                         <ul>
                                             {fakeUser.cart.data.map((item, id) => {
                                                 return (
-                                                    <li className='cart-item' key={`cart-item-${item}-${id}`}>
+                                                    <li className='cart-item' key={`cart-item-${id}`}>
                                                         <Row style={{ height: '100%' }}>
                                                             <Col span={7} style={{ display: 'flex', alignItems: 'center' }}>
                                                                 <Image

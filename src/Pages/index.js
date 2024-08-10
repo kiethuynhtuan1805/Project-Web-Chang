@@ -12,6 +12,8 @@ import TransportPolicy from "./Global/Policy/TransportPolicy/TransportPolicy";
 import SecurityPolicy from "./Global/Policy/SecurityPolicy/SecurityPolicy";
 import TermsOfUse from "./Global/UserCare/TermsOfUse/TermsOfUse";
 import Guide from "./Global/UserCare/Guide/Guide";
+import VATPolicy from "./Global/Policy/VATPolicy/VATPolicy";
+import NormalBlog from "./Global/NormalBlog/NormalBlog";
 // User
 import Profile from "./User/Profile/Profile";
 import ManagePassword from "./User/ManagePassword/ManagePassword";
@@ -39,6 +41,8 @@ export {
     SecurityPolicy,
     TermsOfUse,
     Guide,
+    VATPolicy,
+    NormalBlog,
     Profile,
     ManagePassword,
     Cart,

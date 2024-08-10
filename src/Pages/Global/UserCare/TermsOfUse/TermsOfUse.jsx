@@ -8,10 +8,10 @@ export default function TermsOfUse() {
             <Blog data={fakeBlogTermsOfUse} trace={
                 {
                     data: ["Trang chủ", "Tin tức", "Điều khoản sử dụng"],
-                    route: ['/home', "/blog", "/blog/user-care/terms-of-use"]
+                    route: ['/home', "/blog"]
                 }
             }
-                defaultItem={'dksd'}
+                defaultItem={fakeBlogTermsOfUse.key}
             />
         </div>
     )

@@ -8,10 +8,10 @@ export default function TransportPolicy() {
             <Blog data={fakeBlogTransportPolicy} trace={
                 {
                     data: ["Trang chủ", "Tin tức", "Chính sách giao hàng"],
-                    route: ['/home', "/blog", "/blog/policy/transport-policy"]
+                    route: ['/home', "/blog"]
                 }
             }
-                defaultItem={'csgh'}
+                defaultItem={fakeBlogTransportPolicy.key}
             />
         </div>
     )

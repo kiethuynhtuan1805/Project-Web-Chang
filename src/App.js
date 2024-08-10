@@ -7,7 +7,7 @@ import {
   Profile, ManagePassword, Purchase, Favorite, Cart, Payment, SettingNotification, SettingPrivacy,
   NotificationOrder, NotificationPromotion, NotificationUpdate, VoucherWallet,
   PaymentPolicy, ReturnPolicy, TransportPolicy, SecurityPolicy,
-  TermsOfUse, Guide,
+  TermsOfUse, Guide, VATPolicy, NormalBlog
 } from './Pages';
 import { ScrollToTop, UserLayout } from 'Components';
 
@@ -67,6 +67,7 @@ export default function App() {
             <Route path='payment-policy' element={<PaymentPolicy />}></Route>
             <Route path='return-policy' element={<ReturnPolicy />}></Route>
             <Route path='transport-policy' element={<TransportPolicy />}></Route>
+            <Route path='vat-policy' element={<VATPolicy />}></Route>
           </Route>
           <Route path='user-care'>
             <Route path='' element={<Navigate to="terms-of-use" replace />}></Route>
@@ -74,6 +75,7 @@ export default function App() {
             <Route path='terms-of-use' element={<TermsOfUse />}></Route>
             <Route path='guide' element={<Guide />}></Route>
           </Route>
+          <Route path=':blogId' element={<NormalBlog />}></Route>
         </Route>
 
 

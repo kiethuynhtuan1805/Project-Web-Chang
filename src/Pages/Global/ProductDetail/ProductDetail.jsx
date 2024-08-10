@@ -36,7 +36,7 @@ export default function ProductDetail(props) {
                                     [...fakeProduct.picSrc].splice(1,).map((data, id) => {
                                         return (
                                             <Image
-                                                key={`sub-image-${data.src}-${id}`}
+                                                key={`sub-image-${id}`}
                                                 src={data.src}
                                                 width={'140px'}
                                                 height={'140px'}
@@ -90,7 +90,7 @@ export default function ProductDetail(props) {
                                     <div style={{ display: 'flex' }}>
                                         {
                                             fakeProduct.color.map((color, id) => (
-                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type + '-' + id}>
+                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + id}>
                                                     <div className='color'>
                                                         <Icon icon="fluent:color-16-filled" color={color.type} width={48} height={48} className='color-option selected' />
                                                     </div>
@@ -134,7 +134,7 @@ export default function ProductDetail(props) {
                                             {
                                                 fakeProduct.description.split('\n').map((data, id) => {
                                                     return (
-                                                        <li key={`description-${data}-${id}`}>
+                                                        <li key={`description-${id}`}>
                                                             {data}
                                                         </li>
                                                     )

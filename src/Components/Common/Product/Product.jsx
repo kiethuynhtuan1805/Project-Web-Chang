@@ -58,7 +58,7 @@ export default function Product({ dataProduct, type }) {
                                         [...dataProduct.picSrc].splice(1,).map((data, id) => {
                                             return (
                                                 <Image
-                                                    key={`picture-sub-${data.src}-${id}`}
+                                                    key={`picture-sub-${id}`}
                                                     src={data.src}
                                                     width={'80px'}
                                                     height={'100%'}
@@ -97,7 +97,7 @@ export default function Product({ dataProduct, type }) {
                                     <div style={{ display: 'flex' }}>
                                         {
                                             dataProduct.color.map((color, id) => (
-                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + color.type + '-' + id}>
+                                                <Tooltip title={color.name} color={color.type} key={'product-color-' + id}>
                                                     <div className='color'>
                                                         <Icon icon="fluent:color-16-filled" color={color.type} width={40} height={40} className='color-option selected' />
                                                     </div>
@@ -111,8 +111,8 @@ export default function Product({ dataProduct, type }) {
                                     <div className='type-wrapper'>
                                         <div style={{ display: 'flex' }}>
                                             {
-                                                dataProduct.classify.map(classify => (
-                                                    <Tooltip title={classify} key={"tooltip-" + classify}>
+                                                dataProduct.classify.map((classify, index) => (
+                                                    <Tooltip title={classify} key={"tooltip-" + index}>
                                                         <div className='type'>
                                                             {classify}
                                                         </div>

@@ -14,7 +14,7 @@ export default function Trace({ traceData }) {
             {
                 traceData.data.map((data, id) => {
                     return (
-                        <div key={`Trace-${data}-${id}`} id={`${data}`} className='trace-data' onClick={() => {
+                        <div key={`Trace-${id}`} id={`${data}`} className='trace-data' onClick={() => {
                             if (id + 1 !== traceData.data.length)
                                 return linkTo(traceData.route[id]);
                             return;

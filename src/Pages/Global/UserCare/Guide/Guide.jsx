@@ -8,10 +8,10 @@ export default function Guide() {
             <Blog data={fakeBlogGuide} trace={
                 {
                     data: ["Trang chủ", "Tin tức", "Hướng dẫn mua hàng"],
-                    route: ['/home', "/blog", "/blog/user-care/guide"]
+                    route: ['/home', "/blog"]
                 }
             }
-                defaultItem={'hdmh'}
+                defaultItem={fakeBlogGuide.key}
             />
         </div>
     )

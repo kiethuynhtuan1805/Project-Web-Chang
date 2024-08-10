@@ -9,7 +9,7 @@ export default function ListProduct({ data, btn, type }) {
                 {
                     data.map((item, id) => {
                         return (
-                            <Col key={`Product-${item}-${id}`} xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{ span: 6 }} xxl={{ span: 4 }}>
+                            <Col key={`Product-${id}`} xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} xl={{ span: 6 }} xxl={{ span: 4 }}>
                                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                                     <Product dataProduct={item} type={type ? type : ''} />
                                 </div>

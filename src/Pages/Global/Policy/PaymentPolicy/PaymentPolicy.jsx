@@ -8,10 +8,10 @@ export default function PaymentPolicy() {
             <Blog data={fakeBlogPaymentPolicy} trace={
                 {
                     data: ["Trang chủ", "Tin tức", "Chính sách thanh toán"],
-                    route: ['/home', "/blog", "/blog/policy/payment-policy"]
+                    route: ['/home', "/blog"]
                 }
             }
-                defaultItem={'cstt'}
+                defaultItem={fakeBlogPaymentPolicy.key}
             />
         </div>
     )

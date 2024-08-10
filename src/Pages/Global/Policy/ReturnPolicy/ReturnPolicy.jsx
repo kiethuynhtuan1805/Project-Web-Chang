@@ -11,7 +11,7 @@ export default function ReturnPolicy() {
                     route: ['/home', "/blog", "/blog/policy/return-policy"]
                 }
             }
-                defaultItem={'csdth'}
+                defaultItem={fakeBlogReturnPolicy.key}
             />
         </div>
     )

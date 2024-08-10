@@ -8,10 +8,10 @@ export default function SecurityPolicy() {
             <Blog data={fakeBlogSecurityPolicy} trace={
                 {
                     data: ["Trang chủ", "Tin tức", "Chính sách bảo mật"],
-                    route: ['/home', "/blog", "/blog/policy/security-policy"]
+                    route: ['/home', "/blog"]
                 }
             }
-                defaultItem={'csbm'}
+                defaultItem={fakeBlogSecurityPolicy.key}
             />
         </div>
     )
