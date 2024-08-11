@@ -60,6 +60,31 @@
             margin-left: calc(50% - 50vw);
         }
 
+        .slogan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 40px;
+
+            p {
+                &:first-child {
+                    width: 800px;
+                    text-align: center;
+                    font-size: 2.5rem;
+                    font-style: italic;
+                    font-weight: bold;
+                }
+
+                &:last-child {
+                    margin-top: 20px;
+                    font-size: 1.5rem;
+                    color: var(--COLOR-gray);
+                    font-style: italic;
+                }
+            }
+        }
+
         .content {
             margin: 40px 0;
             text-align: center;

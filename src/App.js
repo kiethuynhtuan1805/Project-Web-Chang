@@ -7,7 +7,7 @@ import {
   Profile, ManagePassword, Purchase, Favorite, Cart, Payment, SettingNotification, SettingPrivacy,
   NotificationOrder, NotificationPromotion, NotificationUpdate, VoucherWallet,
   PaymentPolicy, ReturnPolicy, TransportPolicy, SecurityPolicy,
-  TermsOfUse, Guide, VATPolicy, NormalBlog
+  TermsOfUse, Guide, VATPolicy, NormalBlog, BlogPage
 } from './Pages';
 import { ScrollToTop, UserLayout } from 'Components';
 
@@ -61,7 +61,7 @@ export default function App() {
 
         {/* Policy, User Care */}
         <Route path='/blog' element={<UserLayout />}>
-          <Route path='' element={<Navigate to="policy" replace />}></Route>
+          <Route path='' element={<BlogPage />}></Route>
           <Route path='policy'>
             <Route path='' element={<Navigate to="payment-policy" replace />}></Route>
             <Route path='payment-policy' element={<PaymentPolicy />}></Route>

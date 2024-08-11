@@ -27,9 +27,7 @@ function CommonHeader(props) {
     return (
         <div className='CommonHeader container'>
             <Row align="middle" className={props.type === 'WP' ? `header ${isScrolled ? 'scrolled' : ''}` : `header`}>
-                <Col span={3} className='logo' onClick={() => {
-                    return navigate('/home');
-                }}>
+                <Col span={3} className='logo'>
                     {
                         !isScrolled ? (
                             <Image
@@ -38,9 +36,12 @@ function CommonHeader(props) {
                                 preview={false}
                                 src={''}
                                 fallback={require('assets/images/logo1.jpg')}
+                                onClick={() => {
+                                    return navigate('/home');
+                                }}
                             />
                         ) : (
-                            <a href='/home' style={{ margin: 0 }}>CHANG HOUSE</a>
+                            <a href='/' style={{ margin: 0 }}>CHANG HOUSE</a>
                         )
                     }
                 </Col>
@@ -53,8 +54,9 @@ function CommonHeader(props) {
                         <Col span={10} className='header-content'>
                             <a href="/login">ĐĂNG NHẬP</a>
                             <a href="/signup">ĐĂNG KÝ</a>
+                            <a href="/blog">TIN TỨC</a>
                             <a href="/blog/policy">CHÍNH SÁCH</a>
-                            <a href="/blog/user-care/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
+                            <a href="/blog/user-care/terms-of-use">CSKH</a>
                         </Col>
                     ) : (
                         <Col span={10} className='header-content'>

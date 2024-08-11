@@ -1,3 +1,10 @@
+export const fakeCompany = {
+    name: 'Chang House',
+    logo: '',
+    signature: '',
+    slogan: 'Tận hưởng sự đa dạng, tìm thấy sản phẩm đúng nhu cầu của bạn ngay tại đây.',
+}
+
 export let fakeNav = [
     {
         label: 'TRANG CHỦ',
@@ -446,11 +453,10 @@ export const fakeListVoucher = [fakeVoucher, fakeVoucher, fakeVoucher];
 
 export const fakeBlogPaymentPolicy = {
     id: '01',
-    title: 'Chính sách thanh toán',
-    tag: 0,
+    label: 'Chính sách thanh toán',
     author: 'Chang House',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://cdn.tgdd.vn//GameApp/1302823//anhh2-800x450.jpg',
     content: [
@@ -484,15 +490,17 @@ export const fakeBlogPaymentPolicy = {
     ],
     keywords: ['policy', 'support', 'payment'],
     key: 'cstt',
+    url: '/blog/policy/payment-policy',
+    type: 'cs',
+    description: '',
 };
 
 export const fakeBlogReturnPolicy = {
     id: '02',
-    title: 'Chính sách đổi trả hàng',
-    tag: 0,
+    label: 'Chính sách đổi trả hàng',
     author: 'Chang House',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://codedeco.art/wp-content/uploads/2021/07/Minimalist-January-Month-Fashion-Sale-Banner-Email-Header-10.5-%C3%97-5-cm-4-1024x488.jpg',
     content: [
@@ -526,15 +534,17 @@ export const fakeBlogReturnPolicy = {
     ],
     keywords: ['policy', 'support', 'return'],
     key: 'csdth',
+    url: '/blog/policy/return-policy',
+    type: 'cs',
+    description: 'Với phương châm đặt lợi ích của khách hàng lên hàng đầu, Langfarm chấp nhận đổi trả toàn bộ sản phẩm hư hỏng trong quá trình vận chuyển, có lỗi nhà sản xuất, hoặc bất cứ trường hợp có lỗi khách quan nào xảy ra với toàn bộ chi phí do công ty chịu.',
 };
 
 export const fakeBlogTransportPolicy = {
     id: '03',
-    title: 'Chính sách giao hàng',
-    tag: 0,
+    label: 'Chính sách giao hàng',
     author: 'Chang House',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://dongphucict.com/public/upload/images/thumb_baiviet/chinh-sach-giao-hang-751679825333.png',
     content: [
@@ -568,15 +578,17 @@ export const fakeBlogTransportPolicy = {
     ],
     keywords: ['policy', 'support', 'delivery'],
     key: 'csgh',
+    url: '/blog/policy/transport-policy',
+    type: 'cs',
+    description: 'Với mong muốn có thể phục vụ khách hàng tốt nhất, L’angfarm cung cấp dịch vụ giao hàng đến tận tay khách hàng trên toàn quốc thông qua việc chọn mua sản phẩm trên website thương mại điện tử này',
 };
 
 export const fakeBlogSecurityPolicy = {
     id: '04',
-    title: 'Chính sách bảo mật',
-    tag: 1,
+    label: 'Chính sách bảo mật',
     author: 'Chang House',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://internet-viettel.vn/uploads/files/tin_tuc/Chinh-sach-bao-mat.png',
     content: [
@@ -627,15 +639,17 @@ export const fakeBlogSecurityPolicy = {
     ],
     keywords: ['policy', 'support', 'privacy'],
     key: 'csbm',
+    url: '/blog/user-care/security-policy',
+    type: 'cskh',
+    description: 'Việc thu thập thông tin chủ yếu trên website bao gồm: Họ & tên, email, số điện thoại, địa chỉ khách hàng. Đây là các thông tin cần thiết tối thiểu để khách hàng có thể sử dụng dịch vụ mua hàng online giao tận nơi của Langfarm.',
 };
 
 export const fakeBlogTermsOfUse = {
     id: '05',
-    title: 'Điều khoản sử dụng',
-    tag: 1,
+    label: 'Điều khoản sử dụng',
     author: 'Chang House',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://nextcrm.vn/wp-content/uploads/2022/12/dieu-khoan-su-dung-1024x538-1.jpg',
     content: [
@@ -696,16 +710,18 @@ export const fakeBlogTermsOfUse = {
         },
     ],
     keywords: ['terms', 'conditions', 'support'],
-    key: 'dksd'
+    key: 'dksd',
+    url: '/blog/user-care/terms-of-use',
+    type: 'cskh',
+    description: '',
 };
 
 export const fakeBlogGuide = {
     id: '06',
-    title: 'Hướng dẫn mua hàng',
-    tag: 1,
+    label: 'Hướng dẫn mua hàng',
     author: 'Chang House',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://langfarmstore.com/_next/image?url=https%3A%2F%2Flangfarm-backend.s3.amazonaws.com%2Fhuonddan.png&w=1080&q=75',
     content: [
@@ -756,15 +772,17 @@ export const fakeBlogGuide = {
     ],
     keywords: ['guide', 'buying', 'support'],
     key: 'hdmh',
+    url: '/blog/user-care/guide',
+    type: 'cskh',
+    description: '',
 };
 
 export const fakeBlogVAT = {
     id: '07',
-    title: 'Chính sách xuất hoá đơn GTGT',
-    tag: 0,
+    label: 'Chính sách xuất hoá đơn GTGT',
     author: 'Chang House',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://thegioiinan.com/images/faq/The_gioi_in_an_20240711172742477vat.jpeg',
     content: [
@@ -780,16 +798,18 @@ export const fakeBlogVAT = {
         },
     ],
     keywords: ['guide', 'buying', 'support'],
-    key: 'csvat'
+    key: 'csvat',
+    url: '/blog/policy/vat-policy',
+    type: 'cs',
+    description: '',
 };
 
 export const fakeBlog = {
     id: '08',
-    title: 'Cao Atisô Và Những Điều Cần Biết',
-    tag: 2,
+    label: 'Cao Atisô Và Những Điều Cần Biết',
     author: 'Huỳnh Tuấn Kiệt',
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    created: new Date(),
+    updated: new Date(),
     viewed: 10,
     image: 'https://langfarmstore.com/_next/image?url=https%3A%2F%2Flangfarm-backend.s3.amazonaws.com%2Fcaoatiso.webp&w=1080&q=75',
     content: [
@@ -887,73 +907,11 @@ export const fakeBlog = {
     ],
     keywords: [],
     key: '#121dlc',
+    url: '/blog/121',
+    type: 'tt',
+    description: 'Hiện nay, với những hoạt chất có công dụng cực tốt, atisô không chỉ để ăn, làm trà mà còn được trồng để làm cao thuốc. Để giữ nguyên chất dinh dưỡng và thành phần duợc tính có trong Atisô, với công nghệ tân tiến nhất, Langfarm đã cô đặc lá tươi và cho ra sản phẩm Cao Atisô.',
 }
 
-export const fakeBlogList = [
-    {
-        title: 'Chính sách',
-        data: [
-            {
-                label: 'Chính sách thanh toán',
-                blog: fakeBlogPaymentPolicy,
-                url: '/blog/policy/payment-policy',
-                key: 'cstt',
-            },
-            {
-                label: 'Chính sách giao hàng',
-                blog: fakeBlogTransportPolicy,
-                url: '/blog/policy/transport-policy',
-                key: 'csgh',
-            },
-            {
-                label: 'Chính sách đổi trả hàng',
-                blog: fakeBlogReturnPolicy,
-                url: '/blog/policy/return-policy',
-                key: 'csdth',
-            },
-            {
-                label: 'Chính sách xuất hóa đơn GTGT',
-                blog: fakeBlogVAT,
-                url: '/blog/policy/vat-policy',
-                key: 'csvat',
-            },
-        ],
-        type: 'cs',
-    },
-    {
-        title: 'Chăm sóc khách hàng',
-        data: [
-            {
-                label: 'Chính sách bảo mật',
-                blog: fakeBlogSecurityPolicy,
-                url: '/blog/user-care/security-policy',
-                key: 'csbm',
-            },
-            {
-                label: 'Điều khoản sử dụng',
-                blog: fakeBlogTermsOfUse,
-                url: '/blog/user-care/terms-of-use',
-                key: 'dksd',
-            },
-            {
-                label: 'Hướng dẫn mua hàng',
-                blog: fakeBlogGuide,
-                url: '/blog/user-care/guide',
-                key: 'hdmh',
-            }
-        ],
-        type: 'cskh',
-    },
-    {
-        title: 'Tin tức',
-        data: [
-            {
-                label: 'Cao Atisô Và Những Điều Cần Biết',
-                blog: fakeBlog,
-                url: '/blog/121',
-                key: '#121dlc',
-            },
-        ],
-        type: 'tt',
-    }
-];
+export const fakeKeywords = []
+
+export const fakeBlogList = [fakeBlog, fakeBlogPaymentPolicy, fakeBlogReturnPolicy, fakeBlogSecurityPolicy, fakeBlogTermsOfUse, fakeBlogTransportPolicy, fakeBlogVAT, fakeBlogGuide]

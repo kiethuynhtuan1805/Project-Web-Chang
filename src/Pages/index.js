@@ -14,6 +14,7 @@ import TermsOfUse from "./Global/UserCare/TermsOfUse/TermsOfUse";
 import Guide from "./Global/UserCare/Guide/Guide";
 import VATPolicy from "./Global/Policy/VATPolicy/VATPolicy";
 import NormalBlog from "./Global/NormalBlog/NormalBlog";
+import BlogPage from "./Global/BlogPage/BlogPage";
 // User
 import Profile from "./User/Profile/Profile";
 import ManagePassword from "./User/ManagePassword/ManagePassword";
@@ -43,6 +44,7 @@ export {
     Guide,
     VATPolicy,
     NormalBlog,
+    BlogPage,
     Profile,
     ManagePassword,
     Cart,

@@ -29,6 +29,7 @@ function UserHeader() {
                     <div className='header-top'>
                         <div className='container-wrapper'>
                             <div>
+                                <a href="/blog">TIN TỨC</a>
                                 <a href="/">HỆ THỐNG CỬA HÀNG</a>
                                 <a href="/blog/user-care/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
                                 <a href="/blog/policy">CHÍNH SÁCH THANH TOÁN - GIAO HÀNG - ĐỔI TRẢ</a>

@@ -23,45 +23,82 @@ export default function Blog({ data, trace, defaultItem }) {
                 <Row>
                     <Col span={6}>
                         <div className='list-select'>
-                            {
-                                fakeBlogList.map((item, index) => {
-                                    return (
-                                        <Card
-                                            size="middle"
-                                            title={item.title}
-                                            extra={
-                                                <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={() => {
-                                                    document.getElementById(item.type).classList.toggle('hide');
-                                                }}>
-                                                    <Icon icon="ic:baseline-minus" width={20} height={20} />
-                                                </Button>
-                                            }
-                                            bordered={false}
-                                            key={'blog-list-' + index}
-                                        >
-                                            <Menu
-                                                onClick={(data) => {
-                                                    return handleNav(data, item.data)
-                                                }}
-                                                defaultSelectedKeys={[defaultItem]}
-                                                mode="inline"
-                                                items={item.data}
-                                                id={item.type}
-                                            />
-                                        </Card>
-                                    )
-                                })
-                            }
+                            <Card
+                                size="middle"
+                                title={'Chính sách'}
+                                extra={
+                                    <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={() => {
+                                        document.getElementById('cs').classList.toggle('hide');
+                                    }}>
+                                        <Icon icon="ic:baseline-minus" width={20} height={20} />
+                                    </Button>
+                                }
+                                bordered={false}
+                            >
+                                <Menu
+                                    onClick={(data) => {
+                                        return handleNav(data, fakeBlogList.filter(item => item.type === 'cs'))
+                                    }}
+                                    defaultSelectedKeys={[defaultItem]}
+                                    mode="inline"
+                                    items={fakeBlogList.filter(item => item.type === 'cs')}
+                                    id={'cs'}
+                                />
+                            </Card>
+                            <Card
+                                size="middle"
+                                title={'Chăm sóc khách hàng'}
+                                extra={
+                                    <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={() => {
+                                        document.getElementById('cskh').classList.toggle('hide');
+                                    }}>
+                                        <Icon icon="ic:baseline-minus" width={20} height={20} />
+                                    </Button>
+                                }
+                                bordered={false}
+                            >
+                                <Menu
+                                    onClick={(data) => {
+                                        return handleNav(data, fakeBlogList.filter(item => item.type === 'cskh'))
+                                    }}
+                                    defaultSelectedKeys={[defaultItem]}
+                                    mode="inline"
+                                    items={fakeBlogList.filter(item => item.type === 'cskh')}
+                                    id={'cskh'}
+                                />
+                            </Card>
+                            <Card
+                                size="middle"
+                                title={'Tin tức'}
+                                extra={
+                                    <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={() => {
+                                        document.getElementById('tt').classList.toggle('hide');
+                                    }}>
+                                        <Icon icon="ic:baseline-minus" width={20} height={20} />
+                                    </Button>
+                                }
+                                bordered={false}
+                            >
+                                <Menu
+                                    onClick={(data) => {
+                                        return handleNav(data, fakeBlogList.filter(item => item.type === 'tt'))
+                                    }}
+                                    defaultSelectedKeys={[defaultItem]}
+                                    mode="inline"
+                                    items={fakeBlogList.filter(item => item.type === 'tt')}
+                                    id={'tt'}
+                                />
+                            </Card>
                         </div>
                     </Col>
                     <Col span={18}>
                         <div className='content-wrapper'>
-                            <p className="title">{data.title}</p>
+                            <p className="title">{data.label}</p>
                             <div className='author-wrapper'>
                                 <div>
-                                    <Tag color={data.tag === 0 ? "red" : data.tag === 1 ? "green" : "blue"} >
+                                    <Tag color={data.type === 'cs' ? "red" : data.type === 'cskh' ? "green" : "blue"} >
                                         {
-                                            data.tag === 0 ? "Chính sách" : data.tag === 1 ? "Chăm sóc khách hàng" : "Tin tức"
+                                            data.type === 'cs' ? "Chính sách" : data.type === 'cskh' ? "Chăm sóc khách hàng" : "Tin tức"
                                         }
                                     </Tag>
                                     <p>Đăng bởi <b>CHANG HOUSE</b></p>
@@ -72,8 +109,8 @@ export default function Blog({ data, trace, defaultItem }) {
                                 </div>
                             </div>
                             <div className='date'>
-                                <p>Đăng ngày: {formattedDate(data.createdAt)}</p>
-                                <p>Cập nhật mới nhất ngày: {formattedDate(data.updatedAt)}</p>
+                                <p>Đăng ngày: {formattedDate(data.created)}</p>
+                                <p>Cập nhật mới nhất ngày: {formattedDate(data.updated)}</p>
                             </div>
                             <div className='image'>
                                 <img src={data.image} alt={"Hình ảnh chính sách thanh toán"} />
@@ -132,7 +169,7 @@ export default function Blog({ data, trace, defaultItem }) {
                                         )
                                     })
                                 }
-                                <div className='key-wrapper'>
+                                <div className='keywords-wrapper'>
                                     <p className='title'>Từ khóa</p>
                                     <div>
                                         {

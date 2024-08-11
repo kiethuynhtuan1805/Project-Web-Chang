@@ -4,7 +4,7 @@ import { Image } from 'antd';
 import { connect } from 'react-redux';
 import { WelcomeProduct, FollowMeBanner, ContactBar } from 'Components';
 import { mapDispatchToProps, mapStateToProps } from './rdWelcomePage';
-import { fakeWelcomeProduct } from 'data';
+import { fakeWelcomeProduct, fakeCompany } from 'data';
 import { CommonHeader, OnTopButton, UserFooter } from 'Components';
 import { Footer } from 'antd/es/layout/layout';
 
@@ -31,6 +31,10 @@ function WelcomePage(props) {
                         src={''}
                         fallback={require('assets/images/hero.jpg')}
                     />
+                </div>
+                <div className='slogan'>
+                    <p>"{fakeCompany.slogan}"</p>
+                    <p>--- {fakeCompany.name} ---</p>
                 </div>
                 <div className='content'>
                     {

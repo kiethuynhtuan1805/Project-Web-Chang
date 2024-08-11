@@ -4,7 +4,7 @@ import { fakeHero } from 'data';
 import { useEffect } from 'react';
 
 const contentStyle = {
-    height: '390px',
+    height: '420px',
     color: '#fff',
     lineHeight: '160px',
     textAlign: 'center',
