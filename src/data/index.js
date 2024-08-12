@@ -912,6 +912,32 @@ export const fakeBlog = {
     description: 'Hiện nay, với những hoạt chất có công dụng cực tốt, atisô không chỉ để ăn, làm trà mà còn được trồng để làm cao thuốc. Để giữ nguyên chất dinh dưỡng và thành phần duợc tính có trong Atisô, với công nghệ tân tiến nhất, Langfarm đã cô đặc lá tươi và cho ra sản phẩm Cao Atisô.',
 }
 
-export const fakeKeywords = []
+export const fakeKeywords = [
+    {
+        id: '000',
+        data: 'terms',
+        type: 'blog',
+    },
+    {
+        id: '001',
+        data: 'invoice',
+        type: 'blog',
+    },
+    {
+        id: '002',
+        data: 'delivery',
+        type: 'blog',
+    },
+    {
+        id: '003',
+        data: 'policy',
+        type: 'blog',
+    },
+    {
+        id: '004',
+        data: 'support',
+        type: 'blog',
+    }
+]
 
 export const fakeBlogList = [fakeBlog, fakeBlogPaymentPolicy, fakeBlogReturnPolicy, fakeBlogSecurityPolicy, fakeBlogTermsOfUse, fakeBlogTransportPolicy, fakeBlogVAT, fakeBlogGuide]

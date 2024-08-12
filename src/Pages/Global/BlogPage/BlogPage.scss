@@ -1,20 +1,216 @@
 .BlogPage {
     .container-wrapper {
-        .title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--COLOR-black);
+        color: var(--COLOR-black);
 
-            span {
-                color: var(--COLOR-pink-super-deep);
+        .blog-main {
+            .title {
+                font-size: 2.5rem;
+                font-weight: bold;
+
+
+                span {
+                    color: var(--COLOR-pink-super-deep);
+                }
+            }
+
+            &>img {
+                width: 100%;
+                max-height: 500px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                border-radius: 20px;
+            }
+
+            .content-title {
+                font-size: 2rem;
+                font-weight: bold;
+
+            }
+
+            .content-description {
+                padding: 5px 0;
+                font-size: 1.1rem;
+                color: var(--COLOR-gray-super-deep);
+            }
+
+            .content-tag {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 1rem;
+                margin-top: 5px;
+
+                &>div {
+                    display: flex;
+                    flex-direction: row;
+
+                    p {
+                        color: var(--COLOR-gray-super-deep);
+
+                        b {
+                            color: var(--COLOR-pink-super-deep);
+                        }
+                    }
+
+                    &:last-child {
+                        color: var(--COLOR-gray-super-deep);
+
+                        p {
+                            margin-left: 0.25rem;
+                        }
+                    }
+                }
+            }
+
+            .keywords-wrapper {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin-top: 2.5rem;
+                margin-bottom: 2rem;
+                padding: 1.5rem;
+                border-radius: 1rem;
+
+                --tw-bg-opacity: 1;
+                background-color: rgb(245 245 245/var(--tw-bg-opacity));
+
+                .title {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: 1.25rem;
+                }
+
+                &>div {
+                    display: flex;
+                    flex-direction: row;
+
+                    p {
+                        font-size: 1rem;
+                        background-color: #ffffff;
+                        padding: 0.5rem 1rem;
+                        margin-right: 0.75rem;
+                        border-radius: .5rem;
+                    }
+                }
+            }
+
+            .category {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+
+                &>div {
+                    width: 49%;
+                }
             }
         }
 
-        img {
-            width: 100%;
-            max-height: 500px;
-            margin: 30px 0;
-            border-radius: 20px;
+        .blog-sub {
+            .title {
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
+
+            .item {
+                display: flex;
+                flex-direction: row;
+                height: 200px;
+                margin-bottom: 1.5rem;
+
+                &>img {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 20px;
+                }
+
+                &>div {
+                    margin-left: 20px;
+
+                    .content-title {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                    }
+
+                    .content-tag {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        font-size: 1rem;
+                        margin: 5px 0;
+
+                        &>div {
+                            display: flex;
+                            flex-direction: row;
+
+                            p {
+                                color: var(--COLOR-gray-super-deep);
+
+                                b {
+                                    color: var(--COLOR-pink-super-deep);
+                                }
+                            }
+
+                            &:last-child {
+                                color: var(--COLOR-gray-super-deep);
+
+                                p {
+                                    margin-left: 0.25rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .content-description {
+                        font-size: 1rem;
+                        color: var(--COLOR-gray-super-deep);
+                        text-align: justify;
+                    }
+                }
+            }
+
+            .pagination {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                p {}
+
+                ul {
+                    display: flex;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+
+        .most-viewed-list {
+            height: 850px;
+            padding: 1.5rem;
+            margin-left: 3rem;
+            background-color: rgb(245 245 245);
+            border-radius: 15px;
+            text-align: left;
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: bold;
+
+            }
+
+            .item {
+                height: 128px;
+            }
         }
     }
 }
