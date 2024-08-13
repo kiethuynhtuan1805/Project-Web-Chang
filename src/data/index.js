@@ -272,6 +272,29 @@ export const fakeListProduct = {
     type: 'phu-kien\ntrang-suc\nday-chuyen',
 }
 
+export const fakeCart = {
+    id: '000',
+    userId: '000',
+    data: [
+        {
+            product: fakeProduct,
+            amount: 2,
+        },
+        {
+            product: fakeProduct,
+            amount: 2,
+        },
+        {
+            product: fakeProduct,
+            amount: 2,
+        },
+        {
+            product: fakeProduct,
+            amount: 2,
+        }
+    ]
+}
+
 export const fakeBanner = ["https://tinyyume.com/cdn/shop/files/Snapinsta.app_338458269_879996006396274_990222832187670111_n_1080_360x.jpg?v=1680243210",
     "https://tinyyume.com/cdn/shop/files/Snapinsta.app_334156055_671529237994962_7039349499115086332_n_1080_360x.jpg?v=1680243210",
     "https://tinyyume.com/cdn/shop/files/Snapinsta.app_330216219_528114826098250_217353088272934477_n_1080_360x.jpg?v=1680243420",

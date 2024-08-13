@@ -1,15 +1,83 @@
 .Cart {
     .container-wrapper {
-        table {
-            thead {
-                th {
-                    text-align: center;
+        .col-header {
+            height: 60px;
+            padding: 0 15px;
+
+            &>div {
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:first-child {
+                    justify-content: flex-start;
+                }
+
+                &>div {
+                    &:first-child {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 60px;
+                        height: 60px;
+
+                        input {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
                 }
             }
+        }
 
-            tbody {
-                td {
-                    text-align: center;
+        .col-item {
+            .item-wrapper {
+                padding: 20px 15px;
+
+                &>div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:first-child {
+                        justify-content: flex-start;
+                    }
+
+                    &>div {
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            object-fit: cover;
+                        }
+
+                        &:first-child {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 60px;
+                            height: 60px;
+
+                            input {
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
+
+                        &.item {
+                            display: flex;
+                            align-items: center;
+
+                            p {
+                                margin-left: 16px;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
             }
         }

@@ -6,24 +6,7 @@ export default function UserFooter() {
         <div className="UserFooter">
             <div className="container-wrapper">
                 <Row>
-                    <Col span={9} className="footer-left">
-                        {/* <div className='hot-line'>
-                            <Icon icon="gg:phone" width="48" height="48" />
-                            <div>
-                                Hotline
-                                <br />
-                                <a href="tel:+84964643875">0964.643.875</a>
-                            </div>
-                        </div>
-                        <br />
-                        <div className='email'>
-                            <Icon icon="foundation:mail" width="48" height="48" />
-                            <div>
-                                Email
-                                <br />
-                                <a href="mailto:kiet.huynhtuan1805@gmail.com">kiet.huynhtuan1805@gmail.com</a>
-                            </div>
-                        </div> */}
+                    <Col span={8} className="footer-left">
                         <div>
                             HỆ THỐNG CỬA HÀNG
                         </div>
@@ -38,10 +21,10 @@ export default function UserFooter() {
                             CHÍNH SÁCH THANH TOÁN - GIAO HÀNG - ĐỔI TRẢ
                         </div>
                     </Col>
-                    <Col span={6} className='footer-middle'>
-                        <div className='logo'></div>
+                    <Col span={8} className='footer-middle'>
+                        <img src={require('assets/images/logo1.jpg')} alt="" />
                     </Col>
-                    <Col span={9} className='footer-right'>
+                    <Col span={8} className='footer-right'>
                         <div className='footer-right-wrapper'>
                             <div className='signature'>
                                 <Image

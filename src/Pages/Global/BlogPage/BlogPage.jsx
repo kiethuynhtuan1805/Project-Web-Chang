@@ -4,8 +4,12 @@ import { Trace } from 'Components'
 import { fakeBlogList, fakeKeywords } from 'data';
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import { useNavigate } from 'react-router-dom';
 
 export default function BlogPage() {
+    // Navigation
+    const navigate = useNavigate();
+
     const traceData = {
         data: ["Trang chủ", "Tin tức"],
         route: ['/home']
@@ -30,6 +34,10 @@ export default function BlogPage() {
         setCurrent(page);
     };
 
+    const handleNav = (nav) => {
+        return navigate(nav);
+    };
+
     return (
         <div className='BlogPage container'>
             <div className='container-wrapper'>
@@ -40,21 +48,25 @@ export default function BlogPage() {
                             <p className="title">
                                 Khám phá ngay các tin tức mới nhất từ <span>CHANG HOUSE</span>
                             </p>
-                            <img src={fakeBlogList[0].image} alt="Ảnh bị lỗi" />
-                            <p className="content-title">{fakeBlogList[0].label}</p>
-                            <p className="content-description">{fakeBlogList[0].description}</p>
-                            <div className='content-tag'>
-                                <div>
-                                    <Tag color={fakeBlogList[0].type === 'cs' ? "red" : fakeBlogList[0].type === 'cskh' ? "green" : "blue"} >
-                                        {
-                                            fakeBlogList[0].type === 'cs' ? "Chính sách" : fakeBlogList[0].type === 'cskh' ? "Chăm sóc khách hàng" : "Tin tức"
-                                        }
-                                    </Tag>
-                                    <p>Đăng bởi <b>CHANG HOUSE</b> - <span>{formattedDate(fakeBlogList[0].updated)}</span></p>
-                                </div>
-                                <div>
-                                    <Icon icon="carbon:view" width={22} height={22} />
-                                    <p>{fakeBlogList[0].viewed} lượt xem</p>
+                            <div className='main-item' onClick={() => {
+                                return handleNav(fakeBlogList[0].url);
+                            }}>
+                                <img src={fakeBlogList[0].image} alt="Ảnh bị lỗi" />
+                                <p className="content-title">{fakeBlogList[0].label}</p>
+                                <p className="content-description">{fakeBlogList[0].description}</p>
+                                <div className='content-tag'>
+                                    <div>
+                                        <Tag color={fakeBlogList[0].type === 'cs' ? "red" : fakeBlogList[0].type === 'cskh' ? "green" : "blue"} >
+                                            {
+                                                fakeBlogList[0].type === 'cs' ? "Chính sách" : fakeBlogList[0].type === 'cskh' ? "Chăm sóc khách hàng" : "Tin tức"
+                                            }
+                                        </Tag>
+                                        <p>Đăng bởi <b>CHANG HOUSE</b> - <span>{formattedDate(fakeBlogList[0].updated)}</span></p>
+                                    </div>
+                                    <div>
+                                        <Icon icon="carbon:view" width={22} height={22} />
+                                        <p>{fakeBlogList[0].viewed} lượt xem</p>
+                                    </div>
                                 </div>
                             </div>
                             <div className='keywords-wrapper'>
@@ -121,8 +133,10 @@ export default function BlogPage() {
                             {
                                 fakeBlogList.map((item, index) => {
                                     return (
-                                        <div className='item'>
-                                            <img src="#" alt="" />
+                                        <div className='item' key={`blog-sub-${index}`} onClick={() => {
+                                            return handleNav(item.url);
+                                        }}>
+                                            <img src={item.image} alt="" />
                                             <div>
                                                 <p className="content-title">{item.label}</p>
                                                 <div className='content-tag'>
@@ -134,9 +148,10 @@ export default function BlogPage() {
                                                         </Tag>
                                                         <p>Đăng bởi <b>CHANG HOUSE</b> - <span>{formattedDate(item.updated)}</span></p>
                                                     </div>
-                                                    <p>
-                                                        {item.viewed}
-                                                    </p>
+                                                    <div>
+                                                        <Icon icon="carbon:view" width={22} height={22} />
+                                                        <p>{item.viewed} lượt xem</p>
+                                                    </div>
                                                 </div>
                                                 <p className='content-description'>
                                                     {
@@ -165,17 +180,28 @@ export default function BlogPage() {
                     <Col md={{ span: 8 }}>
                         <div className='most-viewed-list'>
                             <p className="title">Xem nhiều nhất</p>
-                            <div className="item">
-                                <img src="#" alt="" />
-                                <div>
-                                    <p className="content-title"></p>
-                                    <p>Đăng bởi <b>CHANG HOUSE</b></p>
-                                    <p>{formattedDate(fakeBlogList[0].updated)}</p>
-                                    <p>
-
-                                    </p>
-                                </div>
-                            </div>
+                            {
+                                fakeBlogList.sort((a, b) => b.viewed - a.viewed).slice(0, 5).map((item, index) => {
+                                    return (
+                                        <div className="item" key={`most-viewed-${index}`} onClick={() => {
+                                            return handleNav(item.url);
+                                        }}>
+                                            <img src={item.image} alt="Ảnh bị lỗi!" />
+                                            <div>
+                                                <div>
+                                                    <p className="content-title">{item.label}</p>
+                                                    <p>Đăng bởi <span>CHANG HOUSE</span></p>
+                                                    <p>{formattedDate(fakeBlogList[0].updated)}</p>
+                                                </div>
+                                                <div>
+                                                    <Icon icon="carbon:view" width={22} height={22} />
+                                                    <p>{item.viewed} lượt xem</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </Col>
                 </Row>
