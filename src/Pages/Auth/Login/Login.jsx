@@ -22,8 +22,12 @@ export default function Login() {
     };
 
     return (
-        <div className="Login container">
+        <div className="Login">
             <div className='container-wrapper'>
+                <div className='header'>
+                    <img src={require('assets/images/logo1.jpg')} alt="" />
+                    <p>Đăng nhập với CHANG HOUSE</p>
+                </div>
                 <Row>
                     <Col span={12} className='cover-wrapper'>
                         <Image

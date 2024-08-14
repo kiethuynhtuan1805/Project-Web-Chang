@@ -3,6 +3,7 @@
         .col-header {
             height: 60px;
             padding: 0 15px;
+            border-bottom: 1px solid #9a9a9a90;
 
             &>div {
                 font-weight: bold;
@@ -11,6 +12,10 @@
                 justify-content: center;
 
                 &:first-child {
+                    justify-content: flex-start;
+                }
+
+                &.label-sp {
                     justify-content: flex-start;
                 }
 
@@ -32,6 +37,8 @@
         }
 
         .col-item {
+            margin-bottom: 30px;
+
             .item-wrapper {
                 padding: 20px 15px;
 
@@ -44,13 +51,27 @@
                         justify-content: flex-start;
                     }
 
-                    &>div {
+                    &.item {
+                        justify-content: flex-start;
+
                         img {
                             width: 80px;
                             height: 80px;
                             object-fit: cover;
                         }
 
+                        .item-label {
+                            margin-left: 16px;
+                            text-align: justify;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 3;
+                        }
+                    }
+
+                    &>div {
                         &:first-child {
                             display: flex;
                             align-items: center;
@@ -63,20 +84,38 @@
                                 height: 18px;
                             }
                         }
-
-                        &.item {
-                            display: flex;
-                            align-items: center;
-
-                            p {
-                                margin-left: 16px;
-                            }
-                        }
                     }
 
                     &:last-child {
                         display: flex;
                         flex-direction: column;
+                    }
+                }
+            }
+        }
+
+        .product-detail-sub {
+            font-size: 1.2rem;
+            text-align: left;
+
+            &>p:first-child {
+                margin-bottom: 50px;
+                font-weight: bold;
+            }
+
+            &>div {
+                margin-bottom: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .pagination {
+                    margin-top: 30px;
+
+                    li {
+                        a {
+                            display: inline-block;
+                        }
                     }
                 }
             }

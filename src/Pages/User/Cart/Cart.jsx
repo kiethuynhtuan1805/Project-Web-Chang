@@ -1,8 +1,8 @@
-import { Col, Row } from 'antd';
 import './Cart.scss'
-import { CartPayment, Trace } from 'Components';
-import { fakeUser } from 'data';
-import { fakeCart } from 'data';
+import { Col, Row, Pagination } from 'antd';
+import { CartPayment, Trace, ListProduct } from 'Components';
+import { fakeUser, fakeCart, fakeListProduct } from 'data';
+
 
 export default function Cart() {
     const traceData = {
@@ -16,10 +16,12 @@ export default function Cart() {
             <div className='container-wrapper'>
                 <Trace traceData={traceData} />
                 <Row className='col-header'>
-                    <Col md={{ span: 8 }}>
+                    <Col md={{ span: 2 }}>
                         <div>
                             <input type="checkbox" name="" id="" />
                         </div>
+                    </Col>
+                    <Col md={{ span: 6 }} className='label-sp'>
                         <p>
                             Sản Phẩm
                         </p>
@@ -43,14 +45,14 @@ export default function Cart() {
                         fakeCart.data.map((item, index) => {
                             return (
                                 <Row className='item-wrapper' key={`cart-item-${index}`}>
-                                    <Col md={{ span: 8 }}>
+                                    <Col md={{ span: 2 }}>
                                         <div>
                                             <input type="checkbox" name="" id="" />
                                         </div>
-                                        <div className='item'>
-                                            <img src={item.product.picSrc[0].src} alt="" />
-                                            <p className='item-label'>{item.product.name}</p>
-                                        </div>
+                                    </Col>
+                                    <Col md={{ span: 6 }} className='item'>
+                                        <img src={item.product.picSrc[0].src} alt="" />
+                                        <p className='item-label'>{item.product.name}</p>
                                     </Col>
                                     <Col md={{ span: 4 }}></Col>
                                     <Col md={{ span: 3 }}>
@@ -71,8 +73,23 @@ export default function Cart() {
                         })
                     }
                 </div>
+                <CartPayment />
+                <div className='product-detail-sub'>
+                    <p>
+                        Có thể bạn cũng thích
+                    </p>
+                    <div>
+                        <ListProduct data={fakeListProduct.data} btn={false} />
+                        <Pagination
+                            showSizeChanger={false}
+                            // onShowSizeChange={onShowSizeChange}
+                            defaultCurrent={1}
+                            total={500}
+                            className='pagination'
+                        />
+                    </div>
+                </div>
             </div>
-            <CartPayment />
         </div>
     )
 }

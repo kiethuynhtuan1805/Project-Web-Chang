@@ -1,9 +1,31 @@
 .Login {
-    margin-top: 80px;
+    width: 100vw;
+    height: 100vh;
     padding: 0 10px;
+    overflow: hidden;
 
     .container-wrapper {
         max-width: 2200px;
+
+        .header {
+            height: 80px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-shadow: none;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 160px;
+                height: 100%;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: var(--COLOR-pink-super-deep);
+            }
+        }
 
         &>div {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

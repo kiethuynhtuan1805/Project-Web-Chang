@@ -20,15 +20,19 @@ export default function Signup() {
     };
 
     return (
-        <div className="Signup container">
+        <div className="Signup">
             <div className='container-wrapper'>
+                <div className='header'>
+                    <img src={require('assets/images/logo1.jpg')} alt="" />
+                    <p>Đăng ký với CHANG HOUSE</p>
+                </div>
                 <Row>
                     <Col span={12} className='cover-wrapper'>
                         <Image
                             width={'100%'}
                             height={'100%'}
                             preview={false}
-                            src={'https://i.pinimg.com/736x/a7/d0/61/a7d061088228fc7151aea42f0b6c01ef.jpg'}
+                            src={'https://cellphones.com.vn/sforum/wp-content/uploads/2023/08/hinh-nen-meo-5.jpg'}
                             fallback={require('assets/images/logo1.jpg')}
                         />
                     </Col>

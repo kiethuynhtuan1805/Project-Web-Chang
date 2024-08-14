@@ -1,11 +1,31 @@
 .Signup {
-    margin: 80px 0;
+    height: 100vh;
     padding: 0 10px;
 
     .container-wrapper {
         max-width: 2200px;
+        padding-bottom: 50px;
 
-        &>div {
+        .header {
+            height: 80px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 160px;
+                height: 100%;
+            }
+
+            p {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: var(--COLOR-pink-super-deep);
+            }
+        }
+
+        &>div:last-child {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             border-radius: 10px;
         }
