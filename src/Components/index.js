@@ -18,6 +18,7 @@ import OnTopButton from "./Common/OnTopButton/OnTopButton";
 import ListVoucher from "./Common/ListVoucher/ListVoucher";
 import CartPayment from "./Common/CartPayment/CartPayment";
 import Blog from "./Common/Blog/Blog";
+import ProductCarousel from "./Common/ProductCarousel/ProductCarousel";
 
 export {
     Hero,
@@ -40,4 +41,5 @@ export {
     ListVoucher,
     CartPayment,
     Blog,
+    ProductCarousel,
 }

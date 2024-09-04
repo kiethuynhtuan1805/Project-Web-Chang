@@ -1,5 +1,6 @@
 import './Cart.scss'
 import { Col, Row, Pagination } from 'antd';
+import { ProductCarousel } from 'Components';
 import { CartPayment, Trace, ListProduct } from 'Components';
 import { fakeUser, fakeCart, fakeListProduct } from 'data';
 
@@ -79,14 +80,7 @@ export default function Cart() {
                         Có thể bạn cũng thích
                     </p>
                     <div>
-                        <ListProduct data={fakeListProduct.data} btn={false} />
-                        <Pagination
-                            showSizeChanger={false}
-                            // onShowSizeChange={onShowSizeChange}
-                            defaultCurrent={1}
-                            total={500}
-                            className='pagination'
-                        />
+                        <ProductCarousel />
                     </div>
                 </div>
             </div>
