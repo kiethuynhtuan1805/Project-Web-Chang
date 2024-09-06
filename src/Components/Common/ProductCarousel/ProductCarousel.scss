@@ -3,21 +3,22 @@
     width: 100%;
     margin: auto;
     overflow: hidden;
+    padding: 0 2%;
 
     .carousel-container {
         display: flex;
+        justify-content: center;
         transition: transform 0.5s ease-in-out;
 
         .carousel-slide {
             display: flex;
+            width: 100%;
         }
 
         .product {
             display: flex;
             justify-content: center;
-            min-width: 25%;
             box-sizing: border-box;
-            padding: 10px;
             text-align: center;
         }
 

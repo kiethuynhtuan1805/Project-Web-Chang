@@ -1,9 +1,9 @@
 import { Icon } from '@iconify/react';
 import './ProductDetail.scss';
 import { Trace } from 'Components';
-import { Button, Col, Image, InputNumber, Pagination, Row, Tooltip } from 'antd';
-import { fakeProduct, fakeListProduct } from 'data';
-import { ListProduct } from 'Components';
+import { Button, Col, Image, InputNumber, Row, Tooltip } from 'antd';
+import { fakeProduct } from 'data';
+import { ProductCarousel } from 'Components';
 
 export default function ProductDetail(props) {
     const traceRoute = [...fakeProduct.type.split('\n')];
@@ -68,7 +68,7 @@ export default function ProductDetail(props) {
                                     <div className='shipping-wrapper'>
                                         <div className='free-shipping'>
                                             <img src={require('assets/images/freeship.png')} alt={require('assets/images/image-not-found.png')} />
-                                            <p>Miễn phí vận chuyển</p>
+                                            <p style={{ marginTop: '10px' }}>Miễn phí vận chuyển</p>
                                         </div>
                                         <div className='shipping-content'>
                                             <img src={require('assets/images/freeship.png')} alt={require('assets/images/image-not-found.png')} />
@@ -186,14 +186,7 @@ export default function ProductDetail(props) {
                         Một số sản phẩm liên quan
                     </p>
                     <div>
-                        <ListProduct data={fakeListProduct.data} btn={false} />
-                        <Pagination
-                            showSizeChanger={false}
-                            // onShowSizeChange={onShowSizeChange}
-                            defaultCurrent={1}
-                            total={500}
-                            className='pagination'
-                        />
+                        <ProductCarousel />
                     </div>
                 </div>
             </div>

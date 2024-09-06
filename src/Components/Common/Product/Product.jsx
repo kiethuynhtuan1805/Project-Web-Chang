@@ -99,7 +99,7 @@ export default function Product({ dataProduct, type }) {
                                             dataProduct.color.map((color, id) => (
                                                 <Tooltip title={color.name} color={color.type} key={'product-color-' + id}>
                                                     <div className='color'>
-                                                        <Icon icon="fluent:color-16-filled" color={color.type} width={40} height={40} className='color-option selected' />
+                                                        <Icon icon="fluent:color-16-filled" color={color.type} width={40} height={40} className='color-option' />
                                                     </div>
                                                 </Tooltip>
                                             ))
