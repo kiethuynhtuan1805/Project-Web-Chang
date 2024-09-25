@@ -1,9 +1,9 @@
 import { Layout, Space } from 'antd';
-import './UserLayout.scss';
-import UserHeader from 'Components/Common/Header/User/UserHeader';
+import './GlobalLayout.scss';
 import UserFooter from 'Components/Common/Footer/UserFooter';
 import { Outlet } from 'react-router-dom';
 import { Footer } from 'antd/es/layout/layout';
+import { CommonHeader } from 'Components';
 
 const { Content } = Layout;
 
@@ -22,9 +22,9 @@ const footerStyle = {
     paddingRight: 0,
 };
 
-export default function UserLayout() {
+export default function GlobalLayout() {
     return (
-        <div className='UserLayout container'>
+        <div className='GlobalLayout container'>
             <div className="container-wrapper">
                 <Space
                     direction="vertical"
@@ -34,7 +34,7 @@ export default function UserLayout() {
                     size={[0, 48]}
                 >
                     <Layout>
-                        <UserHeader />
+                        <CommonHeader type="WP" />
                         <Content style={contentStyle}>
                             <Outlet />
                         </Content>

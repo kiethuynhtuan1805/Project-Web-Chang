@@ -39,9 +39,9 @@ body {
   }
 
   .container-wrapper {
-    padding: 0 5%;
+    padding: 0 240px;
     width: 100%;
-    max-width: 2400px;
+    max-width: 2720px;
   }
 
   p {
@@ -50,6 +50,7 @@ body {
   }
 
   a {
+    font-size: 1rem;
     color: var(--COLOR-blue);
 
     &:hover {

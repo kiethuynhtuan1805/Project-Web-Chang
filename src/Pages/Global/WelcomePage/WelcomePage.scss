@@ -1,119 +1,45 @@
 .WelcomePage {
-    .container-wrapper {
-        .header {
-            transition: all 0.3s ease;
-            width: 100%;
-            height: 80px;
-            position: relative;
-            z-index: 1000;
+    .hero {
+        height: 550px;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+    }
 
-            a {
+    .slogan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 40px;
+
+        p {
+            &:first-child {
+                width: 800px;
+                text-align: center;
+                font-size: 2.5rem;
+                font-style: italic;
                 font-weight: bold;
-                margin-left: 20px;
-                opacity: 0.9;
-                color: var(--COLOR-brown);
-
-                &:hover {
-                    color: var(--COLOR-brown-hover);
-                    cursor: pointer;
-                }
             }
 
-            .logo {
-                display: flex;
-                align-items: center;
-                text-align: left;
-                height: 100%;
-                cursor: pointer;
-
-                &:hover {
-                    opacity: 0.7;
-                }
-            }
-
-            .search-container {
-                display: flex;
-                flex-direction: row;
-                justify-content: right;
-                align-items: center;
-            }
-
-            .header-content {
-                display: flex;
-                flex-direction: row;
-                justify-content: right;
+            &:last-child {
+                margin-top: 20px;
+                font-size: 1.5rem;
+                color: var(--COLOR-gray);
+                font-style: italic;
             }
         }
+    }
 
-        .header.scrolled {
-            /* Pink color with transparency */
-            height: 60px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 0 5%;
-        }
+    .content {
+        margin: 40px 0;
+        text-align: center;
+    }
 
-        .hero {
-            height: 550px;
-            width: 100vw;
-            margin-left: calc(50% - 50vw);
-        }
+    .banner {
+        text-align: center;
 
-        .slogan {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-            margin-bottom: 40px;
-
-            p {
-                &:first-child {
-                    width: 800px;
-                    text-align: center;
-                    font-size: 2.5rem;
-                    font-style: italic;
-                    font-weight: bold;
-                }
-
-                &:last-child {
-                    margin-top: 20px;
-                    font-size: 1.5rem;
-                    color: var(--COLOR-gray);
-                    font-style: italic;
-                }
-            }
-        }
-
-        .content {
-            margin: 40px 0;
-            text-align: center;
-        }
-
-        .banner {
-            text-align: center;
-
-            a {
-                text-decoration: none;
-            }
-        }
-
-        .footer {
-            width: 100vw;
-            margin-left: calc(50% - 50vw);
-
-            .copy-right {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 40px;
-                margin-top: 10px;
-                border-top: 3px solid #ffffff;
-                background-color: var(--COLOR-pink);
-                font-size: 1.1rem;
-                font-weight: bold;
-                color: #ffffff;
-            }
+        a {
+            text-decoration: none;
         }
     }
 }

@@ -25,29 +25,26 @@ function UserHeader() {
         <div className='UserHeader container'>
             <Header style={headerStyle}>
                 <ContactBar />
-                <div className="container-wrapper">
-                    <div className='header-top'>
-                        <div className='container-wrapper'>
-                            <div>
-                                <a href="/blog">TIN TỨC</a>
-                                <a href="/">HỆ THỐNG CỬA HÀNG</a>
-                                <a href="/blog/user-care/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
-                                <a href="/blog/policy">CHÍNH SÁCH THANH TOÁN - GIAO HÀNG - ĐỔI TRẢ</a>
-                            </div>
-                        </div>
+                <div className='header-top'>
+                    <div className="overlay"></div>
+                    <div>
+                        <a href="/blog">TIN TỨC</a>
+                        <a href="/">HỆ THỐNG CỬA HÀNG</a>
+                        <a href="/blog/user-care/terms-of-use">CHĂM SÓC KHÁCH HÀNG</a>
+                        <a href="/blog/policy">CHÍNH SÁCH THANH TOÁN - GIAO HÀNG - ĐỔI TRẢ</a>
                     </div>
-                    <CommonHeader />
-                    <div className='navigation'>
-                        <div className='container-wrapper'>
-                            <Menu
-                                theme="#FFB0BD"
-                                mode="horizontal"
-                                defaultSelectedKeys={['1']}
-                                items={fakeNav}
-                                className='menu-nav'
-                                onClick={linkTo}
-                            />
-                        </div>
+                </div>
+                <CommonHeader />
+                <div className='navigation'>
+                    <div className='container-wrapper'>
+                        <Menu
+                            theme="#FFB0BD"
+                            mode="horizontal"
+                            defaultSelectedKeys={['1']}
+                            items={fakeNav}
+                            className='menu-nav'
+                            onClick={linkTo}
+                        />
                     </div>
                 </div>
                 <OnTopButton />

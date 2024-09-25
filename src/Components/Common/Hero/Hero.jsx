@@ -19,7 +19,7 @@ export default function Hero() {
     }, []);
 
     return (
-        <div className='Hero container-wrapper'>
+        <div className='Hero'>
             <div className='hero-main'>
                 <Carousel autoplay effect="fade">
                     {

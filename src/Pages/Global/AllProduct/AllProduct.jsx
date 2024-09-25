@@ -55,99 +55,97 @@ export default function AllProduct(props) {
 
     return (
         <div className='AllProduct container'>
-            <div className='container-wrapper'>
-                <Trace traceData={traceData} />
-                <div>
-                    <Row>
-                        <Col span={6}>
-                            <div className='list-select'>
-                                <Card
-                                    size="middle"
-                                    title="Danh mục sản phẩm"
-                                    extra={
-                                        <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={hide}>
-                                            {
-                                                nav === true && <Icon icon="ic:baseline-minus" width={20} height={20} />
-                                            }
-                                            {
-                                                nav === false && <Icon icon="ic:baseline-plus" width={20} height={20} />
-                                            }
-                                        </Button>
-                                    }
-                                    bordered={false}
-                                >
-                                    {
-                                        nav === true && (
-                                            <Menu
-                                                // onClick={onClick}
-                                                defaultSelectedKeys={['1']}
-                                                mode="inline"
-                                                items={items}
-                                            />
-                                        )
-                                    }
-                                </Card>
-                                <Card
-                                    size="middle"
-                                    title="GIÁ"
-                                    bordered={false}
-                                >
-                                    <p>Từ {`${inputValue.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`} - 1.000.000 đ</p>
-                                    <Slider
-                                        min={0}
-                                        max={1000000}
-                                        step={10000}
-                                        tooltip={{
-                                            formatter,
-                                        }}
-                                        onChange={onChange}
-                                        value={typeof inputValue === 'number' ? inputValue : 0}
-                                    />
-                                </Card>
+            <Trace traceData={traceData} />
+            <div>
+                <Row>
+                    <Col span={6}>
+                        <div className='list-select'>
+                            <Card
+                                size="middle"
+                                title="Danh mục sản phẩm"
+                                extra={
+                                    <Button type="link" style={{ display: 'flex', alignItems: 'center', padding: 0 }} onClick={hide}>
+                                        {
+                                            nav === true && <Icon icon="ic:baseline-minus" width={20} height={20} />
+                                        }
+                                        {
+                                            nav === false && <Icon icon="ic:baseline-plus" width={20} height={20} />
+                                        }
+                                    </Button>
+                                }
+                                bordered={false}
+                            >
+                                {
+                                    nav === true && (
+                                        <Menu
+                                            // onClick={onClick}
+                                            defaultSelectedKeys={['1']}
+                                            mode="inline"
+                                            items={items}
+                                        />
+                                    )
+                                }
+                            </Card>
+                            <Card
+                                size="middle"
+                                title="GIÁ"
+                                bordered={false}
+                            >
+                                <p>Từ {`${inputValue.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`} - 1.000.000 đ</p>
+                                <Slider
+                                    min={0}
+                                    max={1000000}
+                                    step={10000}
+                                    tooltip={{
+                                        formatter,
+                                    }}
+                                    onChange={onChange}
+                                    value={typeof inputValue === 'number' ? inputValue : 0}
+                                />
+                            </Card>
+                        </div>
+                    </Col>
+                    <Col span={18}>
+                        <div className='content'>
+                            <div>
+                                <p>
+                                    {props.title ? props.title : traceData.data[traceData.data.length - 1]}
+                                </p>
+                                <Select
+                                    defaultValue="Mới nhất"
+                                    style={{
+                                        width: 160,
+                                    }}
+                                    // onChange={ }
+                                    options={[
+                                        {
+                                            value: 'latest',
+                                            label: 'Mới nhất',
+                                        },
+                                        {
+                                            value: 'price-up',
+                                            label: 'Giá thấp nhất',
+                                        },
+                                        {
+                                            value: 'price-down',
+                                            label: 'Giá cao nhất',
+                                        },
+                                    ]}
+                                />
                             </div>
-                        </Col>
-                        <Col span={18}>
-                            <div className='content'>
-                                <div>
-                                    <p>
-                                        {props.title ? props.title : traceData.data[traceData.data.length - 1]}
-                                    </p>
-                                    <Select
-                                        defaultValue="Mới nhất"
-                                        style={{
-                                            width: 160,
-                                        }}
-                                        // onChange={ }
-                                        options={[
-                                            {
-                                                value: 'latest',
-                                                label: 'Mới nhất',
-                                            },
-                                            {
-                                                value: 'price-up',
-                                                label: 'Giá thấp nhất',
-                                            },
-                                            {
-                                                value: 'price-down',
-                                                label: 'Giá cao nhất',
-                                            },
-                                        ]}
-                                    />
-                                </div>
-                                <div>
-                                    <ListProduct data={fakeListProduct.data} btn={false} type='' />
-                                    <Pagination
-                                        showSizeChanger={false}
-                                        onShowSizeChange={onShowSizeChange}
-                                        defaultCurrent={1}
-                                        total={500}
-                                        className='pagination'
-                                    />
-                                </div>
+                            <div>
+                                <ListProduct data={fakeListProduct.data} btn={false} type='' />
+                                <Pagination
+                                    showSizeChanger={false}
+                                    onShowSizeChange={onShowSizeChange}
+                                    defaultCurrent={1}
+                                    total={500}
+                                    className='pagination'
+                                />
                             </div>
-                        </Col>
-                    </Row>
-                </div>
+                        </div>
+                    </Col>
+                </Row>
             </div>
         </div>
     )

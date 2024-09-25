@@ -34,7 +34,7 @@ export default function ProductCarousel() {
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
-            if (width >= 1800) {
+            if (width >= 2000) {
                 setProductsPerSlide(5); // For large screens
             } else if (width >= 1200) {
                 setProductsPerSlide(4);

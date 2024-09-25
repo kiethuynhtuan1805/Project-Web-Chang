@@ -357,6 +357,26 @@ export const fakeWelcomeProduct1 = {
             url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
             name: 'Souvenir',
             description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
+        },
+        {
+            url: 'https://www.insidethetravellab.com/wp-content/uploads/2023/11/Snow-globes-in-a-souvenir-shop-in-Paris-1110x1426.jpg',
+            name: 'Souvenir',
+            description: 'Cute product!'
         }
     ]
 }
@@ -404,6 +424,26 @@ export const fakeWelcomeProduct2 = {
             url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
             name: 'Ringing',
             description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
+        },
+        {
+            url: 'https://i0.wp.com/www.myticklefeet.com/wp-content/uploads/2019/04/20171226_164021-1.jpg?resize=640%2C1024&ssl=1',
+            name: 'Ringing',
+            description: 'Cup of juice!'
         }
     ]
 }
@@ -412,6 +452,26 @@ export const fakeWelcomeProduct3 = {
     type: 'MỚI',
     description: 'Một số sản phẩm mới!',
     listProduct: [
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
+        {
+            url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
+            name: 'Ringing',
+            description: 'The ringing bell!'
+        },
         {
             url: 'https://statics.vinpearl.com/Souvenir-shop-in-Hanoi-01_1690681282.jpg',
             name: 'Ringing',

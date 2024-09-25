@@ -154,36 +154,34 @@ export default function Purchase() {
     //         : null;
 
     return (
-        <div className='Purchase container'>
-            <div className='container-wrapper'>
-                <Trace traceData={traceData} />
-                <Row style={{ marginBottom: '100px' }}>
-                    <Col span={5}>
-                        <UserPageNav type={'nav-purchase'} haveDropDown={""} />
-                    </Col>
-                    <Col span={1}></Col>
-                    <Col span={18}>
-                        <div className='purchase-content'>
-                            <div>
-                                <p>Lịch sử đơn hàng</p>
-                                <p>Cảm ơn bạn vì đã tin tưởng và đặt hàng tại Chang House!</p>
-                            </div>
-                            <div className='option'>
-                                <div className='selected'>Tất cả</div>
-                                <div >Chờ thanh toán</div>
-                                <div>Vận chuyển</div>
-                                <div>Chờ giao hàng</div>
-                                <div>Hoàn thành</div>
-                                <div>Đã hủy</div>
-                                <div>Trả hàng/Hoàn tiền</div>
-                            </div>
-                            <div>
-                                <CustomSearchTable columns={columns} data={fakeUser.orderPurchase} type={'Purchase'} />
-                            </div>
+        <div className='Purchase'>
+            <Trace traceData={traceData} />
+            <Row style={{ marginBottom: '100px' }}>
+                <Col span={5}>
+                    <UserPageNav type={'nav-purchase'} haveDropDown={""} />
+                </Col>
+                <Col span={1}></Col>
+                <Col span={18}>
+                    <div className='purchase-content'>
+                        <div>
+                            <p>Lịch sử đơn hàng</p>
+                            <p>Cảm ơn bạn vì đã tin tưởng và đặt hàng tại Chang House!</p>
                         </div>
-                    </Col>
-                </Row>
-            </div>
+                        <div className='option'>
+                            <div className='selected'>Tất cả</div>
+                            <div >Chờ thanh toán</div>
+                            <div>Vận chuyển</div>
+                            <div>Chờ giao hàng</div>
+                            <div>Hoàn thành</div>
+                            <div>Đã hủy</div>
+                            <div>Trả hàng/Hoàn tiền</div>
+                        </div>
+                        <div>
+                            <CustomSearchTable columns={columns} data={fakeUser.orderPurchase} type={'Purchase'} />
+                        </div>
+                    </div>
+                </Col>
+            </Row>
         </div >
     )
 }

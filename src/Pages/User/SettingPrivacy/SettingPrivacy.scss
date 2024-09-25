@@ -1,78 +1,76 @@
 .SettingPrivacy {
-    .container-wrapper {
-        .setting-privacy-content {
-            border: 1px solid #fbcdf6;
-            border-radius: 10px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    .setting-privacy-content {
+        border: 1px solid #fbcdf6;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-            &>div {
-                &:first-child {
-                    margin: 20px;
-                    margin-bottom: 0;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid #fbcdf6;
-                    text-align: left;
-                    font-size: 1rem;
+        &>div {
+            &:first-child {
+                margin: 20px;
+                margin-bottom: 0;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #fbcdf6;
+                text-align: left;
+                font-size: 1rem;
 
-                    p:first-child {
-                        font-weight: bold;
-                        font-size: 1.2rem;
+                p:first-child {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &.request-delete {
+                display: flex;
+                margin: 10px 20px;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1rem;
+                color: var(--COLOR-black);
+
+                div {
+                    text-align: center;
+                    background-color: var(--COLOR-brown-smooth);
+                    color: #ffffff;
+                    padding: 8px 40px;
+                    border-radius: 5px;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            &.confirm-delete {
+                color: rgba(0, 0, 0, 0.888);
+                text-align: left;
+                font-size: 0.9rem;
+                margin: 20px 20px;
+
+                ul {
+                    margin: 15px 40px;
+                    text-align: justify;
+
+                    li {
                         margin-bottom: 10px;
-                        text-transform: uppercase;
                     }
                 }
 
-                &.request-delete {
-                    display: flex;
-                    margin: 10px 20px;
-                    justify-content: space-between;
-                    align-items: center;
-                    font-size: 1rem;
-                    color: var(--COLOR-black);
+                div {
+                    background-color: var(--COLOR-brown-smooth);
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 8px 20px;
+                    border-radius: 5px;
+                    width: 140px;
+                    margin-top: 20px;
+                    cursor: pointer;
 
-                    div {
-                        text-align: center;
-                        background-color: var(--COLOR-brown-smooth);
-                        color: #ffffff;
-                        padding: 8px 40px;
-                        border-radius: 5px;
-
-                        cursor: pointer;
-
-                        &:hover {
-                            opacity: 0.8;
-                        }
-                    }
-                }
-
-                &.confirm-delete {
-                    color: rgba(0, 0, 0, 0.888);
-                    text-align: left;
-                    font-size: 0.9rem;
-                    margin: 20px 20px;
-
-                    ul {
-                        margin: 15px 40px;
-                        text-align: justify;
-
-                        li {
-                            margin-bottom: 10px;
-                        }
-                    }
-
-                    div {
-                        background-color: var(--COLOR-brown-smooth);
-                        color: #ffffff;
-                        text-align: center;
-                        padding: 8px 20px;
-                        border-radius: 5px;
-                        width: 140px;
-                        margin-top: 20px;
-                        cursor: pointer;
-
-                        &:hover {
-                            opacity: 0.8;
-                        }
+                    &:hover {
+                        opacity: 0.8;
                     }
                 }
             }

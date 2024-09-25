@@ -9,7 +9,7 @@ import {
   PaymentPolicy, ReturnPolicy, TransportPolicy, SecurityPolicy,
   TermsOfUse, Guide, VATPolicy, NormalBlog, BlogPage
 } from './Pages';
-import { ScrollToTop, UserLayout } from 'Components';
+import { ScrollToTop, UserLayout, GlobalLayout } from 'Components';
 
 export default function App() {
   return (
@@ -17,9 +17,12 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         {/* Auth */}
-        <Route path='' element={<WelcomePage />} />
         <Route path='login' element={<Login />}></Route>
         <Route path='signup' element={<Signup />}></Route>
+
+        <Route path='' element={<GlobalLayout />}>
+          <Route index element={<WelcomePage />} />
+        </Route>
 
         {/* Home */}
         <Route path='home' element={<UserLayout />}>

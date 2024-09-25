@@ -3,6 +3,7 @@ import UserHeader from "./Common/Header/User/UserHeader";
 import UserFooter from "./Common/Footer/UserFooter";
 import SearchBar from "./Common/SearchBar/SearchBar";
 import UserLayout from "./Layout/UserLayout/UserLayout";
+import GlobalLayout from "./Layout/GlobalLayout/GlobalLayout";
 import ListProduct from "./Common/ListProduct/ListProduct";
 import Product from "./Common/Product/Product";
 import FollowMeBanner from "./Common/FollowMeBanner/FollowMeBanner";
@@ -26,6 +27,7 @@ export {
     UserFooter,
     SearchBar,
     UserLayout,
+    GlobalLayout,
     ListProduct,
     Product,
     FollowMeBanner,

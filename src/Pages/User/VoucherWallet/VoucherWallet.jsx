@@ -26,33 +26,31 @@ export default function VoucherWallet() {
     }, []);
 
     return (
-        <div className='VoucherWallet container'>
-            <div className='container-wrapper'>
-                <Trace traceData={traceData} />
-                <Row style={{ marginBottom: '100px' }}>
-                    <Col span={5} >
-                        <UserPageNav type={'nav-voucher'} haveDropDown={""} />
-                    </Col>
-                    <Col span={1}></Col>
-                    <Col span={18}>
-                        <div className='voucher-wallet-content'>
-                            <div>
-                                <p>Voucher</p>
-                                <p>Những khuyến mãi dành cho bạn!</p>
-                            </div>
-                            <Menu
-                                theme="#FFB0BD"
-                                mode="horizontal"
-                                selectedKeys={[`${opt}`]}
-                                items={fakeNavVoucher}
-                                className='option'
-                                onClick={handleNav}
-                            />
-                            <ListVoucher data={fakeListVoucher} btn={false} type={''} />
+        <div className='VoucherWallet'>
+            <Trace traceData={traceData} />
+            <Row style={{ marginBottom: '100px' }}>
+                <Col span={5} >
+                    <UserPageNav type={'nav-voucher'} haveDropDown={""} />
+                </Col>
+                <Col span={1}></Col>
+                <Col span={18}>
+                    <div className='voucher-wallet-content'>
+                        <div>
+                            <p>Voucher</p>
+                            <p>Những khuyến mãi dành cho bạn!</p>
                         </div>
-                    </Col>
-                </Row>
-            </div>
+                        <Menu
+                            theme="#FFB0BD"
+                            mode="horizontal"
+                            selectedKeys={[`${opt}`]}
+                            items={fakeNavVoucher}
+                            className='option'
+                            onClick={handleNav}
+                        />
+                        <ListVoucher data={fakeListVoucher} btn={false} type={''} />
+                    </div>
+                </Col>
+            </Row>
         </div >
     )
 }

@@ -25,7 +25,7 @@ function CommonHeader(props) {
     }, []);
 
     return (
-        <div className='CommonHeader container'>
+        <div className='CommonHeader'>
             <Row align="middle" className={props.type === 'WP' ? `header ${isScrolled ? 'scrolled' : ''}` : `header`}>
                 <Col span={3} className='logo'>
                     {

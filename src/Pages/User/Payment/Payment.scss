@@ -1,79 +1,77 @@
 .Payment {
-    .container-wrapper {
-        .payment-content {
-            border: 1px solid #fbcdf6;
-            border-radius: 10px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    .payment-content {
+        border: 1px solid #fbcdf6;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-            &>div {
-                &:first-child {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin: 20px;
-                    margin-bottom: 0;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid #fbcdf6;
-                    text-align: left;
-                    font-size: 1rem;
+        &>div {
+            &:first-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px;
+                margin-bottom: 0;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #fbcdf6;
+                text-align: left;
+                font-size: 1rem;
 
-                    &>div:first-child {
-                        p:first-child {
-                            font-weight: bold;
-                            font-size: 1.2rem;
-                            margin-bottom: 10px;
-                            text-transform: uppercase;
-                        }
-                    }
-
-                    &>div:last-child {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        background-color: var(--COLOR-brown-smooth);
-                        color: #ffffff;
-                        padding: 2px 20px;
-                        border-radius: 5px;
-
-                        p {
-                            margin: 0;
-                            margin-right: 10px;
-                        }
-
-                        cursor: pointer;
-
-                        &:hover {
-                            opacity: 0.8;
-                        }
+                &>div:first-child {
+                    p:first-child {
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                        margin-bottom: 10px;
+                        text-transform: uppercase;
                     }
                 }
 
-                &:last-child {
-                    text-align: left;
-                    padding: 20px;
+                &>div:last-child {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    background-color: var(--COLOR-brown-smooth);
+                    color: #ffffff;
+                    padding: 2px 20px;
+                    border-radius: 5px;
+
+                    p {
+                        margin: 0;
+                        margin-right: 10px;
+                    }
+
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            &:last-child {
+                text-align: left;
+                padding: 20px;
+
+                &>div {
+                    margin-bottom: 20px;
+                    min-height: 300px;
+
+                    &>p:first-child {
+                        font-size: 1rem;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid #ccc;
+                        height: 35px;
+                    }
 
                     &>div {
-                        margin-bottom: 20px;
-                        min-height: 300px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 265px;
 
-                        &>p:first-child {
-                            font-size: 1rem;
-                            font-weight: bold;
-                            text-transform: uppercase;
-                            border-bottom: 1px solid #ccc;
-                            height: 35px;
-                        }
-
-                        &>div {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 265px;
-
-                            p {
-                                font-size: 16px;
-                            }
+                        p {
+                            font-size: 16px;
                         }
                     }
                 }

@@ -41,7 +41,7 @@ export default function SearchBar() {
                 <Icon icon="fa:close" className='close-icon' width={14} height={14} />
             </div>
             <div className='search-icon' onClick={handleSearch}>
-                <Icon icon="mingcute:search-3-line" width={22} height={22} />
+                <Icon icon="mingcute:search-3-line" width={24} height={24} />
             </div>
         </div>
     )

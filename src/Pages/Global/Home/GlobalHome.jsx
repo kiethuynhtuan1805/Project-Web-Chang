@@ -16,26 +16,24 @@ function GlobalHome(props) {
     }, []);
 
     return (
-        <div className='GlobalHome container'>
+        <div className='GlobalHome'>
             {
                 !isLoading && (
                     <>
                         <Hero />
-                        <div className='container-wrapper'>
-                            <div className='home-content'>
-                                {
-                                    fakeApiHome.map((data, id) => {
-                                        return (
-                                            <div key={`home-${id}`} className='home-data'>
-                                                <p className='home-data-name'>{data.name}</p>
-                                                <ListProduct data={data.data} type={'home'} />
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
-                            <FollowMeBanner />
+                        <div className='home-content'>
+                            {
+                                fakeApiHome.map((data, id) => {
+                                    return (
+                                        <div key={`home-${id}`} className='home-data'>
+                                            <p className='home-data-name'>{data.name}</p>
+                                            <ListProduct data={data.data} type={'home'} />
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
+                        <FollowMeBanner />
                     </>
                 )
             }
