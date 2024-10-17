@@ -1,4 +1,4 @@
-import actUser from "../../../Redux/Action/actUser"
+import actUser from "redux/Action/actUser"
 
 export const mapStateToProps = (globalState) => {
     return {
