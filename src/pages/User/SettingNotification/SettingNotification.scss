@@ -1,0 +1,95 @@
+.SettingNotification {
+    .setting-notification-content {
+        border: 1px solid #fbcdf6;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        &>div {
+            &:first-child {
+                margin: 20px;
+                margin-bottom: 0;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #fbcdf6;
+                text-align: left;
+                font-size: 1rem;
+
+                p:first-child {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+
+                .notification-part {
+                    margin: 20px 20px;
+                    margin-bottom: 0;
+                    padding-bottom: 20px;
+                    text-align: left;
+
+                    .notification-main-wrapper {
+
+                        .notification-content-wrapper {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 10px 0;
+
+                            .notification-content {
+                                .title {
+                                    font-size: 18px;
+                                    color: var(--COLOR-black);
+                                    height: 32px;
+                                }
+
+                                .content {
+                                    font-size: 14px;
+                                    color: var(--COLOR-gray);
+                                    height: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .notification-extra-wrapper {
+                        .notification-content-wrapper {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 10px 0;
+                            padding-left: 30px;
+
+                            .notification-content {
+                                .title {
+                                    font-size: 16px;
+                                    color: var(--COLOR-black);
+                                    height: 32px;
+                                }
+
+                                .content {
+                                    font-size: 14px;
+                                    color: var(--COLOR-gray);
+                                    height: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        border-bottom: 1px solid rgb(217, 217, 217);
+                    }
+
+                    .hidden {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

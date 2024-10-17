@@ -1,0 +1,97 @@
+.Profile {
+    min-height: 800px;
+
+    .profile-content {
+        border: 1px solid #fbcdf6;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        &>div {
+            &:first-child {
+                margin: 20px;
+                margin-bottom: 0;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #fbcdf6;
+                text-align: left;
+                font-size: 1rem;
+
+                p:first-child {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &:last-child {
+                display: flex;
+                justify-content: center;
+                margin: 40px 0;
+
+                form {
+                    margin: 0 50px;
+                    width: 100%;
+                    max-width: 1000px;
+                    font-size: 1rem;
+
+                    label {
+                        font-size: 1rem;
+                    }
+
+                    .ant-col:first-child {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .default-input {
+                        input {
+                            height: 40px;
+                        }
+                    }
+
+                    .default-select {
+                        .ant-col:last-child {
+                            height: 40px;
+
+                            div {
+                                display: flex;
+                                align-items: center;
+                                height: 100%;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    &>div:last-child {
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+
+                        div {
+                            .btn {
+                                button {
+                                    background-color: var(--COLOR-pink-super-deep);
+                                    color: white;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    width: 150px;
+
+                                    &:hover {
+                                        outline: none;
+                                        border: none;
+                                        opacity: 0.7;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .ant-form-item-explain-error {
+                        text-align: left;
+                        padding: 8px 0;
+                    }
+                }
+            }
+        }
+    }
+}

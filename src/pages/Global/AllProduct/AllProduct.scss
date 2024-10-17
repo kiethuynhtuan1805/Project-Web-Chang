@@ -1,0 +1,104 @@
+.AllProduct {
+    .list-select {
+        padding-right: 50px;
+        text-align: left;
+
+        &>div {
+            &>div:first-child {
+                margin: 0;
+                padding: 0 15px;
+                color: var(--COLOR-brown-deep);
+                border-bottom: 1px solid var(--COLOR-brown-deep);
+            }
+
+            &>div:last-child {
+                padding: 0;
+
+                &>ul {
+                    border-inline-end: none;
+
+                    li {
+                        margin: 5px 0;
+                        background-color: #ffffff;
+                        border-radius: 0;
+                        width: 100%;
+                    }
+                }
+
+                .ant-menu-submenu {
+                    &>div {
+                        width: 100%;
+                        margin: 0;
+                    }
+
+                    &>ul {
+                        background-color: white !important;
+
+                        &>li {
+                            &:hover {
+                                color: black;
+                                opacity: 1;
+                            }
+                        }
+
+                        &>li.ant-menu-item-active {
+                            &:hover {
+                                color: #1677ff;
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin: 5px 15px;
+                }
+
+                &>div {
+                    margin: 30px 15px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .content {
+        &>div:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5px;
+            margin-bottom: 30px;
+
+            &>div {
+                &>div {
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+                    font-size: 1rem;
+                    color: var(--COLOR-brown-deep);
+                }
+            }
+
+            &>p {
+                text-align: left;
+                font-weight: bold;
+                font-size: 1.7rem;
+                text-transform: uppercase;
+            }
+        }
+
+        &>div {
+            .pagination {
+                margin-top: 30px;
+                margin-bottom: 80px;
+
+                li {
+                    a {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

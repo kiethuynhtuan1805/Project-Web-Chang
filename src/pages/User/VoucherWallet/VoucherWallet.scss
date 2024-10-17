@@ -1,0 +1,54 @@
+.VoucherWallet {
+    .voucher-wallet-content {
+        border: 1px solid #fbcdf6;
+        border-radius: 10px;
+
+        &>div {
+            &:first-child {
+                margin: 20px;
+                margin-bottom: 0;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #fbcdf6;
+                text-align: left;
+                font-size: 1rem;
+
+                p:first-child {
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+            }
+
+        }
+
+        .option {
+            display: flex;
+            margin: 10px 20px;
+            margin-bottom: 0;
+            border-radius: 5px;
+
+            li {
+                padding: 15px 25px;
+                border-radius: 0;
+                cursor: pointer;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                    color: var(--COLOR-pink-super-deep);
+                }
+            }
+
+            .selected {
+                border-bottom: 2px solid rgba(0, 0, 0, .09);
+                border-color: var(--COLOR-pink-super-deep);
+                color: var(--COLOR-pink-super-deep);
+                font-weight: bold;
+            }
+        }
+    }
+}
