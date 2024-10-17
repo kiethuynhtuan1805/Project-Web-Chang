@@ -1,5 +1,5 @@
 import './App.scss';
-import './GlobalCss/Modal.scss';
+import './globalCss/Modal.scss';
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import {
@@ -8,8 +8,8 @@ import {
   NotificationOrder, NotificationPromotion, NotificationUpdate, VoucherWallet,
   PaymentPolicy, ReturnPolicy, TransportPolicy, SecurityPolicy,
   TermsOfUse, Guide, VATPolicy, NormalBlog, BlogPage
-} from './Pages';
-import { ScrollToTop, UserLayout, GlobalLayout } from 'Components';
+} from './pages';
+import { ScrollToTop, UserLayout, GlobalLayout } from 'components';
 
 export default function App() {
   return (
