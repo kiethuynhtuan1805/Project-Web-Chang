@@ -104,82 +104,44 @@
             .shipping {
                 display: flex;
                 flex-direction: row;
-                margin-top: 15px;
+                margin-top: 30px;
 
                 .shipping-wrapper {
                     margin-left: 15px;
 
-                    .free-shipping {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
 
-                        p {
-                            margin-left: 10px;
-                            font-size: 0.9rem;
-                        }
+                    p {
+                        margin-left: 10px;
+                        font-size: 1rem;
                     }
 
-                    .shipping-content {
-                        display: flex;
-                        flex-direction: row;
-                        margin-top: 10px;
-
-                        &>div {
-                            margin-top: 5px;
-                            margin-left: 10px;
-
-                            &>div {
-                                display: flex;
-                                align-items: center;
-                                flex-direction: row;
-                            }
-
-                            &>div:last-child {
-                                margin-top: 10px;
-                            }
-
-                            p {
-                                width: 120px;
-                                font-size: 0.9rem;
-                                margin-right: 10px;
-                            }
-
-                            select {
-                                width: 300px;
-                                padding: 5px;
-                                border-radius: 5px;
-                            }
-                        }
+                    .note {
+                        font-size: 0.9rem;
+                        color: gray;
                     }
 
                     img {
                         width: 32px;
                         height: 32px;
                     }
-                }
-            }
 
-            .color-picked {
-                p {
-                    font-size: 1.1rem;
-                    margin-right: 20px;
-                }
+                    &>div>div {
+                        display: flex;
+                        flex-direction: row;
 
-                .color-option {
-                    cursor: pointer;
-                    margin-right: 5px;
-                    margin-top: 10px;
-                    margin-bottom: 5px;
-                }
-
-                .selected {
-                    border: 1px solid #fb67e9;
-                    border-radius: 50%;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
 
             .type-picked {
+                margin-top: 30px;
+
                 p {
                     font-size: 1.1rem;
                 }
@@ -187,36 +149,42 @@
                 .type-wrapper {
                     display: flex;
                     flex-wrap: wrap;
-                    margin-top: 10px;
+                    margin-top: 20px;
                     margin-bottom: 10px;
 
                     .type {
-                        border: 1px solid #9c9c9c;
+                        border: 2px solid #9c9c9c;
                         border-radius: 5px;
                         font-size: 1rem;
-                        padding: 5px 20px;
+                        padding: 10px 20px;
                         margin-right: 15px;
-                        color: #717171;
 
                         &:hover {
                             cursor: pointer;
-                            background-color: var(--COLOR-pink-hover);
-                            color: #ffffff;
+                            border-color: var(--COLOR-pink-super-deep);
+                        }
+
+                        &.picked {
+                            cursor: none;
+                            border-color: var(--COLOR-pink-super-deep);
                         }
                     }
+
                 }
             }
 
             .quantity {
+                margin-top: 40px;
+
                 p {
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
                     font-size: 1.1rem;
                 }
 
                 .btn-wrapper {
                     display: flex;
                     justify-content: space-between;
-                    margin-top: 30px;
+                    margin-top: 20px;
 
                     .btn-cart,
                     .btn-buy {
@@ -238,7 +206,7 @@
             }
 
             .description {
-                margin-top: 20px;
+                margin-top: 40px;
 
                 .description-wrapper {
                     margin-left: 20px;
