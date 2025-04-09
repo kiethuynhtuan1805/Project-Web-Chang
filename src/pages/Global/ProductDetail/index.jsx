@@ -1,9 +1,16 @@
 import { Icon } from '@iconify/react'
 import './ProductDetail.scss'
 import { Trace } from 'components'
-import { Button, Col, Image, InputNumber, Row, Tooltip } from 'antd'
+import { Button, Col, Image, InputNumber, Row, Tooltip, Card, Avatar } from 'antd'
+import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
 import { fakeProduct } from 'data'
-import { ProductCarousel } from 'components'
+import { ProductCarousel, StarRating } from 'components'
+
+const actions = [
+  <EditOutlined key="edit" />,
+  <SettingOutlined key="setting" />,
+  <EllipsisOutlined key="ellipsis" />,
+]
 
 export default function ProductDetail(props) {
   const traceRoute = [...fakeProduct.type.split('\n')]
@@ -65,6 +72,15 @@ export default function ProductDetail(props) {
                 </div>
               </div>
               <p className="code">Mã sản phẩm: {fakeProduct.code}</p>
+              <div className="re">
+                <div className="rating">
+                  <p>4.4</p>
+                  <StarRating rating={4.4} />
+                </div>
+                <div className="evaluate">
+                  <p>34 đánh giá</p>
+                </div>
+              </div>
               <p className="price">{`${fakeProduct.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
               <p className="inventory">
                 * Hiện tại cửa hàng còn <strong>{fakeProduct.inventory}</strong> sản phẩm này.
@@ -85,11 +101,20 @@ export default function ProductDetail(props) {
               <div className="type-picked">
                 <p>Kích thước/kiểu:</p>
                 <div className="type-wrapper">
-                  <div style={{ display: 'flex' }}>
-                    {fakeProduct.classify.map((classify, id) => (
-                      <div className="type">{classify.item}</div>
-                    ))}
-                  </div>
+                  {fakeProduct.classify.map((classify, id) => (
+                    <div className="type picked" key={id}>
+                      <p>{classify.item}</p>
+                      <div className="tick-wrapper ">
+                        <Icon
+                          icon="typcn:tick"
+                          width="14"
+                          height="14"
+                          color="#FFFFFF"
+                          className="tick"
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="quantity">
@@ -186,6 +211,71 @@ export default function ProductDetail(props) {
             </div>
           </Col>
         </Row>
+      </div>
+      <div className="evaluate-detail">
+        <p>Đánh giá sản phẩm</p>
+        <div>
+          <Row className="filter">
+            <Col xs={{ span: 6 }}>
+              <p>
+                <b>4.4</b>
+                trên 5
+              </p>
+              <div>
+                <StarRating rating={4.4} />
+              </div>
+            </Col>
+            <Col xs={{ span: 18 }}>
+              <div id="all" className="picked">
+                Tất cả
+              </div>
+              <div id="5s">5 sao (32)</div>
+              <div id="4s">4 sao (0)</div>
+              <div id="3s">3 sao (0)</div>
+              <div id="2s">2 sao (0)</div>
+              <div id="1s">1 sao (0)</div>
+              <div id="0s">0 sao (0)</div>
+            </Col>
+          </Row>
+          <div className="evaluate-wrapper">
+            <Card actions={actions} style={{ minWidth: 300 }} className="evaluate-content">
+              <Card.Meta
+                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />}
+                title="Card title"
+                description={
+                  <>
+                    <p>This is the description</p>
+                    <p>This is the description</p>
+                  </>
+                }
+              />
+            </Card>
+            <Card actions={actions} style={{ minWidth: 300 }} className="evaluate-content">
+              <Card.Meta
+                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />}
+                title="Card title"
+                description={
+                  <>
+                    <p>This is the description</p>
+                    <p>This is the description</p>
+                  </>
+                }
+              />
+            </Card>
+            <Card actions={actions} style={{ minWidth: 300 }} className="evaluate-content">
+              <Card.Meta
+                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />}
+                title="Card title"
+                description={
+                  <>
+                    <p>This is the description</p>
+                    <p>This is the description</p>
+                  </>
+                }
+              />
+            </Card>
+          </div>
+        </div>
       </div>
       <div className="product-detail-sub">
         <p>Một số sản phẩm liên quan</p>

@@ -84,11 +84,41 @@
                 color: #9c9c9c;
             }
 
+            .re {
+                display: flex;
+                margin-top: 10px;
+
+                .rating {
+                    display: flex;
+                    padding-right: 20px;
+                    border-right: 1px solid var(--COLOR-pink-super-deep);
+
+                    p {
+                        margin-right: 10px;
+                        border-bottom: 1px solid var(--COLOR-pink-super-deep);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
+                }
+
+                .evaluate {
+                    padding-left: 20px;
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
+                }
+            }
+
             .price {
                 display: flex;
                 align-items: center;
-                margin-top: 20px;
-                font-size: 1.6rem;
+                margin-top: 30px;
+                font-size: 1.7rem;
                 color: var(--COLOR-pink-super-deep);
                 font-weight: bold;
             }
@@ -104,7 +134,7 @@
             .shipping {
                 display: flex;
                 flex-direction: row;
-                margin-top: 30px;
+                margin-top: 25px;
 
                 .shipping-wrapper {
                     margin-left: 15px;
@@ -140,7 +170,7 @@
             }
 
             .type-picked {
-                margin-top: 30px;
+                margin-top: 25px;
 
                 p {
                     font-size: 1.1rem;
@@ -149,14 +179,14 @@
                 .type-wrapper {
                     display: flex;
                     flex-wrap: wrap;
-                    margin-top: 20px;
                     margin-bottom: 10px;
 
                     .type {
+                        position: relative;
                         border: 2px solid #9c9c9c;
                         border-radius: 5px;
-                        font-size: 1rem;
-                        padding: 10px 20px;
+                        padding: 15px 20px;
+                        margin-top: 20px;
                         margin-right: 15px;
 
                         &:hover {
@@ -166,7 +196,25 @@
 
                         &.picked {
                             cursor: none;
+                            color: var(--COLOR-pink-super-deep);
                             border-color: var(--COLOR-pink-super-deep);
+                            font-weight: bold;
+                        }
+
+                        .tick-wrapper {
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            background: var(--COLOR-pink-super-deep);
+                            border-top-left-radius: 100%;
+
+                            .tick {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                            }
                         }
                     }
 
@@ -174,7 +222,7 @@
             }
 
             .quantity {
-                margin-top: 40px;
+                margin-top: 25px;
 
                 p {
                     margin-bottom: 20px;
@@ -265,12 +313,86 @@
         }
     }
 
+    .evaluate-detail {
+        text-align: left;
+
+        &>p:first-child {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        &>div {
+            display: flex;
+            flex-direction: column;
+
+            .filter {
+                justify-content: space-between;
+
+                &>div:first-child {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                    &>p {
+                        font-size: 1.5rem;
+                        color: var(--COLOR-pink-super-deep);
+
+                        &>b {
+                            font-size: 2rem;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+
+                &>div:last-child {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    &>div {
+                        border: 1px solid #9c9c9c;
+                        border-radius: 5px;
+                        padding: 8px 20px;
+                        font-size: 1rem;
+                        margin-left: 20px;
+                        margin-top: 10px;
+                        width: 120px;
+                        text-align: center;
+
+                        &:hover {
+                            cursor: pointer;
+                            border-color: var(--COLOR-pink-super-deep);
+                        }
+
+                        &.picked {
+                            color: var(--COLOR-pink-super-deep);
+                            border-color: var(--COLOR-pink-super-deep);
+                            font-weight: bold;
+                            cursor: default;
+                        }
+                    }
+                }
+            }
+
+            .evaluate-wrapper {
+                margin-top: 10px;
+                margin-bottom: 40px;
+
+                .evaluate-content {
+                    margin-top: 20px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
     .product-detail-sub {
-        font-size: 1.2rem;
         text-align: left;
 
         &>p:first-child {
             margin-bottom: 50px;
+            font-size: 1.3rem;
             font-weight: bold;
         }
 
