@@ -289,7 +289,7 @@
             }
 
             .share {
-                width: 280px;
+                width: 360px;
 
                 p:first-child {
                     margin-bottom: 20px;
@@ -382,6 +382,49 @@
                 .evaluate-content {
                     margin-top: 20px;
                     font-size: 1rem;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+                    p {
+                        span {
+                            color: #000000;
+                        }
+                    }
+
+                    .content {
+                        margin-top: 10px;
+                        color: #000000;
+                    }
+
+                    .img-wrapper {
+                        margin-top: 20px;
+
+                        img {
+                            width: 120px;
+                            height: 120px;
+                        }
+                    }
+
+                    .evaluate-delete {
+                        &:hover {
+                            color: red;
+                        }
+                    }
+
+                    .rating {
+                        display: flex;
+                        padding-right: 20px;
+                        border-right: 1px solid var(--COLOR-pink-super-deep);
+
+                        p {
+                            margin-right: 10px;
+                            border-bottom: 1px solid var(--COLOR-pink-super-deep);
+                            color: #000000;
+                        }
+                    }
+
+                    .created-at {
+                        margin-bottom: 10px;
+                    }
                 }
             }
         }

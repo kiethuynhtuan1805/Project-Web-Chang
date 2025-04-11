@@ -2,14 +2,17 @@ import { Icon } from '@iconify/react'
 import './ProductDetail.scss'
 import { Trace } from 'components'
 import { Button, Col, Image, InputNumber, Row, Tooltip, Card, Avatar } from 'antd'
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons'
 import { fakeProduct } from 'data'
 import { ProductCarousel, StarRating } from 'components'
 
 const actions = [
-  <EditOutlined key="edit" />,
-  <SettingOutlined key="setting" />,
-  <EllipsisOutlined key="ellipsis" />,
+  <Icon icon="tabler:edit" width="24" height="24" className="evaluate-edit" />,
+  <Icon
+    icon="material-symbols:delete-outline"
+    width="24"
+    height="24"
+    className="evaluate-delete"
+  />,
 ]
 
 export default function ProductDetail(props) {
@@ -186,7 +189,8 @@ export default function ProductDetail(props) {
                   <Col span={8} style={{ paddingRight: '5px' }}>
                     <Tooltip title={'Share on Facebook'}>
                       <Button type="text" className="btn-share">
-                        <Icon icon="devicon:facebook" className="icon" /> Share
+                        <Icon icon="devicon:facebook" className="icon" width={24} height={24} />{' '}
+                        Share
                       </Button>
                     </Tooltip>
                   </Col>
@@ -241,35 +245,32 @@ export default function ProductDetail(props) {
             <Card actions={actions} style={{ minWidth: 300 }} className="evaluate-content">
               <Card.Meta
                 avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />}
-                title="Card title"
+                title={'Kiet dep trai'}
                 description={
                   <>
-                    <p>This is the description</p>
-                    <p>This is the description</p>
-                  </>
-                }
-              />
-            </Card>
-            <Card actions={actions} style={{ minWidth: 300 }} className="evaluate-content">
-              <Card.Meta
-                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />}
-                title="Card title"
-                description={
-                  <>
-                    <p>This is the description</p>
-                    <p>This is the description</p>
-                  </>
-                }
-              />
-            </Card>
-            <Card actions={actions} style={{ minWidth: 300 }} className="evaluate-content">
-              <Card.Meta
-                avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" />}
-                title="Card title"
-                description={
-                  <>
-                    <p>This is the description</p>
-                    <p>This is the description</p>
+                    <div className="rating">
+                      <p>4</p>
+                      <StarRating rating={4.4} />
+                    </div>
+                    <p className="created-at">2024-03-18 18:30</p>
+                    <p>
+                      Tính năng nổi bật: <span>11</span>
+                    </p>
+                    <p>
+                      Chất lượng sản phẩm: <span>good</span>
+                    </p>
+                    <p className="content">
+                      Cũng tạm, không kì vọng quá nhiều vì săn được em này với giá rẻ, đóng gói cẩn
+                      thận
+                    </p>
+                    <div className="img-wrapper">
+                      <Image
+                        src={'https://api.dicebear.com/7.x/miniavs/svg?seed=1'}
+                        width={'120px'}
+                        height={'120px'}
+                        fallback={require('assets/images/image-not-found.png')}
+                      />
+                    </div>
                   </>
                 }
               />
