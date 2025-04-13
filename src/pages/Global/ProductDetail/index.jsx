@@ -5,6 +5,7 @@ import { Button, Col, Image, InputNumber, Row, Tooltip, Card, Avatar, Modal } fr
 import { fakeProduct } from 'data'
 import { ProductCarousel, StarRating } from 'components'
 import { useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const actions = [
   <Icon icon="tabler:edit" width="24" height="24" className="evaluate-edit" />,
@@ -19,6 +20,7 @@ const actions = [
 export default function ProductDetail(props) {
   const myRef = useRef(null)
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
 
   const traceRoute = [...fakeProduct.type.split('\n')]
 
@@ -38,6 +40,10 @@ export default function ProductDetail(props) {
 
   const handleScroll = () => {
     myRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const handleNavPayment = () => {
+    navigate('/user/cart')
   }
 
   return (
@@ -150,7 +156,7 @@ export default function ProductDetail(props) {
                   <Button size={'large'} className="btn-cart">
                     Thêm vào giỏ hàng
                   </Button>
-                  <Button size={'large'} className="btn-buy">
+                  <Button size={'large'} className="btn-buy" onClick={handleNavPayment}>
                     Mua ngay
                   </Button>
                 </div>

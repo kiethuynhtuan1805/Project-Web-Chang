@@ -195,7 +195,7 @@
                         }
 
                         &.picked {
-                            cursor: none;
+                            cursor: default;
                             color: var(--COLOR-pink-super-deep);
                             border-color: var(--COLOR-pink-super-deep);
                             font-weight: bold;
