@@ -1,9 +1,10 @@
 import { Icon } from '@iconify/react'
 import './ProductDetail.scss'
 import { Trace } from 'components'
-import { Button, Col, Image, InputNumber, Row, Tooltip, Card, Avatar } from 'antd'
+import { Button, Col, Image, InputNumber, Row, Tooltip, Card, Avatar, Modal } from 'antd'
 import { fakeProduct } from 'data'
 import { ProductCarousel, StarRating } from 'components'
+import { useRef, useState } from 'react'
 
 const actions = [
   <Icon icon="tabler:edit" width="24" height="24" className="evaluate-edit" />,
@@ -16,6 +17,9 @@ const actions = [
 ]
 
 export default function ProductDetail(props) {
+  const myRef = useRef(null)
+  const [open, setOpen] = useState(false)
+
   const traceRoute = [...fakeProduct.type.split('\n')]
 
   const traceData = {
@@ -30,6 +34,10 @@ export default function ProductDetail(props) {
         return `/products/collections/${traceRoute.slice(0, index + 1).join('/')}`
       }),
     ],
+  }
+
+  const handleScroll = () => {
+    myRef.current?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -76,11 +84,11 @@ export default function ProductDetail(props) {
               </div>
               <p className="code">Mã sản phẩm: {fakeProduct.code}</p>
               <div className="re">
-                <div className="rating">
+                <div className="rating" onClick={handleScroll}>
                   <p>4.4</p>
                   <StarRating rating={4.4} />
                 </div>
-                <div className="evaluate">
+                <div className="evaluate" onClick={handleScroll}>
                   <p>34 đánh giá</p>
                 </div>
               </div>
@@ -93,7 +101,11 @@ export default function ProductDetail(props) {
                 <div className="shipping-wrapper">
                   <Icon icon="mdi-light:truck" width={32} height={32} color={'aqua'} />
                   <div>
-                    <div>
+                    <div
+                      onClick={() => {
+                        setOpen(true)
+                      }}
+                    >
                       <p>Nhận từ 10 Th04 - 14 Th04, phí giao 0đ</p>
                       <Icon icon="weui:arrow-outlined" width="32" height="24" />
                     </div>
@@ -216,7 +228,7 @@ export default function ProductDetail(props) {
           </Col>
         </Row>
       </div>
-      <div className="evaluate-detail">
+      <div className="evaluate-detail" ref={myRef}>
         <p>Đánh giá sản phẩm</p>
         <div>
           <Row className="filter">
@@ -284,6 +296,30 @@ export default function ProductDetail(props) {
           <ProductCarousel />
         </div>
       </div>
+      <Modal
+        title="Thông tin về phí vận chuyển"
+        centered
+        open={open}
+        onOk={() => setOpen(false)}
+        className="modal-delivery"
+      >
+        <p>
+          - Nhận từ <span>10 Th04</span> đến <span>14 Th04</span>
+        </p>
+        <p>
+          - Trong phạm vi tỉnh ...: <span>0</span>đ
+        </p>
+        <p>
+          - Các tỉnh còn lại ...: <span>0</span>đ
+        </p>
+        <ul>
+          <li>Tặng voucher ....</li>
+          <li>Tặng voucher ....</li>
+          <li>Tặng voucher ....</li>
+          <li>Tặng voucher ....</li>
+          <li>Tặng voucher ....</li>
+        </ul>
+      </Modal>
     </div>
   )
 }

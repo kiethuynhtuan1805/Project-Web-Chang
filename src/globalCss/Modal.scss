@@ -169,3 +169,38 @@
         }
     }
 }
+
+.modal-delivery {
+    .ant-modal-content {
+        .ant-modal-title {
+            font-size: 1.2rem;
+        }
+
+        .ant-modal-body {
+            p {
+                font-size: 1rem;
+                padding: 5px 0;
+
+                span {
+                    font-weight: bold;
+                }
+            }
+
+            ul {
+                margin-left: 40px;
+
+                li {
+                    font-size: 1rem;
+                    padding: 5px 0;
+                    color: #9c9c9c;
+                }
+            }
+        }
+
+        .ant-modal-footer {
+            .ant-btn-variant-outlined {
+                display: none;
+            }
+        }
+    }
+}
