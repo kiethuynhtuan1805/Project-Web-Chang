@@ -1,15 +1,56 @@
-import { Button, Col, Row } from 'antd'
+import { Button, Col, Modal, Row, Input } from 'antd'
 import './CartPayment.scss'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { ListVoucher } from 'components'
+import { fakeListVoucher } from 'data'
+
+const { Search } = Input
 
 export default function CartPayment({ data, btn, type }) {
   const navigate = useNavigate()
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const showModal = () => {
+    setIsModalOpen(true)
+  }
+  const handleOk = () => {
+    setIsModalOpen(false)
+  }
+  const handleCancel = () => {
+    setIsModalOpen(false)
+  }
+
+  const handleSearch = () => {
+    console.log('searching...')
+  }
+
   return (
     <div className="CartPayment">
       <div className="cart-payment-wrapper">
         <div>
           <p>Chang Voucher</p>
-          <p>Chọn hoặc nhập mã</p>
+          <p onClick={showModal}>Chọn hoặc nhập mã</p>
+          <Modal
+            title="Chọn Voucher"
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+            className="modal-select-voucher"
+            style={{ top: 50 }}
+            okText={'OK'}
+            cancelText={'TRỞ LẠI'}
+          >
+            <Search
+              placeholder="Nhập mã voucher!"
+              allowClear
+              enterButton="ÁP DỤNG"
+              size="large"
+              onSearch={handleSearch}
+            />
+            <div className="voucher-selector">
+              <ListVoucher data={fakeListVoucher} />
+            </div>
+          </Modal>
         </div>
         <Row className="cart-payment-main">
           <Col md={{ span: 2 }} className="first-col">

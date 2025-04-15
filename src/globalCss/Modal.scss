@@ -204,3 +204,64 @@
         }
     }
 }
+
+.modal-select-voucher {
+    .ant-modal-content {
+        &>button {
+            display: none;
+        }
+
+        .ant-modal-header {
+            border-bottom: 1px solid #9c9c9c;
+            padding-bottom: 15px;
+
+            &>div {
+                font-size: 1.3rem;
+            }
+        }
+
+        .ant-modal-body {
+            margin-top: 20px;
+
+            &>span>span>span {
+                height: 50px;
+
+                button {
+                    height: 50px;
+                    font-weight: bold;
+                    background-color: var(--COLOR-pink-super-deep);
+
+                    &:hover {
+                        background-color: var(--COLOR-pink-hover);
+                    }
+                }
+            }
+
+            .voucher-selector {
+                margin-top: 10px;
+                height: 450px;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar-track {
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .ant-modal-footer {
+            button {
+                width: 120px;
+                height: 50px;
+                font-size: 1rem;
+
+                &.ant-btn-primary {
+                    background-color: var(--COLOR-pink-super-deep);
+
+                    &:hover {
+                        background-color: var(--COLOR-pink-hover);
+                    }
+                }
+            }
+        }
+    }
+}
