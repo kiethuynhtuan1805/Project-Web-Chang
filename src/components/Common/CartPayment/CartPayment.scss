@@ -64,6 +64,11 @@
                     font-weight: bold;
                     text-transform: uppercase;
                     margin-right: 20px;
+
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 0.7;
+                    }
                 }
 
                 button {
@@ -88,10 +93,6 @@
 
                 p {
                     font-weight: bold;
-
-                    &:first-child {
-                        text-transform: uppercase;
-                    }
                 }
             }
 

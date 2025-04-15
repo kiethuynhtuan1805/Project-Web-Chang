@@ -7,7 +7,16 @@ import { fakeListVoucher } from 'data'
 
 const { Search } = Input
 
-export default function CartPayment({ data, btn, type }) {
+export default function CartPayment({
+  totalAmount,
+  totalPrice,
+  selectedAmount,
+  checkedAll,
+  handleCheckAll,
+  setCheckedAll,
+  setCheckedItems,
+  product,
+}) {
   const navigate = useNavigate()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const showModal = () => {
@@ -22,6 +31,11 @@ export default function CartPayment({ data, btn, type }) {
 
   const handleSearch = () => {
     console.log('searching...')
+  }
+
+  const clearCheckedItems = () => {
+    setCheckedAll(false)
+    setCheckedItems(Array(product.length).fill(false))
   }
 
   return (
@@ -55,17 +69,37 @@ export default function CartPayment({ data, btn, type }) {
         <Row className="cart-payment-main">
           <Col md={{ span: 2 }} className="first-col">
             <div>
-              <input type="checkbox" />
+              <input type="checkbox" checked={checkedAll} onChange={handleCheckAll} />
             </div>
           </Col>
           <Col md={{ span: 10 }} className="second-col">
-            <p>Chọn tất cả (1)</p>
-            <button>Xóa</button>
+            <p
+              onClick={() => {
+                if (!checkedAll) {
+                  setCheckedAll(true)
+                  setCheckedItems(Array(product.length).fill(true))
+                } else {
+                  setCheckedAll(false)
+                  setCheckedItems(Array(product.length).fill(false))
+                }
+              }}
+            >
+              Chọn tất cả <span>({totalAmount})</span>
+            </p>
+            <button onClick={clearCheckedItems}>Xóa</button>
             <button style={{ color: 'orangered' }}>Lưu vào mục đã thích</button>
           </Col>
           <Col md={{ span: 7 }} className="third-col">
             <p>
-              Tổng thanh toán (0 Sản phẩm): <span>0đ</span>
+              TỔNG THANH TOÁN (<span>{selectedAmount}</span> SẢN PHẨM):{' '}
+              <span style={{ fontSize: '1.2rem', color: '#fb7474' }}>
+                {
+                  totalPrice
+                    .toLocaleString('it-IT', { style: 'currency', currency: 'VND' })
+                    .split('VND')[0]
+                }
+              </span>
+              đ
             </p>
           </Col>
           <Col md={{ span: 5 }} className="fourth-col">
@@ -76,6 +110,7 @@ export default function CartPayment({ data, btn, type }) {
               onClick={() => {
                 navigate('/user/checkout')
               }}
+              disabled={selectedAmount === 0}
             >
               Mua Hàng
             </Button>

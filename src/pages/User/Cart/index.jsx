@@ -4,6 +4,7 @@ import { ProductCarousel } from 'components'
 import { CartPayment, Trace } from 'components'
 import { fakeCart } from 'data'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Cart() {
   const traceData = {
@@ -11,12 +12,10 @@ export default function Cart() {
     route: ['/home'],
   }
 
+  const navigate = useNavigate()
+
   const [checkedAll, setCheckedAll] = useState(false)
-  const [checkedItems, setCheckedItems] = useState({
-    item1: false,
-    item2: false,
-    item3: false,
-  })
+  const [checkedItems, setCheckedItems] = useState(Array(fakeCart.data.length).fill(false))
 
   const handleCheckAll = (e) => {
     const checked = e.target.checked
@@ -35,6 +34,10 @@ export default function Cart() {
     const allChecked = updated.every(Boolean)
     setCheckedAll(allChecked)
   }
+
+  const selectedItems = fakeCart.data.filter((_, index) => checkedItems[index])
+  const selectedAmount = selectedItems.reduce((sum, item) => sum + item.amount, 0)
+  const totalPrice = selectedItems.reduce((sum, item) => sum + item.amount * item.product.price, 0)
 
   return (
     <div className="Cart">
@@ -77,11 +80,17 @@ export default function Cart() {
                   />
                 </div>
               </Col>
-              <Col md={{ span: 6 }} className="item">
+              <Col
+                md={{ span: 8 }}
+                className="item"
+                onClick={() => {
+                  navigate('/products/1')
+                }}
+              >
                 <img src={item.product.picSrc[0].src} alt="" />
                 <p className="item-label">{item.product.name}</p>
               </Col>
-              <Col md={{ span: 4 }}></Col>
+              <Col md={{ span: 2 }}></Col>
               <Col md={{ span: 3 }}>
                 <p>{`${item.product.price.toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
               </Col>
@@ -92,14 +101,30 @@ export default function Cart() {
                 <p>{`${(item.product.price * item.amount).toLocaleString('it-IT', { style: 'currency', currency: 'VND' }).split('VND')[0]}đ`}</p>
               </Col>
               <Col md={{ span: 3 }}>
-                <p>Xóa</p>
-                <p>Tìm sản phẩm tương tự</p>
+                <p
+                  className="cart-delete"
+                  onClick={() => {
+                    console.log(item)
+                  }}
+                >
+                  Xóa
+                </p>
+                <p className="cart-search">Tìm sản phẩm tương tự</p>
               </Col>
             </Row>
           )
         })}
       </div>
-      <CartPayment />
+      <CartPayment
+        totalAmount={fakeCart.data.reduce((sum, item) => sum + item.amount, 0)}
+        selectedAmount={selectedAmount}
+        totalPrice={totalPrice}
+        checkedAll={checkedAll}
+        handleCheckAll={handleCheckAll}
+        setCheckedAll={setCheckedAll}
+        setCheckedItems={setCheckedItems}
+        product={fakeCart.data}
+      />
       <div className="product-detail-sub">
         <p>Có thể bạn cũng thích</p>
         <div>
