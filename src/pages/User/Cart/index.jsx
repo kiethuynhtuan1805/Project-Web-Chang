@@ -48,10 +48,10 @@ export default function Cart() {
             <input type="checkbox" name="" id="" checked={checkedAll} onChange={handleCheckAll} />
           </div>
         </Col>
-        <Col md={{ span: 6 }} className="label-sp">
+        <Col md={{ span: 8 }} className="label-sp">
           <p>Sản Phẩm</p>
         </Col>
-        <Col md={{ span: 4 }}></Col>
+        <Col md={{ span: 2 }}></Col>
         <Col md={{ span: 3 }}>
           <p>Đơn Giá</p>
         </Col>
@@ -59,7 +59,7 @@ export default function Cart() {
           <p>Số Lượng</p>
         </Col>
         <Col md={{ span: 3 }}>
-          <p>Số Tiền</p>
+          <p>Thành Tiền</p>
         </Col>
         <Col md={{ span: 3 }}>
           <p>Thao Tác</p>

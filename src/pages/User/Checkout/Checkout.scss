@@ -1,0 +1,85 @@
+.Checkout {
+    .col-header {
+        height: 60px;
+        padding: 0 15px;
+        border-bottom: 1px solid #9a9a9a90;
+
+        &>div {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:first-child {
+                justify-content: flex-start;
+            }
+
+            &.label-sp {
+                justify-content: flex-start;
+            }
+
+            &>div {
+                &:first-child {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 60px;
+                    height: 60px;
+
+                    input {
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .col-item {
+        margin-bottom: 30px;
+
+        .item-wrapper {
+            padding: 20px 15px;
+
+            &>div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:first-child {
+                    justify-content: flex-start;
+                }
+
+                &.item {
+                    justify-content: flex-start;
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        object-fit: cover;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .item-label {
+                        font-weight: bold;
+                        margin-left: 16px;
+                        text-align: justify;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+
+                        &:hover {
+                            color: var(--COLOR-pink-hover);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

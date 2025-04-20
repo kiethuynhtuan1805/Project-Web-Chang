@@ -265,3 +265,52 @@
         }
     }
 }
+
+.modal-checkout {
+    .ant-modal-content {
+        .ant-modal-header {
+            .ant-modal-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        .ant-modal-body {
+            &>p {
+                font-size: 0.8rem;
+                margin-bottom: 20px;
+            }
+
+            .i-wrapper {
+                &>div {
+                    &:first-child {
+                        padding-right: 10px;
+                    }
+
+                    &:last-child {
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            .ant-input-affix-wrapper {
+                .ant-input-suffix {
+                    &>div {
+                        display: flex;
+                        align-items: center;
+
+                        svg {
+                            opacity: 0.5;
+                        }
+
+                        .btn-close {
+                            &:hover {
+                                opacity: 0.3;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
